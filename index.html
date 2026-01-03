@@ -4,20 +4,40 @@
   <meta charset="UTF-8">
   <title>Ramón Gardella</title>
 
-  <!-- Google Font similar -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      color: white;
+      color: #111;
+      line-height: 1.6;
     }
 
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- HERO ---------- */
     header {
       min-height: 100vh;
       background-image: url("header.jpg");
@@ -28,60 +48,32 @@
       align-items: center;
     }
 
-    /* overlay oscuro */
     header::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0,0,0,0.55);
     }
 
-    .hero-content {
+    .hero {
       position: relative;
       max-width: 900px;
       padding: 0 60px;
+      color: white;
     }
 
-    h1 {
+    .hero h1 {
       font-size: 3.5rem;
-      font-weight: 600;
-      margin: 0 0 20px 0;
-      line-height: 1.2;
+      margin-bottom: 10px;
     }
 
-    p {
+    .hero h2 {
       font-size: 1.2rem;
-      font-weight: 300;
-      max-width: 600px;
-      line-height: 1.6;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    @media (max-width: 768px) {
-      .hero-content {
-        padding: 0 30px;
-      }
-
-      h1 {
-        font-size: 2.4rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <div class="hero-content">
-      <h1>Ramón Gardella</h1>
-      <p>
-        Texto descriptivo breve. Quién sos, qué hacés o cómo querés que te perciban.
-      </p>
-    </div>
-  </header>
-
-</body>
-</html>
+    .hero blockquote {
+      font-size: 1.8rem;
+      margin:
