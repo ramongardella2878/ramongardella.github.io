@@ -4,37 +4,70 @@
   <meta charset="UTF-8">
   <title>Ramón Gardella</title>
 
+  <!-- Google Font similar -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+    * {
+      box-sizing: border-box;
     }
 
-    header {
-      height: 60vh;
-      background-image: url("header.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
       color: white;
     }
 
-    .overlay {
+    header {
+      min-height: 100vh;
+      background-image: url("header.jpg");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* overlay oscuro */
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background: rgba(0, 0, 0, 0.45);
-      padding: 30px 40px;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      padding: 0 60px;
     }
 
     h1 {
-      margin: 0;
-      font-size: 3rem;
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+      line-height: 1.2;
     }
 
-    h2 {
-      margin-top: 10px;
-      font-weight: normal;
+    p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 0 30px;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -42,9 +75,11 @@
 <body>
 
   <header>
-    <div class="overlay">
+    <div class="hero-content">
       <h1>Ramón Gardella</h1>
-      <h2>Texto o subtítulo acá</h2>
+      <p>
+        Texto descriptivo breve. Quién sos, qué hacés o cómo querés que te perciban.
+      </p>
     </div>
   </header>
 
