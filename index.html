@@ -8,10 +8,11 @@
 
   <style>
     :root {
-      --bg-dark: #0f172a;
-      --bg-section: #020617;
-      --text-light: #e5e7eb;
-      --accent: #f59e0b;
+      --bg-main: #f8fafc;
+      --bg-alt: #eef2f7;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+      --accent: #2563eb;
     }
 
     * {
@@ -22,8 +23,8 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
+      background: var(--bg-main);
+      color: var(--text-main);
       line-height: 1.7;
     }
 
@@ -36,16 +37,34 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(2,6,23,0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(248,250,252,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e7eb;
       z-index: 10;
     }
 
+    .brand {
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .brand strong {
+      display: block;
+      font-weight: 600;
+    }
+
+    .brand span {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
     nav a {
-      color: var(--text-light);
+      color: var(--text-soft);
       text-decoration: none;
       margin-left: 25px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       position: relative;
@@ -55,7 +74,7 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -5px;
+      bottom: -4px;
       width: 0;
       height: 1px;
       background: var(--accent);
@@ -75,13 +94,14 @@
       position: relative;
       display: flex;
       align-items: center;
+      padding-top: 80px;
     }
 
     header::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(2,6,23,0.65);
+      background: rgba(248,250,252,0.75);
     }
 
     .hero {
@@ -90,21 +110,8 @@
       padding: 0 60px;
     }
 
-    .hero h1 {
-      font-size: 3.6rem;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: 1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 40px;
-    }
-
     .hero blockquote {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 300;
       margin-bottom: 30px;
       border-left: 3px solid var(--accent);
@@ -113,6 +120,7 @@
 
     .hero p {
       max-width: 700px;
+      color: var(--text-soft);
     }
 
     /* ---------- BUTTON ---------- */
@@ -121,18 +129,18 @@
       margin-top: 30px;
       padding: 14px 32px;
       border: 1px solid var(--accent);
-      color: var(--accent);
+      color: white;
+      background: var(--accent);
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: var(--accent);
-      color: #020617;
-      transform: translateY(-2px);
+      background: transparent;
+      color: var(--accent);
     }
 
     /* ---------- SECTIONS ---------- */
@@ -143,18 +151,17 @@
     }
 
     section.alt {
-      background: var(--bg-section);
+      background: var(--bg-alt);
     }
 
     section h3 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 30px;
-      color: white;
     }
 
     .quotes p {
       font-style: italic;
-      opacity: 0.85;
+      color: var(--text-soft);
     }
 
     .center {
@@ -169,8 +176,7 @@
       nav { padding: 20px 30px; }
       .hero { padding: 0 30px; }
       section { padding: 90px 30px; }
-      .hero h1 { font-size: 2.4rem; }
-      .hero blockquote { font-size: 1.4rem; }
+      .hero blockquote { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -178,7 +184,10 @@
 <body>
 
 <nav>
-  <div>Ramón Gardella</div>
+  <div class="brand">
+    <strong>Ramón Gardella</strong>
+    <span>Músico · Performer · Educador</span>
+  </div>
   <div>
     <a href="#inicio">Inicio</a>
     <a href="#conoceme">Conoceme</a>
@@ -189,9 +198,6 @@
 
 <header id="inicio">
   <div class="hero">
-    <h1>Ramón Gardella</h1>
-    <h2>Músico · Performer · Educador</h2>
-
     <blockquote>
       Escuchar el interior emocional de un músico
     </blockquote>
@@ -232,13 +238,8 @@
 
   <p>
     Las emociones de los ejecutantes de música no suelen ser tomadas en cuenta por las
-    instituciones. Acá les damos un lugar.
+    instituciones de enseñanza. Acá les damos un lugar.
   </p>
-
-  <div class="center">
-    <a class="btn" href="#ofrezco">Qué te ofrezco</a>
-    <a class="btn" href="#trabajo">Cómo trabajo</a>
-  </div>
 </section>
 
 <section id="trabajo">
