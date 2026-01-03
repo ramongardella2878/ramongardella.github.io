@@ -13,6 +13,7 @@
       --bg-alt: #eef2f7;
       --text-main: #0f172a;
       --text-soft: #475569;
+      --text-hero: #f8fafc;
       --accent: #a16207;
       --accent-hover: #78350f;
     }
@@ -28,6 +29,7 @@
       background: var(--bg-main);
       color: var(--text-main);
       line-height: 1.75;
+      text-align: center;
     }
 
     /* ---------- NAV ---------- */
@@ -37,7 +39,8 @@
       width: 100%;
       padding: 18px 60px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 60px;
       align-items: center;
       background: rgba(248,250,252,0.95);
       border-bottom: 1px solid #e5e7eb;
@@ -59,7 +62,7 @@
     nav a {
       color: var(--text-soft);
       text-decoration: none;
-      margin-left: 28px;
+      margin: 0 14px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -69,12 +72,13 @@
     nav a::after {
       content: "";
       position: absolute;
-      left: 0;
+      left: 50%;
       bottom: -4px;
       width: 0;
       height: 1px;
       background: var(--accent);
       transition: 0.3s;
+      transform: translateX(-50%);
     }
 
     nav a:hover::after {
@@ -90,6 +94,7 @@
       position: relative;
       display: flex;
       align-items: center;
+      justify-content: center;
       padding-top: 90px;
     }
 
@@ -97,13 +102,14 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255,255,255,0.15);
+      background: rgba(0,0,0,0.45);
     }
 
     .hero {
       position: relative;
       max-width: 1000px;
       padding: 0 60px;
+      color: var(--text-hero);
     }
 
     .hero-manifesto {
@@ -112,19 +118,20 @@
       font-weight: 600;
       white-space: nowrap;
       margin-bottom: 40px;
-      color: #020617;
+      color: var(--text-hero);
     }
 
     .hero p {
       max-width: 720px;
-      color: var(--text-soft);
+      margin: 0 auto;
+      color: #e5e7eb;
     }
 
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 40px;
-      padding: 15px 38px;
+      margin-top: 45px;
+      padding: 16px 40px;
       background: var(--accent);
       color: white;
       text-decoration: none;
@@ -140,8 +147,8 @@
 
     .btn:hover {
       background: var(--accent-hover);
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
     }
 
     /* ---------- SECTIONS ---------- */
@@ -160,14 +167,20 @@
       margin-bottom: 30px;
     }
 
+    section p {
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
     .quotes p {
       font-style: italic;
       color: var(--text-soft);
-      margin-bottom: 10px;
     }
 
-    .center {
-      text-align: center;
+    ol {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      text-align: left;
     }
 
     ol li {
@@ -182,7 +195,11 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 18px 30px; }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px 20px;
+      }
       .hero { padding: 0 30px; }
       section { padding: 90px 30px; }
     }
@@ -239,9 +256,7 @@
     Acompaño desde mi experiencia.
   </p>
 
-  <div class="center">
-    <a class="btn" href="#">Conoceme</a>
-  </div>
+  <a class="btn" href="#">Conoceme</a>
 </section>
 
 <section id="lugar" class="alt quotes">
@@ -266,7 +281,7 @@
 
   <p>
     Parto de la idea que el desarrollo pleno de una carrera musical no es posible
-    si el ejecutante no se desarrolla, a su vez, personalmente.
+    si el ejecutante de música no se desarrolla, a su vez, personalmente.
   </p>
 
   <p>
@@ -285,9 +300,7 @@
 
   <p><strong>Primer encuentro gratis para conocernos.</strong></p>
 
-  <div class="center">
-    <a class="btn" href="#">Reservá tu encuentro aquí</a>
-  </div>
+  <a class="btn" href="#">Reservá tu encuentro aquí</a>
 </section>
 
 </body>
