@@ -56,10 +56,15 @@
       color: var(--text-soft);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
     nav a {
       color: var(--text-soft);
       text-decoration: none;
-      margin-left: 28px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -79,6 +84,15 @@
 
     nav a:hover::after {
       width: 100%;
+    }
+
+    .lang-switch a {
+      font-size: 0.7rem;
+      opacity: 0.6;
+    }
+
+    .lang-switch a:hover {
+      opacity: 1;
     }
 
     /* ---------- HERO ---------- */
@@ -109,15 +123,18 @@
       color: var(--text-hero);
     }
 
-    /* ---------- MANIFESTO ---------- */
     .hero-manifesto {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.9rem;
+      font-size: 2.8rem;
       font-weight: 600;
-      line-height: 1.4;
+      line-height: 1.35;
       margin-bottom: 34px;
       opacity: 0;
       animation: manifest 1.2s ease forwards;
+    }
+
+    .hero-manifesto span {
+      display: block;
     }
 
     @keyframes manifest {
@@ -141,7 +158,7 @@
     .btn {
       display: inline-block;
       margin-top: 30px;
-      padding: 20px 54px;              /* MÁS GRANDE */
+      padding: 20px 54px;
       background: var(--btn-main);
       color: white;
       text-decoration: none;
@@ -218,18 +235,28 @@
     <strong>Ramón Gardella</strong>
     <span>Músico · Performer · Educador</span>
   </div>
-  <div>
+
+  <div class="nav-right">
     <a href="#inicio">Inicio</a>
     <a href="#conoceme">Conoceme</a>
-    <a href="#lugar">Lugar correcto</a>
-    <a href="#trabajo">Cómo trabajo</a>
+    <a href="#ofrezco">Qué te ofrezco</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#archivos">Archivos</a>
+
+    <div class="lang-switch">
+      <a href="#">ES</a> ·
+      <a href="#">EN</a> ·
+      <a href="#">DE</a> ·
+      <a href="#">PT</a>
+    </div>
   </div>
 </nav>
 
 <header id="inicio">
   <div class="hero">
     <div class="hero-manifesto">
-      Escuchar el interior emocional de un músico
+      <span>Escuchar el interior emocional</span>
+      <span>de un músico</span>
     </div>
 
     <p>
@@ -255,8 +282,8 @@
   </p>
 
   <p>
-    Hoy quiero ayudarte.<br>
-    No es terapia – no es motivacional –<br>
+    Hoy quiero ayudarte.  
+    No es terapia – no es motivacional –  
     Acompaño desde mi experiencia.
   </p>
 
@@ -274,7 +301,7 @@
   <p>"mirá todo lo que hacen los otros y lo poco que hago yo"</p>
   <p>"qué pensarán mis padres / amigos / pareja de mí"</p>
 
-  <p><strong>Acá le damos un lugar.</strong></p>
+  <p>Acá le damos un lugar.</p>
 </section>
 
 <section id="trabajo">
@@ -285,7 +312,7 @@
     si el ejecutante de música no se desarrolla, a su vez, personalmente.
   </p>
 
-  <p><strong>En los encuentros profundizamos en cuatro temas:</strong></p>
+  <p>En los encuentros profundizamos en cuatro temas:</p>
 
   <ol>
     <li>¿Qué siento al hacer música? ¿Qué me quiere decir eso?</li>
@@ -294,7 +321,7 @@
     <li>Organización y gestión de una carrera musical.</li>
   </ol>
 
-  <p><strong>Primer encuentro gratis para conocernos.</strong></p>
+  <p>Primer encuentro gratis para conocernos.</p>
 
   <a class="btn" href="#">Reservá tu encuentro aquí</a>
 </section>
