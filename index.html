@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Ramón Gardella</title>
 
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -56,22 +57,17 @@
       color: var(--text-soft);
     }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    nav a {
+    .nav-right a {
       color: var(--text-soft);
       text-decoration: none;
+      margin-left: 28px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       position: relative;
     }
 
-    nav a::after {
+    .nav-right a::after {
       content: "";
       position: absolute;
       left: 0;
@@ -82,17 +78,8 @@
       transition: 0.3s;
     }
 
-    nav a:hover::after {
+    .nav-right a:hover::after {
       width: 100%;
-    }
-
-    .lang-switch a {
-      font-size: 0.7rem;
-      opacity: 0.6;
-    }
-
-    .lang-switch a:hover {
-      opacity: 1;
     }
 
     /* ---------- HERO ---------- */
@@ -116,6 +103,28 @@
       background: rgba(0,0,0,0.45);
     }
 
+    /* ---------- LANG OVER HERO ---------- */
+    .lang-overlay {
+      position: absolute;
+      top: 110px;
+      right: 60px;
+      display: flex;
+      gap: 14px;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      z-index: 5;
+    }
+
+    .lang-overlay a {
+      color: rgba(248,250,252,0.8);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .lang-overlay a:hover {
+      opacity: 1;
+    }
+
     .hero {
       position: relative;
       max-width: 900px;
@@ -123,11 +132,12 @@
       color: var(--text-hero);
     }
 
+    /* ---------- MANIFESTO ---------- */
     .hero-manifesto {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.8rem;
       font-weight: 600;
-      line-height: 1.35;
+      line-height: 1.4;
       margin-bottom: 34px;
       opacity: 0;
       animation: manifest 1.2s ease forwards;
@@ -220,6 +230,7 @@
 
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
+      .lang-overlay { right: 25px; top: 100px; font-size: 0.65rem; }
       .hero { padding: 0 25px; }
       section { padding: 50px 25px; }
       section.alt { padding: 40px 25px; }
@@ -242,17 +253,17 @@
     <a href="#ofrezco">Qué te ofrezco</a>
     <a href="#contacto">Contacto</a>
     <a href="#archivos">Archivos</a>
-
-    <div class="lang-switch">
-      <a href="#">ES</a> ·
-      <a href="#">EN</a> ·
-      <a href="#">DE</a> ·
-      <a href="#">PT</a>
-    </div>
   </div>
 </nav>
 
 <header id="inicio">
+  <div class="lang-overlay">
+    <a href="#">ES</a>
+    <a href="#">EN</a>
+    <a href="#">DE</a>
+    <a href="#">PT</a>
+  </div>
+
   <div class="hero">
     <div class="hero-manifesto">
       <span>Escuchar el interior emocional</span>
@@ -282,8 +293,8 @@
   </p>
 
   <p>
-    Hoy quiero ayudarte.  
-    No es terapia – no es motivacional –  
+    Hoy quiero ayudarte.<br>
+    No es terapia – no es motivacional –<br>
     Acompaño desde mi experiencia.
   </p>
 
