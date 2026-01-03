@@ -13,8 +13,8 @@
       --text-main: #0f172a;
       --text-soft: #475569;
       --text-hero: #f8fafc;
-      --accent: #a16207;
-      --accent-hover: #78350f;
+      --btn-main: #1f2933;
+      --btn-hover: #000000;
     }
 
     * {
@@ -73,7 +73,7 @@
       bottom: -4px;
       width: 0;
       height: 1px;
-      background: var(--accent);
+      background: var(--btn-main);
       transition: 0.3s;
     }
 
@@ -109,12 +109,26 @@
       color: var(--text-hero);
     }
 
+    /* ---------- MANIFESTO ---------- */
     .hero-manifesto {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.8rem;
+      font-size: 2.9rem;
       font-weight: 600;
-      line-height: 1.4;              /* MÁS AIRE */
-      margin-bottom: 34px;           /* MÁS ESPACIO */
+      line-height: 1.4;
+      margin-bottom: 34px;
+      opacity: 0;
+      animation: manifest 1.2s ease forwards;
+    }
+
+    @keyframes manifest {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero p {
@@ -126,15 +140,15 @@
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 26px;
-      padding: 14px 36px;
-      background: var(--accent);
+      margin-top: 30px;
+      padding: 20px 54px;              /* MÁS GRANDE */
+      background: var(--btn-main);
       color: white;
       text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 2px;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      border-radius: 2px;
+      border-radius: 3px;
       transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
@@ -142,9 +156,9 @@
     }
 
     .btn:hover {
-      background: var(--accent-hover);
+      background: var(--btn-hover);
       transform: translateY(-3px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.3);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
     }
 
     /* ---------- SECTIONS ---------- */
@@ -157,7 +171,7 @@
 
     section.alt {
       background: var(--bg-alt);
-      padding: 45px 60px;   /* MÁS CHICO EL RECUADRO */
+      padding: 45px 60px;
     }
 
     section h3 {
@@ -166,7 +180,7 @@
     }
 
     section p {
-      margin-bottom: 12px;  /* MENOS ESPACIO ENTRE TEXTOS */
+      margin-bottom: 12px;
     }
 
     .quotes p {
@@ -175,7 +189,6 @@
       margin-bottom: 8px;
     }
 
-    /* ---------- LISTA CENTRADA ---------- */
     ol {
       max-width: 620px;
       margin: 0 auto 22px;
@@ -242,8 +255,8 @@
   </p>
 
   <p>
-    Hoy quiero ayudarte.  
-    No es terapia – no es motivacional –  
+    Hoy quiero ayudarte.<br>
+    No es terapia – no es motivacional –<br>
     Acompaño desde mi experiencia.
   </p>
 
