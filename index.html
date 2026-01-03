@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Ramón Gardella</title>
 
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -28,8 +27,7 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg-main);
       color: var(--text-main);
-      line-height: 1.75;
-      text-align: center;
+      line-height: 1.6;
     }
 
     /* ---------- NAV ---------- */
@@ -37,10 +35,9 @@
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 18px 60px;
+      padding: 16px 60px;
       display: flex;
-      justify-content: center;
-      gap: 60px;
+      justify-content: space-between;
       align-items: center;
       background: rgba(248,250,252,0.95);
       border-bottom: 1px solid #e5e7eb;
@@ -62,7 +59,7 @@
     nav a {
       color: var(--text-soft);
       text-decoration: none;
-      margin: 0 14px;
+      margin-left: 28px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -72,13 +69,12 @@
     nav a::after {
       content: "";
       position: absolute;
-      left: 50%;
+      left: 0;
       bottom: -4px;
       width: 0;
       height: 1px;
       background: var(--accent);
       transition: 0.3s;
-      transform: translateX(-50%);
     }
 
     nav a:hover::after {
@@ -96,6 +92,7 @@
       align-items: center;
       justify-content: center;
       padding-top: 90px;
+      text-align: center;
     }
 
     header::before {
@@ -107,22 +104,21 @@
 
     .hero {
       position: relative;
-      max-width: 1000px;
-      padding: 0 60px;
+      max-width: 900px;
+      padding: 0 40px;
       color: var(--text-hero);
     }
 
     .hero-manifesto {
       font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 600;
-      white-space: nowrap;
-      margin-bottom: 40px;
-      color: var(--text-hero);
+      line-height: 1.25;
+      margin-bottom: 24px;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 700px;
       margin: 0 auto;
       color: #e5e7eb;
     }
@@ -130,8 +126,8 @@
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 45px;
-      padding: 16px 40px;
+      margin-top: 28px;
+      padding: 14px 36px;
       background: var(--accent);
       color: white;
       text-decoration: none;
@@ -139,7 +135,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       border-radius: 2px;
-      transition: 
+      transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         background 0.25s ease;
@@ -147,15 +143,16 @@
 
     .btn:hover {
       background: var(--accent-hover);
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.3);
     }
 
     /* ---------- SECTIONS ---------- */
     section {
-      padding: 120px 60px;
-      max-width: 900px;
+      padding: 70px 60px;
+      max-width: 860px;
       margin: auto;
+      text-align: center;
     }
 
     section.alt {
@@ -163,13 +160,17 @@
     }
 
     section h3 {
-      font-size: 2rem;
-      margin-bottom: 30px;
+      font-size: 1.9rem;
+      margin-bottom: 24px;
     }
 
     section p {
-      max-width: 760px;
-      margin: 0 auto 20px;
+      margin-bottom: 14px;
+    }
+
+    section p strong {
+      font-size: 1.05rem;
+      color: var(--text-main);
     }
 
     .quotes p {
@@ -179,29 +180,19 @@
 
     ol {
       max-width: 760px;
-      margin: 0 auto 30px;
+      margin: 0 auto 20px;
       text-align: left;
     }
 
     ol li {
-      margin-bottom: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .hero-manifesto {
-        font-size: 2.2rem;
-        white-space: normal;
-      }
+      margin-bottom: 10px;
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 16px 20px;
-      }
-      .hero { padding: 0 30px; }
-      section { padding: 90px 30px; }
+      nav { padding: 16px 30px; }
+      .hero { padding: 0 25px; }
+      section { padding: 60px 25px; }
+      .hero-manifesto { font-size: 2rem; }
     }
   </style>
 </head>
@@ -251,8 +242,8 @@
   </p>
 
   <p>
-    Hoy quiero ayudarte.<br>
-    No es terapia – no es motivacional –<br>
+    Hoy quiero ayudarte.  
+    No es terapia – no es motivacional –  
     Acompaño desde mi experiencia.
   </p>
 
@@ -272,7 +263,8 @@
 
   <p>
     Las emociones de los ejecutantes de música son generalmente no tomadas en cuenta
-    por las instituciones de enseñanza. Acá le damos un lugar.
+    por las instituciones de enseñanza.  
+    <strong>Acá le damos un lugar.</strong>
   </p>
 </section>
 
@@ -289,7 +281,7 @@
     de progreso existen y son un llamado a analizar este ámbito personal.
   </p>
 
-  <p>En los encuentros profundizamos en cuatro temas:</p>
+  <p><strong>En los encuentros profundizamos en cuatro temas:</strong></p>
 
   <ol>
     <li>¿Qué siento al hacer música? ¿Qué me quiere decir eso?</li>
