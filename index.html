@@ -113,8 +113,8 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 2.8rem;
       font-weight: 600;
-      line-height: 1.25;
-      margin-bottom: 24px;
+      line-height: 1.4;              /* MÁS AIRE */
+      margin-bottom: 34px;           /* MÁS ESPACIO */
     }
 
     .hero p {
@@ -126,7 +126,7 @@
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 28px;
+      margin-top: 26px;
       padding: 14px 36px;
       background: var(--accent);
       color: white;
@@ -149,7 +149,7 @@
 
     /* ---------- SECTIONS ---------- */
     section {
-      padding: 70px 60px;
+      padding: 60px 60px;
       max-width: 860px;
       margin: auto;
       text-align: center;
@@ -157,31 +157,31 @@
 
     section.alt {
       background: var(--bg-alt);
+      padding: 45px 60px;   /* MÁS CHICO EL RECUADRO */
     }
 
     section h3 {
       font-size: 1.9rem;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     section p {
-      margin-bottom: 14px;
-    }
-
-    section p strong {
-      font-size: 1.05rem;
-      color: var(--text-main);
+      margin-bottom: 12px;  /* MENOS ESPACIO ENTRE TEXTOS */
     }
 
     .quotes p {
       font-style: italic;
       color: var(--text-soft);
+      margin-bottom: 8px;
     }
 
+    /* ---------- LISTA CENTRADA ---------- */
     ol {
-      max-width: 760px;
-      margin: 0 auto 20px;
-      text-align: left;
+      max-width: 620px;
+      margin: 0 auto 22px;
+      padding-left: 0;
+      list-style-position: inside;
+      text-align: center;
     }
 
     ol li {
@@ -191,7 +191,8 @@
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
       .hero { padding: 0 25px; }
-      section { padding: 60px 25px; }
+      section { padding: 50px 25px; }
+      section.alt { padding: 40px 25px; }
       .hero-manifesto { font-size: 2rem; }
     }
   </style>
@@ -232,8 +233,7 @@
 
   <p>
     Hace 10 años, cuando comenzaba estudios de posgrado en Alemania, tuve una crisis
-    que me impedía subirme al escenario y tocar. Cada vez que lo hacía pensaba que todo
-    lo que hacía estaba mal, que era un fracasado y que esto no era para mí.
+    que me impedía subirme al escenario y tocar.
   </p>
 
   <p>
@@ -261,11 +261,7 @@
   <p>"mirá todo lo que hacen los otros y lo poco que hago yo"</p>
   <p>"qué pensarán mis padres / amigos / pareja de mí"</p>
 
-  <p>
-    Las emociones de los ejecutantes de música son generalmente no tomadas en cuenta
-    por las instituciones de enseñanza.  
-    <strong>Acá le damos un lugar.</strong>
-  </p>
+  <p><strong>Acá le damos un lugar.</strong></p>
 </section>
 
 <section id="trabajo">
@@ -274,11 +270,6 @@
   <p>
     Parto de la idea que el desarrollo pleno de una carrera musical no es posible
     si el ejecutante de música no se desarrolla, a su vez, personalmente.
-  </p>
-
-  <p>
-    Eventos como pánico escénico, frustración, comparación con colegas o impedimento
-    de progreso existen y son un llamado a analizar este ámbito personal.
   </p>
 
   <p><strong>En los encuentros profundizamos en cuatro temas:</strong></p>
