@@ -35,9 +35,6 @@
       top: 0;
       width: 100%;
       padding: 16px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       background: rgba(248,250,252,0.95);
       border-bottom: 1px solid #e5e7eb;
       z-index: 10;
@@ -53,8 +50,8 @@
 
     /* ---------- CONTENT ---------- */
     main {
-      max-width: 680px;
-      margin: 140px auto 90px;
+      max-width: 620px;
+      margin: 140px auto 100px;
       padding: 0 30px;
     }
 
@@ -63,16 +60,11 @@
       font-size: 2.4rem;
       font-weight: 600;
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
     }
 
     p {
       margin-bottom: 28px;
-      transition: color 0.3s ease;
-    }
-
-    p:hover {
-      color: #020617;
     }
 
     /* ---------- INTRO ---------- */
@@ -87,37 +79,28 @@
     .emphasis {
       font-style: italic;
       color: var(--text-soft);
-      margin: 34px 0;
+      margin: 26px 0;
     }
 
-    /* ---------- QUESTIONS ---------- */
-    .questions {
-      margin: 60px 0;
-      text-align: center;
+    /* ---------- PAUSE BLOCK ---------- */
+    .pause {
+      margin: 50px 0;
     }
 
-    .questions p {
-      font-size: 1.1rem;
+    .pause p {
+      margin-bottom: 10px;
+    }
+
+    /* ---------- CLOSING ---------- */
+    .closing {
+      margin-top: 50px;
       font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    /* ---------- FADE ON SCROLL ---------- */
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .fade.visible {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 50px;
+      margin-top: 60px;
       padding: 18px 48px;
       background: var(--btn-main);
       color: white;
@@ -164,75 +147,56 @@
 
 <main>
 
-  <h1 class="fade">Conoceme</h1>
+  <h1>Conoceme</h1>
 
-  <p class="intro fade">
-    Soy una persona que decidió dedicarse a la música y para eso dejé mi país natal
-    Argentina para mudarme a Alemania y continuar mis estudios de postgrado en percusión.
+  <p class="intro">
+    Decidí hacer estudios de posgrado en percusión y, para eso, me fui de Argentina a Alemania.
   </p>
 
-  <p class="fade">
-    A los pocos meses de llegar a Colonia (ciudad en la que vivo desde el 2015) tuve
-    una fuerte crisis que me impedía subirme al escenario y tocar, mejor dicho, cada
-    vez que me subía y lo hacía pensaba que todo lo que hacía estaba mal, que era un
-    fracasado y que esto no era para mí.
+  <p>
+    A los pocos meses, algo se rompió.
   </p>
 
-  <p class="fade">
-    A partir de ese momento comenzó un proceso en mi vida que me lleva a ser, 10 años
-    después, un músico exitoso con una carrera en auge, colaborando y tocando con
-    ensambles y orquestas muy importantes de Europa y haciendo diferentes cooperaciones
-    con países de Latinoamérica.
+  <p>
+    Subirme al escenario se volvió imposible.
   </p>
 
-  <p class="fade">
-    Este proceso que incluye terapias, cursos, talleres, encuentros, golpes y más
-    dudas que certezas no fue solo musical sino, más bien, personal. Un proceso que me
-    llevó a darme cuenta que no podía seguir desarrollando mi música sino me ponía a
-    analizar lo que sentía y lo que me estaba pasando por dentro.
+  <p class="emphasis">
+    Cada vez que tocaba sentía que todo estaba mal.  
+    Que yo estaba mal.
   </p>
 
-  <p class="fade">
-    Hoy estoy aquí donde estoy porque me dediqué a escuchar lo que me pasaba y a
-    trabajar sobre eso.
+  <p>
+    Ese quiebre inició un proceso que no fue solo musical, sino profundamente personal.
   </p>
 
-  <div class="questions fade">
-    <p>¿Tan lejos me tuve que ir para darme cuenta?</p>
-    <p>¿Fue necesario hacer esos 14.000 km de viaje y dejar todo lo que tenía para empezar de vuelta en un país ajeno y frío?</p>
+  <p>
+    Con el tiempo entendí que no podía desarrollar mi música sin escuchar lo que me estaba pasando por dentro.
+  </p>
+
+  <div class="pause">
+    <p>Hoy estoy acá por eso.</p>
+    <p>Por haberme detenido.</p>
+    <p>Por haber escuchado.</p>
+    <p>Por haber trabajado sobre lo que aparecía.</p>
   </div>
 
-  <p class="fade">
-    Hoy lo veo en retrospectiva y fue la mejor (y más difícil) decisión que pude haber tomado.
+  <p class="closing">
+    Si algo de esto te resuena, no estás solo.
   </p>
 
-  <p class="fade">
-    Ahora que pude entender muchas cosas del proceso estoy listo para ayudar a aquellas
-    personas que les pase algo parecido y/o resuenen con esto.
+  <p class="closing">
+    Acompaño a músicos y artistas que sienten que algo se traba cuando hacen lo que aman.
   </p>
 
-  <p class="fade">
-    Una exitosa carrera musical no se logra solo con el estudio y perfección de un
-    instrumento sino con un desarrollo personal a la par.
+  <p class="closing">
+    Porque una carrera musical no se construye solo con técnica,
+    sino también con un desarrollo personal que vaya en paralelo.
   </p>
 
-  <a href="index.html#contacto" class="btn fade">Volver</a>
+  <a href="index.html#contacto" class="btn">Contacto</a>
 
 </main>
-
-<script>
-  const faders = document.querySelectorAll('.fade');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  faders.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
