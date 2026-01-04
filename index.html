@@ -16,6 +16,7 @@
       --text-hero: #f8fafc;
       --btn-main: #1f2933;
       --btn-hover: #000000;
+      --accent: #1e3a8a;
     }
 
     * {
@@ -159,12 +160,13 @@
 
     section.alt {
       background: var(--bg-alt);
-      padding: 45px 60px;
+      padding: 60px;
     }
 
     section h3 {
-      font-size: 1.9rem;
+      font-size: 2rem;
       margin-bottom: 22px;
+      font-family: 'Montserrat', sans-serif;
     }
 
     /* ---------- STORY ---------- */
@@ -188,101 +190,78 @@
       color: var(--text-soft);
     }
 
-    .story-quote p {
-      margin-bottom: 6px;
-    }
-
-    .story-close {
-      margin: 40px 0 20px;
-    }
-
     .story-close p {
       margin-bottom: 6px;
     }
 
-    /* ---------- OFFERS ---------- */
-.offers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 36px;
-  margin-top: 60px;
-}
-
-.offer-card {
-  display: block;
-  padding: 48px 36px;
-  border-radius: 10px;
-  text-decoration: none;
-  background: linear-gradient(135deg, #1e3a8a, #0f172a);
-  color: white;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transform: scale(1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* brillo suave */
-.offer-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top left,
-    rgba(255,255,255,0.18),
-    transparent 60%
-  );
-}
-
-.offer-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-}
-
-.offer-card h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 18px;
-  position: relative;
-}
-
-.offer-card p {
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.offer-card .highlight {
-  margin-top: 22px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  background: rgba(255,255,255,0.15);
-  padding: 10px 16px;
-  border-radius: 6px;
-  display: inline-block;
-}
+    /* ---------- QUOTES ---------- */
     .quotes p {
       font-style: italic;
       color: var(--text-soft);
       margin-bottom: 8px;
     }
 
-    ol {
-      max-width: 620px;
-      margin: 0 auto 22px;
-      padding-left: 0;
-      list-style-position: inside;
+    /* ---------- OFFERS INTRO ---------- */
+    .offers-intro {
+      max-width: 720px;
+      margin: 0 auto 70px;
+      padding: 40px 30px;
+      background: rgba(30, 58, 138, 0.08);
+      border-radius: 12px;
     }
 
-    ol li {
+    .offers-intro p {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+    }
+
+    /* ---------- OFFERS CARDS ---------- */
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 36px;
+    }
+
+    .offer-card {
+      display: block;
+      padding: 48px 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #0f172a);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .offer-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .offer-card p {
+      font-size: 1.05rem;
       margin-bottom: 10px;
+    }
+
+    .highlight {
+      margin-top: 18px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.15);
+      padding: 10px 16px;
+      border-radius: 6px;
+      display: inline-block;
     }
 
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
-      .hero-manifesto { font-size: 2rem; }
       section { padding: 50px 25px; }
-      section.alt { padding: 40px 25px; }
+      .hero-manifesto { font-size: 2rem; }
     }
   </style>
 </head>
@@ -311,8 +290,8 @@
     </div>
 
     <p>
-      Encuentros individuales y grupales para músicos y ejecutantes
-      de otras artes que deseen profundizar su proceso personal.
+      Encuentros individuales y grupales para músicos
+      que desean profundizar su proceso personal.
     </p>
 
     <a href="#conoceme" class="btn">Comenzá ahora</a>
@@ -320,18 +299,15 @@
 </header>
 
 <section id="conoceme" class="story">
-
   <p class="story-intro">
     ¿Te sentís mal, frustrado, cansado?<br>
     <span>Lo sé y te entiendo.</span>
   </p>
 
-  <div class="story-block">
-    <p>
-      Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
-      atravesé una crisis que me impedía subirme al escenario y tocar.
-    </p>
-  </div>
+  <p>
+    Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
+    atravesé una crisis que me impedía subirme al escenario y tocar.
+  </p>
 
   <div class="story-quote">
     <p>Que todo estaba mal.</p>
@@ -339,14 +315,8 @@
     <p>Que esto no era para mí.</p>
   </div>
 
-  <div class="story-block">
-    <p>
-      Ahí entendí que no podía seguir desarrollando mi música
-      sin escuchar lo que me estaba pasando por dentro.
-    </p>
-  </div>
-
   <div class="story-close">
+    <p>Ahí entendí que no podía seguir desarrollando mi música sin escuchar lo que me estaba pasando por dentro.</p>
     <p>Desde entonces estoy en proceso.</p>
     <p>Hoy quiero ayudarte.</p>
     <p>No es terapia. No es motivacional.</p>
@@ -354,7 +324,6 @@
   </div>
 
   <a class="btn" href="#trabajo">Qué te ofrezco</a>
-
 </section>
 
 <section id="lugar" class="alt quotes">
@@ -372,50 +341,28 @@
 </section>
 
 <section id="trabajo">
-  /* ---------- OFFERS INTRO (TEXTO RESALTADO) ---------- */
-.offers-intro {
-  max-width: 720px;
-  margin: 0 auto 70px;
-  padding: 40px 30px;
-  background: rgba(30, 58, 138, 0.08);
-  border-radius: 12px;
-  text-align: center;
-}
+  <div class="offers-intro">
+    <h3>Qué te ofrezco</h3>
+    <p>
+      Espacios de encuentro para músicos y artistas que buscan
+      acompañamiento personal en su proceso.
+    </p>
+  </div>
 
-.offers-intro h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.3rem;
-  margin-bottom: 18px;
-}
-
-.offers-intro p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: var(--text-soft);
-}
- <div class="offers-intro">
-  <h3>Qué te ofrezco</h3>
-  <p>
-    Espacios de encuentro para músicos y artistas que buscan
-    acompañamiento personal en su proceso.
-  </p>
-</div>
   <div class="offers">
-
     <a href="encuentros.html#individual" class="offer-card">
       <h4>Encuentros individuales</h4>
       <p>Sesiones de 60 minutos</p>
       <p>Modalidad online</p>
-      <p class="highlight">Primer encuentro gratis</p>
+      <span class="highlight">Primer encuentro gratis</span>
     </a>
 
     <a href="encuentros.html#grupal" class="offer-card">
       <h4>Encuentros grupales</h4>
       <p>Espacios compartidos</p>
       <p>Modalidad online</p>
-      <p class="highlight">Grupos reducidos</p>
+      <span class="highlight">Grupos reducidos</span>
     </a>
-
   </div>
 </section>
 
