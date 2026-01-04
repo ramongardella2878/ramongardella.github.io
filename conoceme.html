@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Conoceme · Ramón Gardella</title>
+  <title>Algo de lo que soy · Ramón Gardella</title>
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
@@ -26,7 +26,8 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg-main);
       color: var(--text-main);
-      line-height: 1.8;
+      line-height: 1.9;
+      font-size: 18.5px; /* ⬅️ texto base más grande */
     }
 
     /* ---------- NAV ---------- */
@@ -50,62 +51,62 @@
 
     /* ---------- CONTENT ---------- */
     main {
-      max-width: 620px;
-      margin: 140px auto 100px;
+      max-width: 640px;
+      margin: 150px auto 110px;
       padding: 0 30px;
     }
 
     h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       font-weight: 600;
       text-align: center;
-      margin-bottom: 70px;
+      margin-bottom: 80px;
     }
 
     p {
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     /* ---------- INTRO ---------- */
     .intro {
-      font-size: 1.35rem;
-      line-height: 1.9;
+      font-size: 1.55rem; /* ⬅️ intro claramente protagonista */
+      line-height: 2;
       font-weight: 500;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     /* ---------- EMPHASIS ---------- */
     .emphasis {
       font-style: italic;
       color: var(--text-soft);
-      margin: 26px 0;
+      margin: 34px 0;
     }
 
     /* ---------- PAUSE BLOCK ---------- */
     .pause {
-      margin: 50px 0;
+      margin: 60px 0;
     }
 
     .pause p {
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     /* ---------- CLOSING ---------- */
     .closing {
-      margin-top: 50px;
+      margin-top: 55px;
       font-weight: 500;
     }
 
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 60px;
-      padding: 18px 48px;
+      margin-top: 70px;
+      padding: 20px 54px;
       background: var(--btn-main);
       color: white;
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       letter-spacing: 3px;
       text-transform: uppercase;
       border-radius: 3px;
@@ -119,21 +120,25 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        font-size: 17px; /* mobile un poco más chico pero cómodo */
+      }
+
       nav {
         padding: 16px 30px;
       }
 
       main {
-        margin-top: 120px;
+        margin-top: 130px;
         padding: 0 20px;
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
 
       .intro {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
     }
   </style>
