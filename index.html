@@ -118,11 +118,6 @@
     .lang-overlay a {
       color: rgba(248,250,252,0.8);
       text-decoration: none;
-      transition: opacity 0.2s ease;
-    }
-
-    .lang-overlay a:hover {
-      opacity: 1;
     }
 
     .hero {
@@ -148,14 +143,8 @@
     }
 
     @keyframes manifest {
-      from {
-        opacity: 0;
-        transform: translateY(14px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .hero p {
@@ -176,10 +165,7 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       border-radius: 3px;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     }
 
     .btn:hover {
@@ -208,6 +194,43 @@
 
     section p {
       margin-bottom: 12px;
+    }
+
+    /* ---------- STORY ---------- */
+    .story {
+      max-width: 720px;
+    }
+
+    .story-intro {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .story-intro span {
+      font-weight: 600;
+    }
+
+    .story-block {
+      margin-bottom: 36px;
+    }
+
+    .story-quote {
+      margin: 40px auto;
+      font-style: italic;
+      color: var(--text-soft);
+    }
+
+    .story-quote p {
+      margin-bottom: 6px;
+    }
+
+    .story-close {
+      margin: 40px 0 20px;
+    }
+
+    .story-close p {
+      margin-bottom: 6px;
     }
 
     .quotes p {
@@ -279,24 +302,38 @@
   </div>
 </header>
 
-<section id="conoceme">
-  <p><strong>¿Te sentís mal, frustrado, cansado? Lo sé y te entiendo.</strong></p>
-
-  <p>
-    Hace 10 años, cuando comenzaba estudios de posgrado en Alemania, tuve una crisis
-    que me impedía subirme al escenario y tocar.
+<section id="conoceme" class="story">
+  <p class="story-intro">
+    ¿Te sentís mal, frustrado, cansado?<br>
+    <span>Lo sé y te entiendo.</span>
   </p>
 
-  <p>
-    Hace 10 años estoy en proceso que me llevó a darme cuenta que no podía seguir
-    desarrollando mi música sin analizar lo que sentía y lo que me estaba pasando por dentro.
-  </p>
+  <div class="story-block">
+    <p>
+      Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
+      tuve una crisis que me impedía subirme al escenario y tocar.
+    </p>
+  </div>
 
-  <p>
-    Hoy quiero ayudarte.<br>
-    No es terapia – no es motivacional –<br>
-    Acompaño desde mi experiencia.
-  </p>
+  <div class="story-quote">
+    <p>Cada vez que lo hacía pensaba que todo estaba mal.</p>
+    <p>Que era un fracasado.</p>
+    <p>Que esto no era para mí.</p>
+  </div>
+
+  <div class="story-block">
+    <p>
+      Hace 10 años estoy en proceso y me di cuenta que no podía seguir
+      desarrollando mi música sin analizar lo que sentía y lo que me
+      estaba pasando por dentro.
+    </p>
+  </div>
+
+  <div class="story-close">
+    <p>Hoy quiero ayudarte.</p>
+    <p>No es terapia. No es motivacional.</p>
+    <p>Acompaño desde mi experiencia.</p>
+  </div>
 
   <a class="btn" href="#">Conoceme</a>
 </section>
