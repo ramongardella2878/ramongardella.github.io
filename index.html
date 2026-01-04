@@ -31,7 +31,7 @@
       line-height: 1.6;
     }
 
-    /* NAV */
+    /* ---------- NAV ---------- */
     nav {
       position: fixed;
       top: 0;
@@ -64,9 +64,25 @@
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
+      position: relative;
     }
 
-    /* HERO */
+    .nav-right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--btn-main);
+      transition: 0.3s;
+    }
+
+    .nav-right a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- HERO ---------- */
     header {
       min-height: 100vh;
       background-image: url("header.jpg");
@@ -87,6 +103,23 @@
       background: rgba(0,0,0,0.45);
     }
 
+    /* ---------- LANG OVER HERO ---------- */
+    .lang-overlay {
+      position: absolute;
+      top: 110px;
+      right: 60px;
+      display: flex;
+      gap: 14px;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      z-index: 5;
+    }
+
+    .lang-overlay a {
+      color: rgba(248,250,252,0.8);
+      text-decoration: none;
+    }
+
     .hero {
       position: relative;
       max-width: 900px;
@@ -94,14 +127,33 @@
       color: var(--text-hero);
     }
 
+    /* ---------- MANIFESTO ---------- */
     .hero-manifesto {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.8rem;
       font-weight: 600;
       line-height: 1.4;
       margin-bottom: 34px;
+      opacity: 0;
+      animation: manifest 1.2s ease forwards;
     }
 
+    .hero-manifesto span {
+      display: block;
+    }
+
+    @keyframes manifest {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #e5e7eb;
+    }
+
+    /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
       margin-top: 30px;
@@ -122,8 +174,9 @@
       box-shadow: 0 12px 26px rgba(0,0,0,0.35);
     }
 
+    /* ---------- SECTIONS ---------- */
     section {
-      padding: 70px 60px;
+      padding: 60px 60px;
       max-width: 860px;
       margin: auto;
       text-align: center;
@@ -131,12 +184,80 @@
 
     section.alt {
       background: var(--bg-alt);
+      padding: 45px 60px;
+    }
+
+    section h3 {
+      font-size: 1.9rem;
+      margin-bottom: 22px;
+    }
+
+    section p {
+      margin-bottom: 12px;
+    }
+
+    /* ---------- STORY ---------- */
+    .story {
+      max-width: 720px;
+    }
+
+    .story-intro {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .story-intro span {
+      font-weight: 600;
+    }
+
+    .story-block {
+      margin-bottom: 36px;
+    }
+
+    .story-quote {
+      margin: 40px auto;
+      font-style: italic;
+      color: var(--text-soft);
+    }
+
+    .story-quote p {
+      margin-bottom: 6px;
+    }
+
+    .story-close {
+      margin: 40px 0 20px;
+    }
+
+    .story-close p {
+      margin-bottom: 6px;
+    }
+
+    .quotes p {
+      font-style: italic;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    ol {
+      max-width: 620px;
+      margin: 0 auto 22px;
+      padding-left: 0;
+      list-style-position: inside;
+      text-align: center;
+    }
+
+    ol li {
+      margin-bottom: 10px;
     }
 
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
+      .lang-overlay { right: 25px; top: 100px; font-size: 0.65rem; }
+      .hero { padding: 0 25px; }
+      section { padding: 50px 25px; }
+      section.alt { padding: 40px 25px; }
       .hero-manifesto { font-size: 2rem; }
-      section { padding: 60px 25px; }
     }
   </style>
 </head>
@@ -151,31 +272,106 @@
 
   <div class="nav-right">
     <a href="#inicio">Inicio</a>
-    <a href="conoceme.html">Conoceme</a>
+    <a href="#conoceme">Conoceme</a>
+    <a href="#ofrezco">Qué te ofrezco</a>
     <a href="#contacto">Contacto</a>
+    <a href="#archivos">Archivos</a>
   </div>
 </nav>
 
 <header id="inicio">
+  <div class="lang-overlay">
+    <a href="#">ES</a>
+    <a href="#">EN</a>
+    <a href="#">DE</a>
+    <a href="#">PT</a>
+  </div>
+
   <div class="hero">
     <div class="hero-manifesto">
-      Escuchar el interior emocional<br>
-      de un músico
+      <span>Escuchar el interior emocional</span>
+      <span>de un músico</span>
     </div>
 
     <p>
-      Encuentros individuales y grupales para músicos
-      que desean profundizar su proceso personal.
+      Encuentros individuales, grupales y personalizados para músicos y ejecutantes
+      de otras artes que deseen comenzar (o profundizar) su proceso personal.
     </p>
 
-    <a href="conoceme.html" class="btn">Conoceme</a>
+    <a href="#conoceme" class="btn">Comenzá ahora</a>
   </div>
 </header>
 
-<section id="contacto" class="alt">
-  <h3>Contacto</h3>
-  <p>Primer encuentro sin compromiso.</p>
-  <a class="btn" href="mailto:tucorreo@ejemplo.com">Escribime</a>
+<section id="conoceme" class="story">
+  <p class="story-intro">
+    ¿Te sentís mal, frustrado, cansado?<br>
+    <span>Lo sé y te entiendo.</span>
+  </p>
+
+  <div class="story-block">
+    <p>
+      Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
+      tuve una crisis que me impedía subirme al escenario y tocar.
+    </p>
+  </div>
+
+  <div class="story-quote">
+    <p>Cada vez que lo hacía pensaba que todo estaba mal.</p>
+    <p>Que era un fracasado.</p>
+    <p>Que esto no era para mí.</p>
+  </div>
+
+  <div class="story-block">
+    <p>
+      Hace 10 años estoy en proceso y me di cuenta que no podía seguir
+      desarrollando mi música sin analizar lo que sentía y lo que me
+      estaba pasando por dentro.
+    </p>
+  </div>
+
+  <div class="story-close">
+    <p>Hoy quiero ayudarte.</p>
+    <p>No es terapia. No es motivacional.</p>
+    <p>Acompaño desde mi experiencia.</p>
+  </div>
+
+  <a class="btn" href="#">Conoceme</a>
+</section>
+
+<section id="lugar" class="alt quotes">
+  <h3>Estás en el lugar correcto</h3>
+
+  <p>"cuando toco la paso mal"</p>
+  <p>"nunca me salen los pasajes difíciles"</p>
+  <p>"me la paso practicando y sé que cuando haya público esto no me va a salir"</p>
+  <p>"no puedo ganar dinero con la música"</p>
+  <p>"estoy estancado en mi carrera"</p>
+  <p>"mirá todo lo que hacen los otros y lo poco que hago yo"</p>
+  <p>"qué pensarán mis padres / amigos / pareja de mí"</p>
+
+  <p>Acá le damos un lugar.</p>
+</section>
+
+<section id="trabajo">
+  <h3>Cómo trabajo</h3>
+
+  <p>
+    Parto de la idea que el desarrollo pleno de una carrera musical no es posible
+    si el ejecutante de música no se desarrolla, a su vez, personalmente.
+  </p>
+
+  <p>En los encuentros profundizamos en cuatro temas:</p>
+
+  <ol>
+    <li>¿Qué siento al hacer música? ¿Qué me quiere decir eso?</li>
+    <li>Reglas prácticas para volver a hacer de la práctica un ámbito de juego y disfrute.</li>
+    <li>El proyecto personal de cada músico.</li>
+    <li>Organización y gestión de una carrera musical.</li>
+  </ol>
+
+  <p>Primer encuentro gratis para conocernos.</p>
+
+  <a class="btn" href="#">Reservá tu encuentro aquí</a>
 </section>
 
 </body>
