@@ -4,21 +4,13 @@
   <meta charset="UTF-8">
   <title>Conoceme · Ramón Gardella</title>
 
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-main: #f8fafc;
-      --bg-alt: #eef2f7;
       --text-main: #0f172a;
       --text-soft: #475569;
-      --btn-main: #1f2933;
-      --btn-hover: #000000;
-    }
-
-    * {
-      box-sizing: border-box;
     }
 
     body {
@@ -26,47 +18,28 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg-main);
       color: var(--text-main);
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
-    /* ---------- NAV ---------- */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
       padding: 16px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       background: rgba(248,250,252,0.95);
       border-bottom: 1px solid #e5e7eb;
-      z-index: 10;
     }
 
-    .brand strong {
-      display: block;
-      font-size: 0.9rem;
-    }
-
-    .brand span {
-      font-size: 0.7rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    .nav-right a {
-      color: var(--text-soft);
+    nav a {
       text-decoration: none;
-      margin-left: 28px;
+      color: var(--text-soft);
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
-    /* ---------- CONTENT ---------- */
     main {
-      max-width: 760px;
+      max-width: 680px;
       margin: 140px auto 80px;
       padding: 0 30px;
     }
@@ -74,59 +47,46 @@
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.4rem;
-      font-weight: 600;
-      margin-bottom: 40px;
       text-align: center;
+      margin-bottom: 50px;
     }
 
     p {
-      margin-bottom: 22px;
+      margin-bottom: 26px;
     }
 
-    .quote {
-      margin: 50px 0;
-      font-style: italic;
-      color: var(--text-soft);
-      text-align: center;
-    }
-
-    .closing {
-      margin-top: 50px;
+    .intro {
+      font-size: 1.25rem;
       font-weight: 500;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 50px;
-      padding: 18px 48px;
-      background: var(--btn-main);
-      color: white;
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-radius: 3px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    .emphasis {
+      font-style: italic;
+      color: var(--text-soft);
     }
 
-    .btn:hover {
-      background: var(--btn-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    .questions {
+      text-align: center;
+      margin: 50px 0;
+      font-weight: 500;
+    }
+
+    /* Fade */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     @media (max-width: 768px) {
-      nav {
-        padding: 16px 30px;
-      }
-
       main {
         margin-top: 120px;
         padding: 0 20px;
-      }
-
-      h1 {
-        font-size: 2rem;
       }
     }
   </style>
@@ -135,86 +95,55 @@
 <body>
 
 <nav>
-  <div class="brand">
-    <strong>Ramón Gardella</strong>
-    <span>Músico · Performer · Educador</span>
-  </div>
-
-  <div class="nav-right">
-    <a href="index.html">Inicio</a>
-  </div>
+  <a href="index.html">Inicio</a>
 </nav>
 
 <main>
 
-  <h1>Conoceme</h1>
+  <h1 class="fade">Conoceme</h1>
 
-  <p>
-    Soy una persona que decidió dedicarse a la música.
-    Para hacerlo, dejé mi país natal, Argentina, y me mudé a Alemania para continuar
-    mis estudios de posgrado en percusión.
+  <p class="intro fade">
+    Soy una persona que decidió dedicarse a la música y para eso dejé mi país natal
+    Argentina para mudarme a Alemania y continuar mis estudios de postgrado en percusión.
   </p>
 
-  <p>
-    A los pocos meses de llegar a Colonia —ciudad en la que vivo desde 2015— atravesé
+  <p class="fade">
+    A los pocos meses de llegar a Colonia (ciudad en la que vivo desde el 2015) tuve
     una fuerte crisis que me impedía subirme al escenario y tocar.
-    O, mejor dicho: cada vez que lo hacía, pensaba que todo estaba mal.
-    Que era un fracasado.
-    Que esto no era para mí.
   </p>
 
-  <p>
-    A partir de ese momento comenzó un proceso en mi vida que me lleva a ser hoy,
-    diez años después, un músico con una carrera en pleno desarrollo, colaborando
-    y tocando con ensambles y orquestas muy importantes de Europa, y realizando
-    diferentes cooperaciones con países de Latinoamérica.
+  <p class="emphasis fade">Que era un fracasado.</p>
+  <p class="emphasis fade">Que esto no era para mí.</p>
+
+  <p class="fade">
+    A partir de ese momento comenzó un proceso en mi vida que me lleva a ser,
+    10 años después, un músico exitoso con una carrera en auge.
   </p>
 
-  <p>
-    Ese proceso —que incluyó terapias, cursos, talleres, encuentros, golpes y más
-    dudas que certezas— no fue solo musical.
-    Fue, sobre todo, personal.
-  </p>
-
-  <p>
-    Un recorrido que me llevó a darme cuenta de que no podía seguir desarrollando
-    mi música sin detenerme a escuchar lo que sentía y a entender qué me estaba
-    pasando por dentro.
-  </p>
-
-  <p>
-    Hoy estoy donde estoy porque me dediqué a escucharme y a trabajar sobre eso.
-  </p>
-
-  <div class="quote">
+  <div class="questions fade">
     <p>¿Tan lejos me tuve que ir para darme cuenta?</p>
-    <p>¿Fue necesario recorrer esos 14.000 km y empezar de nuevo?</p>
+    <p>¿Fue necesario recorrer esos 14.000 km?</p>
   </div>
 
-  <p>
-    Sí.
+  <p class="fade">
+    Una exitosa carrera musical no se logra solo con el estudio y perfección de un
+    instrumento sino con un desarrollo personal a la par.
   </p>
-
-  <p>
-    Hoy, visto en retrospectiva, fue la decisión más difícil —y también la mejor—
-    que pude haber tomado.
-  </p>
-
-  <p class="closing">
-    Ahora que pude comprender muchas cosas de este proceso, siento que estoy listo
-    para acompañar a otras personas a las que les pase algo parecido, o que
-    simplemente resuenen con esta historia.
-  </p>
-
-  <p class="closing">
-    Porque una carrera musical no se construye solo a partir del estudio y la
-    perfección de un instrumento, sino también —y sobre todo— desde un desarrollo
-    personal que vaya en paralelo.
-  </p>
-
-  <a href="index.html#contacto" class="btn">Volver</a>
 
 </main>
+
+<script>
+  const faders = document.querySelectorAll('.fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
