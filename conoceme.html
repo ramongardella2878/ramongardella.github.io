@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Conoceme · Ramón Gardella</title>
 
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -11,6 +12,13 @@
       --bg-main: #f8fafc;
       --text-main: #0f172a;
       --text-soft: #475569;
+      --btn-main: #1f2933;
+      --btn-hover: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -21,57 +29,80 @@
       line-height: 1.8;
     }
 
+    /* ---------- NAV ---------- */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
       padding: 16px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background: rgba(248,250,252,0.95);
       border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
     }
 
     nav a {
-      text-decoration: none;
       color: var(--text-soft);
+      text-decoration: none;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
+    /* ---------- CONTENT ---------- */
     main {
       max-width: 680px;
-      margin: 140px auto 80px;
+      margin: 140px auto 90px;
       padding: 0 30px;
     }
 
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.4rem;
+      font-weight: 600;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     p {
-      margin-bottom: 26px;
+      margin-bottom: 28px;
+      transition: color 0.3s ease;
     }
 
+    p:hover {
+      color: #020617;
+    }
+
+    /* ---------- INTRO ---------- */
     .intro {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
+      line-height: 1.9;
       font-weight: 500;
+      margin-bottom: 50px;
     }
 
+    /* ---------- EMPHASIS ---------- */
     .emphasis {
       font-style: italic;
       color: var(--text-soft);
+      margin: 34px 0;
     }
 
+    /* ---------- QUESTIONS ---------- */
     .questions {
+      margin: 60px 0;
       text-align: center;
-      margin: 50px 0;
-      font-weight: 500;
     }
 
-    /* Fade */
+    .questions p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    /* ---------- FADE ON SCROLL ---------- */
     .fade {
       opacity: 0;
       transform: translateY(20px);
@@ -83,10 +114,43 @@
       transform: translateY(0);
     }
 
+    /* ---------- BUTTON ---------- */
+    .btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 18px 48px;
+      background: var(--btn-main);
+      color: white;
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--btn-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    }
+
     @media (max-width: 768px) {
+      nav {
+        padding: 16px 30px;
+      }
+
       main {
         margin-top: 120px;
         padding: 0 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .intro {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -109,31 +173,56 @@
 
   <p class="fade">
     A los pocos meses de llegar a Colonia (ciudad en la que vivo desde el 2015) tuve
-    una fuerte crisis que me impedía subirme al escenario y tocar.
+    una fuerte crisis que me impedía subirme al escenario y tocar, mejor dicho, cada
+    vez que me subía y lo hacía pensaba que todo lo que hacía estaba mal, que era un
+    fracasado y que esto no era para mí.
   </p>
 
-  <p class="emphasis fade">Que era un fracasado.</p>
-  <p class="emphasis fade">Que esto no era para mí.</p>
+  <p class="fade">
+    A partir de ese momento comenzó un proceso en mi vida que me lleva a ser, 10 años
+    después, un músico exitoso con una carrera en auge, colaborando y tocando con
+    ensambles y orquestas muy importantes de Europa y haciendo diferentes cooperaciones
+    con países de Latinoamérica.
+  </p>
 
   <p class="fade">
-    A partir de ese momento comenzó un proceso en mi vida que me lleva a ser,
-    10 años después, un músico exitoso con una carrera en auge.
+    Este proceso que incluye terapias, cursos, talleres, encuentros, golpes y más
+    dudas que certezas no fue solo musical sino, más bien, personal. Un proceso que me
+    llevó a darme cuenta que no podía seguir desarrollando mi música sino me ponía a
+    analizar lo que sentía y lo que me estaba pasando por dentro.
+  </p>
+
+  <p class="fade">
+    Hoy estoy aquí donde estoy porque me dediqué a escuchar lo que me pasaba y a
+    trabajar sobre eso.
   </p>
 
   <div class="questions fade">
     <p>¿Tan lejos me tuve que ir para darme cuenta?</p>
-    <p>¿Fue necesario recorrer esos 14.000 km?</p>
+    <p>¿Fue necesario hacer esos 14.000 km de viaje y dejar todo lo que tenía para empezar de vuelta en un país ajeno y frío?</p>
   </div>
+
+  <p class="fade">
+    Hoy lo veo en retrospectiva y fue la mejor (y más difícil) decisión que pude haber tomado.
+  </p>
+
+  <p class="fade">
+    Ahora que pude entender muchas cosas del proceso estoy listo para ayudar a aquellas
+    personas que les pase algo parecido y/o resuenen con esto.
+  </p>
 
   <p class="fade">
     Una exitosa carrera musical no se logra solo con el estudio y perfección de un
     instrumento sino con un desarrollo personal a la par.
   </p>
 
+  <a href="index.html#contacto" class="btn fade">Volver</a>
+
 </main>
 
 <script>
   const faders = document.querySelectorAll('.fade');
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
