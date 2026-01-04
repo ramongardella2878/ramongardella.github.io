@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuentros · Ramón Gardella</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-alt: #eef2f7;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+      --btn-main: #1f2933;
+      --btn-hover: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(248,250,252,0.95);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-right: 24px;
+    }
+
+    /* ---------- CONTENT ---------- */
+    main {
+      max-width: 720px;
+      margin: 150px auto 120px;
+      padding: 0 30px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 28px;
+    }
+
+    section {
+      margin-bottom: 90px;
+    }
+
+    section.alt {
+      background: var(--bg-alt);
+      padding: 60px;
+      border-radius: 8px;
+    }
+
+    ul {
+      margin: 20px 0 30px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
+    /* ---------- BUTTON ---------- */
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 18px 48px;
+      background: var(--btn-main);
+      color: white;
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--btn-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 30px;
+      }
+
+      main {
+        margin-top: 130px;
+        padding: 0 20px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      section.alt {
+        padding: 40px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="conoceme.html">Conoceme</a>
+</nav>
+
+<main>
+
+  <h1>Encuentros</h1>
+
+  <!-- ---------- INDIVIDUAL ---------- -->
+  <section id="individual">
+    <h2>Encuentros individuales</h2>
+
+    <p>
+      Los encuentros individuales son espacios uno a uno, pensados para músicos y artistas
+      que sienten que algo se traba en su relación con la música o con su proceso creativo.
+    </p>
+
+    <p>
+      No se trata de clases tradicionales ni de correcciones técnicas.
+      Es un espacio de escucha y acompañamiento, donde el punto de partida
+      es lo que te está pasando hoy.
+    </p>
+
+    <ul>
+      <li>Duración: 60 minutos</li>
+      <li>Modalidad: online</li>
+      <li>Encuentros personalizados</li>
+      <li>Primer encuentro gratuito y sin compromiso</li>
+    </ul>
+
+    <p>
+      El primer encuentro sirve para conocernos, escuchar qué te trae hasta acá
+      y ver si este espacio es adecuado para vos.
+    </p>
+
+    <a href="index.html#contacto" class="btn">Quiero un encuentro</a>
+  </section>
+
+  <!-- ---------- GRUPAL ---------- -->
+  <section id="grupal" class="alt">
+    <h2>Encuentros grupales</h2>
+
+    <p>
+      Los encuentros grupales proponen un espacio compartido entre músicos,
+      donde las experiencias individuales se enriquecen a partir del intercambio.
+    </p>
+
+    <p>
+      Escuchar a otros, poner en palabras lo que a veces cuesta nombrar
+      y descubrir que muchas dificultades no son personales, sino comunes.
+    </p>
+
+    <ul>
+      <li>Modalidad: online</li>
+      <li>Grupos reducidos</li>
+      <li>Duración variable según el formato</li>
+      <li>Procesos de varias semanas</li>
+    </ul>
+
+    <p>
+      Los grupos se abren en momentos puntuales del año.
+      Si te interesa, podés escribirme y te aviso cuando haya nuevas fechas.
+    </p>
+
+    <a href="index.html#contacto" class="btn">Consultar próximos grupos</a>
+  </section>
+
+</main>
+
+</body>
+</html>
