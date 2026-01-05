@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Encuentros · Ramón Gardella</title>
+  <title>Encuentros individuales y grupales · Ramón Gardella</title>
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
 
     /* ---------- CONTENT ---------- */
     main {
-      max-width: 720px;
+      max-width: 760px;
       margin: 150px auto 120px;
       padding: 0 30px;
     }
@@ -63,13 +63,19 @@
       font-size: 2.6rem;
       font-weight: 600;
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 90px;
     }
 
     h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 24px;
+      font-size: 2rem;
+      margin-bottom: 28px;
+    }
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      margin: 50px 0 20px;
     }
 
     p {
@@ -77,28 +83,46 @@
     }
 
     section {
-      margin-bottom: 90px;
+      margin-bottom: 120px;
     }
 
     section.alt {
       background: var(--bg-alt);
-      padding: 60px;
-      border-radius: 8px;
+      padding: 70px 60px;
+      border-radius: 14px;
     }
 
-    ul {
-      margin: 20px 0 30px;
+    /* ---------- INFO LIST ---------- */
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
+    }
+
+    /* ---------- TOPICS ---------- */
+    ol {
+      margin: 20px 0 40px;
       padding-left: 20px;
     }
 
-    ul li {
-      margin-bottom: 12px;
+    ol li {
+      margin-bottom: 14px;
     }
 
-    /* ---------- BUTTON ---------- */
+    /* ---------- CTA ---------- */
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 20px;
       padding: 18px 48px;
       background: var(--btn-main);
       color: white;
@@ -116,6 +140,12 @@
       box-shadow: 0 12px 26px rgba(0,0,0,0.35);
     }
 
+    .note {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-top: 14px;
+    }
+
     @media (max-width: 768px) {
       nav {
         padding: 16px 30px;
@@ -128,10 +158,11 @@
 
       h1 {
         font-size: 2.2rem;
+        margin-bottom: 70px;
       }
 
       section.alt {
-        padding: 40px 25px;
+        padding: 50px 30px;
       }
     }
   </style>
@@ -146,11 +177,17 @@
 
 <main>
 
-  <h1>Encuentros</h1>
-
-  <!-- ---------- INDIVIDUAL ---------- -->
+  <!-- ===== INDIVIDUALES ===== -->
   <section id="individual">
+
     <h2>Encuentros individuales</h2>
+
+    <ul class="info-list">
+      <li>Duración: 60 minutos</li>
+      <li>Modalidad: online</li>
+      <li>Encuentros personalizados</li>
+      <li>Primer encuentro gratuito y sin compromiso</li>
+    </ul>
 
     <p>
       Los encuentros individuales son espacios uno a uno, pensados para músicos y artistas
@@ -163,23 +200,25 @@
       es lo que te está pasando hoy.
     </p>
 
-    <ul>
-      <li>Duración: 60 minutos</li>
-      <li>Modalidad: online</li>
-      <li>Encuentros personalizados</li>
-      <li>Primer encuentro gratuito y sin compromiso</li>
-    </ul>
+    <h3>Temáticas a abordar</h3>
 
-    <p>
-      El primer encuentro sirve para conocernos, escuchar qué te trae hasta acá
-      y ver si este espacio es adecuado para vos.
-    </p>
+    <ol>
+      <li>Indagar de dónde viene el malestar al hacer mi música.</li>
+      <li>Reglas prácticas para volver a hacer de la práctica instrumental un ámbito de juego y disfrute.</li>
+      <li>El proyecto personal de cada músico. ¿Tengo uno o simplemente toco siempre para otro/s?</li>
+      <li>Organización y gestión de una carrera musical: estudios en el extranjero, posgrado, contacto con universidades.</li>
+    </ol>
 
-    <a href="index.html#contacto" class="btn">Quiero un encuentro</a>
+    <div class="cta">
+      <a href="encuentros-individuales.html" class="btn">Más info</a>
+      <p class="note">Información detallada sobre el proceso.</p>
+    </div>
+
   </section>
 
-  <!-- ---------- GRUPAL ---------- -->
+  <!-- ===== GRUPALES ===== -->
   <section id="grupal" class="alt">
+
     <h2>Encuentros grupales</h2>
 
     <p>
@@ -188,23 +227,22 @@
     </p>
 
     <p>
-      Escuchar a otros, poner en palabras lo que a veces cuesta nombrar
-      y descubrir que muchas dificultades no son personales, sino comunes.
+      Escuchar a otros, reconocer dificultades comunes y descubrir
+      que muchas veces no estamos solos en lo que nos pasa.
     </p>
 
-    <ul>
+    <ul class="info-list">
       <li>Modalidad: online</li>
       <li>Grupos reducidos</li>
-      <li>Duración variable según el formato</li>
       <li>Procesos de varias semanas</li>
+      <li>Fechas puntuales a lo largo del año</li>
     </ul>
 
-    <p>
-      Los grupos se abren en momentos puntuales del año.
-      Si te interesa, podés escribirme y te aviso cuando haya nuevas fechas.
-    </p>
+    <div class="cta">
+      <a href="index.html#contacto" class="btn">Consultar próximos grupos</a>
+      <p class="note">Sin compromiso.</p>
+    </div>
 
-    <a href="index.html#contacto" class="btn">Consultar próximos grupos</a>
   </section>
 
 </main>
