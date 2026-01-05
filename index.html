@@ -266,6 +266,40 @@
       letter-spacing: 1px;
     }
 
+    /* ---------- ES ESTO PARA MI ---------- */
+    .para-mi-text {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      line-height: 1.45;
+      color: var(--text-main);
+    }
+
+    .para-mi-text p {
+      margin-bottom: 16px;
+    }
+
+    .para-mi-text .intro {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .para-mi-text .requisitos {
+      font-weight: 500;
+    }
+
+    .para-mi-text .frases {
+      margin-top: 22px;
+      font-style: italic;
+      color: var(--text-soft);
+    }
+
+    .para-mi-text .frases p {
+      margin-bottom: 10px;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 16px 30px 6px; }
       section { padding: 50px 25px; }
@@ -320,7 +354,58 @@
   </div>
 </header>
 
-<!-- (todo lo anterior queda igual hasta la sección trabajo) -->
+<section id="conoceme" class="story">
+  <p class="story-intro">
+    ¿Te sentís mal, frustrado, cansado?<br>
+    <span>Lo sé y te entiendo.</span>
+  </p>
+
+  <p>
+    Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
+    atravesé una crisis que me impedía subirme al escenario y tocar.
+  </p>
+
+  <div class="story-quote">
+    <p>Que todo estaba mal.</p>
+    <p>Que era un fracasado.</p>
+    <p>Que esto no era para mí.</p>
+  </div>
+
+  <div class="story-close">
+    <p>Ahí entendí que no podía seguir desarrollando mi música sin escuchar lo que me estaba pasando por dentro.</p>
+    <p>Desde entonces estoy en proceso.</p>
+    <p>Hoy quiero ayudarte.</p>
+    <p>No es terapia. No es motivacional.</p>
+    <p>Acompaño desde mi experiencia.</p>
+  </div>
+
+  <a class="btn" href="#trabajo">Qué te ofrezco</a>
+</section>
+
+<section id="lugar" class="alt">
+  <h3>Estás en el lugar correcto</h3>
+
+  <p>
+    Diseñé este espacio para acompañarte en tu <strong>vida musical</strong>, dando escucha
+    a lo que sentís al momento de hacer música.
+  </p>
+
+  <p>
+    Parto de la idea de que el desarrollo pleno de una carrera musical no es posible
+    si el ejecutante no se desarrolla, a su vez, personalmente.
+  </p>
+
+  <p>
+    Como músicos, pasamos gran parte —si no toda— nuestra vida tocando para otros:
+    en concursos, clases, audiciones, exámenes de ingreso.
+  </p>
+
+  <p>
+    Experiencias como el pánico escénico, la frustración, la comparación constante con
+    colegas o la sensación de estancamiento en la carrera existen, y no son fallas:
+    son un llamado a mirar y trabajar este plano personal.
+  </p>
+</section>
 
 <section id="trabajo">
   <h3>Qué te ofrezco</h3>
@@ -345,41 +430,34 @@
   </div>
 </section>
 
-<!-- NUEVA SECCIÓN -->
 <section id="para-mi">
   <h3>¿Es esto para mí?</h3>
 
-  <p>
-    Para saber si este espacio puede servirte, no hace falta encajar en todo,
-    pero probablemente te reconozcas en varios de estos puntos.
-  </p>
+  <div class="para-mi-text">
+    <p class="intro">
+      Para saber si esto es para vos, tenes que cumplir estos requisitos:
+    </p>
 
-  <p>
-    Sos músico, estudiante de música, profesional de la música
-    o creador artístico.
-  </p>
+    <p class="requisitos">sos musico, estudiante de musica, profesional de la musica y/o creador artistico.</p>
+    <p class="requisitos">sentis que algo en tu vida artistica musical está trabado</p>
+    <p class="requisitos">Algo te cuesta y no se soluciona perfeccionando tus habilidades fisicas</p>
+    <p class="requisitos">Tenes ganas de vivir plenamente tu arte y expandir tu carrera</p>
+    <p class="requisitos">
+      te sentis identificado con alguna (o todas) estas frases:
+    </p>
 
-  <p>
-    Sentís que algo en tu vida artística o musical está trabado.
-    Algo cuesta y no se resuelve simplemente perfeccionando
-    tus habilidades físicas o técnicas.
-  </p>
+    <div class="frases">
+      <p>"cuando toco la paso mal"</p>
+      <p>"nunca me salen los pasajes difíciles"</p>
+      <p>"me la paso practicando y se que cuando haya publico esto no me va a salir"</p>
+      <p>"No puedo ganar dinero con la música"</p>
+      <p>"estoy estancado en mi carrera"</p>
+      <p>"mira todo lo que hacen los otros y lo poco que hago yo"</p>
+      <p>"que pensaran mis padres/amigos/pareja de mi?"</p>
+    </div>
 
-  <p>
-    Tenés ganas de vivir plenamente tu arte.
-  </p>
-
-  <p><em>Quizás también te identificás con alguna de estas frases:</em></p>
-
-  <p>“cuando toco la paso mal”</p>
-  <p>“nunca me salen los pasajes difíciles”</p>
-  <p>“me la paso practicando y sé que cuando haya público esto no me va a salir”</p>
-  <p>“no puedo ganar dinero con la música”</p>
-  <p>“estoy estancado en mi carrera”</p>
-  <p>“miro todo lo que hacen los otros y lo poco que hago yo”</p>
-  <p>“qué pensarán mis padres, amigos o pareja de mí”</p>
-
-  <a href="contacto.html" class="btn">Si llegaste hasta acá, escribime</a>
+    <a href="contacto.html" class="btn">Si llegaste hasta acá, escribime</a>
+  </div>
 </section>
 
 <section id="contacto" class="alt">
