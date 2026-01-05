@@ -83,6 +83,23 @@
       width: 100%;
     }
 
+    /* ---------- NAV ESPACIO ---------- */
+    .nav-espacio {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .nav-espacio .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
     /* ---------- HERO ---------- */
     header {
       min-height: 100vh;
@@ -208,80 +225,64 @@
       gap: 36px;
     }
 
-   .offer-card {
-  display: block;
-  padding: 52px 40px;
-  border-radius: 14px;
-  background:
-    linear-gradient(
-      160deg,
-      #0f172a 0%,
-      #1e293b 45%,
-      #0f172a 100%
-    );
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
+    .offer-card {
+      display: block;
+      padding: 52px 40px;
+      border-radius: 14px;
+      background: linear-gradient(
+        160deg,
+        #0f172a 0%,
+        #1e293b 45%,
+        #0f172a 100%
+      );
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
 
-/* brillo suave */
-.offer-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255,255,255,0.18),
-      transparent 60%
-    );
-}
+    .offer-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at top left,
+        rgba(255,255,255,0.18),
+        transparent 60%
+      );
+    }
 
-/* línea de acento */
-.offer-card::after {
-  content: "";
-  position: absolute;
-  left: 20%;
-  right: 20%;
-  bottom: 22px;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-}
-.offer-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 28px 70px rgba(0,0,0,0.45);
-}
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 70px rgba(0,0,0,0.45);
+    }
 
- .offer-card h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.7rem;
-  margin-bottom: 22px;
-  letter-spacing: 0.5px;
-}
+    .offer-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7rem;
+      margin-bottom: 22px;
+      position: relative;
+    }
 
-.offer-card p {
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-  opacity: 0.9;
-}
+    .offer-card p {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      opacity: 0.9;
+      position: relative;
+    }
 
-.highlight {
-  margin-top: 26px;
-  font-weight: 700;
-  background: rgba(255,255,255,0.12);
-  padding: 12px 18px;
-  border-radius: 999px;
-  display: inline-block;
-  letter-spacing: 1px;
-}
+    .highlight {
+      margin-top: 26px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.12);
+      padding: 12px 18px;
+      border-radius: 999px;
+      display: inline-block;
+      letter-spacing: 1px;
+      position: relative;
+    }
 
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
@@ -303,6 +304,9 @@
   <div class="nav-right">
     <a href="#inicio">Inicio</a>
     <a href="conoceme.html">Conoceme</a>
+    <a href="#lugar" class="nav-espacio">
+      <span class="dot"></span> El espacio
+    </a>
     <a href="#trabajo">Qué te ofrezco</a>
     <a href="#contacto">Contacto</a>
   </div>
@@ -365,6 +369,7 @@
 
   <p>Acá le damos un lugar.</p>
 </section>
+
 <section id="trabajo">
   <h3>Qué te ofrezco</h3>
 
