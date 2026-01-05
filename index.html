@@ -16,7 +16,6 @@
       --text-hero: #f8fafc;
       --btn-main: #1f2933;
       --btn-hover: #000000;
-      --accent: #1e3a8a;
     }
 
     * {
@@ -37,13 +36,16 @@
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 16px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 16px 60px 8px;
       background: rgba(248,250,252,0.95);
       border-bottom: 1px solid #e5e7eb;
       z-index: 10;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .brand strong {
@@ -83,21 +85,24 @@
       width: 100%;
     }
 
-    /* ---------- NAV ESPACIO ---------- */
-    .nav-espacio {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 600;
-      color: var(--text-main);
+    /* ---------- LANG SWITCH ---------- */
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 14px;
+      margin-top: 6px;
+      font-size: 0.65rem;
+      letter-spacing: 1px;
     }
 
-    .nav-espacio .dot {
-      width: 6px;
-      height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: inline-block;
+    .lang-switch a {
+      text-decoration: none;
+      color: var(--text-soft);
+    }
+
+    .lang-switch a.active {
+      font-weight: 600;
+      color: var(--text-main);
     }
 
     /* ---------- HERO ---------- */
@@ -110,7 +115,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-top: 90px;
+      padding-top: 120px;
       text-align: center;
     }
 
@@ -238,20 +243,7 @@
       color: white;
       text-decoration: none;
       text-align: center;
-      position: relative;
-      overflow: hidden;
       transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .offer-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        circle at top left,
-        rgba(255,255,255,0.18),
-        transparent 60%
-      );
     }
 
     .offer-card:hover {
@@ -263,14 +255,12 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 1.7rem;
       margin-bottom: 22px;
-      position: relative;
     }
 
     .offer-card p {
       font-size: 1.05rem;
       margin-bottom: 10px;
       opacity: 0.9;
-      position: relative;
     }
 
     .highlight {
@@ -281,14 +271,14 @@
       border-radius: 999px;
       display: inline-block;
       letter-spacing: 1px;
-      position: relative;
     }
 
     @media (max-width: 768px) {
-      nav { padding: 16px 30px; }
+      nav { padding: 16px 30px 6px; }
       section { padding: 50px 25px; }
       .hero-manifesto { font-size: 2rem; }
       section h3 { font-size: 2.1rem; margin-bottom: 40px; }
+      .lang-switch { justify-content: center; }
     }
   </style>
 </head>
@@ -296,19 +286,26 @@
 <body>
 
 <nav>
-  <div class="brand">
-    <strong>Ramón Gardella</strong>
-    <span>Músico · Performer · Educador</span>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Músico · Performer · Educador</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="#inicio">Inicio</a>
+      <a href="conoceme.html">Conoceme</a>
+      <a href="#lugar">El espacio</a>
+      <a href="#trabajo">Qué te ofrezco</a>
+      <a href="#contacto">Contacto</a>
+    </div>
   </div>
 
-  <div class="nav-right">
-    <a href="#inicio">Inicio</a>
-    <a href="conoceme.html">Conoceme</a>
-    <a href="#lugar" class="nav-espacio">
-      <span class="dot"></span> El espacio
-    </a>
-    <a href="#trabajo">Qué te ofrezco</a>
-    <a href="#contacto">Contacto</a>
+  <div class="lang-switch">
+    <a href="#" class="active">ES</a>
+    <a href="#">EN</a>
+    <a href="#">DE</a>
+    <a href="#">PT</a>
   </div>
 </nav>
 
