@@ -31,6 +31,7 @@
       line-height: 1.6;
     }
 
+    /* ---------- NAV ---------- */
     nav {
       position: fixed;
       top: 0;
@@ -84,6 +85,7 @@
       width: 100%;
     }
 
+    /* ---------- LANG SWITCH ---------- */
     .lang-switch {
       display: flex;
       justify-content: flex-end;
@@ -103,6 +105,7 @@
       color: var(--text-main);
     }
 
+    /* ---------- HERO ---------- */
     header {
       min-height: 100vh;
       background-image: url("header.jpg");
@@ -148,6 +151,7 @@
       color: #e5e7eb;
     }
 
+    /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
       margin-top: 30px;
@@ -168,6 +172,7 @@
       box-shadow: 0 12px 26px rgba(0,0,0,0.35);
     }
 
+    /* ---------- SECTIONS ---------- */
     section {
       padding: 60px 60px;
       max-width: 860px;
@@ -186,6 +191,32 @@
       margin-bottom: 60px;
     }
 
+    /* ---------- STORY ---------- */
+    .story {
+      max-width: 720px;
+    }
+
+    .story-intro {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .story-intro span {
+      font-weight: 600;
+    }
+
+    .story-quote {
+      margin: 40px auto;
+      font-style: italic;
+      color: var(--text-soft);
+    }
+
+    .story-close p {
+      margin-bottom: 6px;
+    }
+
+    /* ---------- OFFERS ---------- */
     .offers {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -234,6 +265,14 @@
       display: inline-block;
       letter-spacing: 1px;
     }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px 6px; }
+      section { padding: 50px 25px; }
+      .hero-manifesto { font-size: 2rem; }
+      section h3 { font-size: 2.1rem; margin-bottom: 40px; }
+      .lang-switch { justify-content: center; }
+    }
   </style>
 </head>
 
@@ -272,18 +311,72 @@
 
     <p>
       Encuentros individuales y grupales para músicos que desean profundizar su proceso personal y así desarrollar una vida musical sana.
+      <br><br>
+      Dirigido a estudiantes de música, egresados, profesionales, amateurs o personas que trabajen creando un producto artístico.
     </p>
 
     <a href="#conoceme" class="btn">Comenzá ahora</a>
   </div>
 </header>
 
+<section id="conoceme" class="story">
+  <p class="story-intro">
+    ¿Te sentís mal, frustrado, cansado?<br>
+    <span>Lo sé y te entiendo.</span>
+  </p>
+
+  <p>
+    Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
+    atravesé una crisis que me impedía subirme al escenario y tocar.
+  </p>
+
+  <div class="story-quote">
+    <p>Que todo estaba mal.</p>
+    <p>Que era un fracasado.</p>
+    <p>Que esto no era para mí.</p>
+  </div>
+
+  <div class="story-close">
+    <p>Ahí entendí que no podía seguir desarrollando mi música sin escuchar lo que me estaba pasando por dentro.</p>
+    <p>Desde entonces estoy en proceso.</p>
+    <p>Hoy quiero ayudarte.</p>
+    <p>No es terapia. No es motivacional.</p>
+    <p>Acompaño desde mi experiencia.</p>
+  </div>
+
+  <a class="btn" href="#trabajo">Qué te ofrezco</a>
+</section>
+
+<section id="lugar" class="alt">
+  <h3>Estás en el lugar correcto</h3>
+
+  <p>
+    Diseñé este espacio para acompañarte en tu <strong>vida musical</strong>, dando escucha
+    a lo que sentís al momento de hacer música.
+  </p>
+
+  <p>
+    Parto de la idea de que el desarrollo pleno de una carrera musical no es posible
+    si el ejecutante no se desarrolla, a su vez, personalmente.
+  </p>
+
+  <p>
+    Como músicos, pasamos gran parte —si no toda— nuestra vida tocando para otros:
+    en concursos, clases, audiciones, exámenes de ingreso.
+  </p>
+
+  <p>
+    Experiencias como el pánico escénico, la frustración, la comparación constante con
+    colegas o la sensación de estancamiento en la carrera existen, y no son fallas:
+    son un llamado a mirar y trabajar este plano personal.
+  </p>
+</section>
+
 <section id="trabajo">
   <h3>Qué te ofrezco</h3>
 
   <div class="offers">
 
-    <!-- ENCUENTROS INDIVIDUALES -->
     <a href="encuentros.html#individual" class="offer-card">
       <h4>Encuentros individuales</h4>
       <p>Sesiones de 60 minutos</p>
@@ -293,7 +386,6 @@
       <span class="highlight">Reservá tu lugar</span>
     </a>
 
-    <!-- ENCUENTROS GRUPALES -->
     <a href="encuentros.html#grupal" class="offer-card">
       <h4>Encuentros grupales</h4>
       <p>modalidad online</p>
