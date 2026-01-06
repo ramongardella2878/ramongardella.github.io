@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Media · Ramón Gardella</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-alt: #eef2f7;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+      --btn-main: #1f2933;
+      --btn-hover: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(248,250,252,0.95);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-right: 24px;
+    }
+
+    /* ---------- CONTENT ---------- */
+    main {
+      max-width: 820px;
+      margin: 160px auto 120px;
+      padding: 0 30px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: 0 auto 80px;
+      text-align: center;
+      color: var(--text-soft);
+    }
+
+    section {
+      margin-bottom: 100px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* ---------- MEDIA LIST ---------- */
+    .media-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .media-item {
+      padding: 32px 34px;
+      border-radius: 12px;
+      background: white;
+      border: 1px solid #e5e7eb;
+    }
+
+    .media-item h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+
+    .media-item p {
+      color: var(--text-soft);
+      margin-bottom: 0;
+    }
+
+    .placeholder {
+      text-align: center;
+      color: var(--text-soft);
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px; }
+      main { margin-top: 140px; padding: 0 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="conoceme.html">Conoceme</a>
+  <a href="media.html">Media</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<main>
+
+  <h1>Media</h1>
+
+  <p class="intro">
+    Este espacio reúne textos, reflexiones, registros y materiales
+    que nacen del trabajo cotidiano con músicos y artistas.
+    <br><br>
+    No son respuestas cerradas.
+    Son pensamientos en proceso.
+  </p>
+
+  <!-- TEXTOS -->
+  <section>
+    <h2>Textos</h2>
+
+    <div class="media-list">
+
+      <div class="media-item">
+        <h3>Cuando hacer música se vuelve pesado</h3>
+        <p>
+          Una reflexión sobre qué pasa cuando tocar deja de ser un espacio
+          de disfrute y empieza a vivirse como una carga.
+        </p>
+      </div>
+
+      <div class="media-item">
+        <h3>El miedo al escenario no es el problema</h3>
+        <p>
+          Algunas ideas para pensar el pánico escénico más allá de la técnica
+          o el control del cuerpo.
+        </p>
+      </div>
+
+      <!-- Podés duplicar este bloque para cada texto nuevo -->
+
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section>
+    <h2>Videos</h2>
+
+    <p class="placeholder">
+      Próximamente.
+    </p>
+  </section>
+
+  <!-- PODCAST -->
+  <section>
+    <h2>Podcast</h2>
+
+    <p class="placeholder">
+      Este espacio va a alojar capítulos del podcast cuando esté disponible.
+    </p>
+  </section>
+
+</main>
+
+</body>
+</html>
