@@ -3,7 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <title>Encuentros · Ramón Gardella</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg-main:#f8fafc;
+      --bg-alt:#eef2f7;
+      --text-main:#0f172a;
+      --text-soft:#475569;
+      --btn-main:#1f2933;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:var(--bg-main);
+      color:var(--text-main);
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    /* NAV */
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:16px 60px;
+      background:rgba(248,250,252,.95);
+      border-bottom:1px solid #e5e7eb;
+      z-index:10;
+    }
+
+    .nav-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand strong{display:block;font-size:.9rem}
+    .brand span{
+      font-size:.7rem;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:var(--text-soft)
+    }
+
+    .nav-right a{
+      margin-left:24px;
+      font-size:.75rem;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      text-decoration:none;
+      color:var(--text-soft)
+    }
+
+    /* CONTENT */
+    main{
+      max-width:760px;
+      margin:160px auto 120px;
+      padding:0 30px;
+    }
+
+    section{margin-bottom:120px}
+
+    h2{
+      font-family:'Montserrat',sans-serif;
+      font-size:2rem;
+      margin-bottom:20px;
+    }
+
+    h3{
+      font-family:'Montserrat',sans-serif;
+      font-size:1.4rem;
+      margin:50px 0 20px;
+    }
+
+    p{margin-bottom:26px}
+
+    .info-list{
+      list-style:none;
+      padding:0;
+      margin-bottom:40px;
+      font-weight:500;
+    }
+
+    .info-list li{margin-bottom:10px}
+
+    .btn-reservar{
+      display:inline-block;
+      margin-top:30px;
+      padding:16px 42px;
+      background:var(--btn-main);
+      color:white;
+      text-decoration:none;
+      font-size:.7rem;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      border-radius:999px;
+    }
+
+    @media(max-width:768px){
+      nav{padding:16px 30px}
+      main{margin-top:140px;padding:0 20px}
+    }
+  </style>
 </head>
 
 <body>
@@ -26,16 +132,43 @@
   </div>
 </nav>
 
-<main style="margin-top:160px; max-width:760px; padding:0 30px; margin-inline:auto;">
+<main>
+
   <section id="individual">
     <h2>Encuentros individuales</h2>
-    <a href="contacto.html">Reservar</a>
+
+    <ul class="info-list">
+      <li>Sesiones de 60 minutos</li>
+      <li>Modalidad online</li>
+      <li>Disponible en español, portugués, inglés y alemán</li>
+      <li>Primer encuentro gratuito</li>
+    </ul>
+
+    <p>
+      Espacios uno a uno para músicos que sienten que algo en su relación con la música
+      se traba y no se resuelve solamente practicando más.
+    </p>
+
+    <a href="contacto.html" class="btn-reservar">Reservá tu lugar</a>
   </section>
 
   <section id="grupal">
     <h2>Encuentros grupales</h2>
-    <a href="contacto.html">Reservar</a>
+
+    <ul class="info-list">
+      <li>modalidad online</li>
+      <li>grupos organizados por idioma</li>
+      <li>Disponible en español, portugués, inglés y alemán</li>
+    </ul>
+
+    <p>
+      Espacios compartidos donde la experiencia individual se enriquece
+      a partir del intercambio con otros músicos.
+    </p>
+
+    <a href="contacto.html" class="btn-reservar">Reservá tu lugar</a>
   </section>
+
 </main>
 
 </body>
