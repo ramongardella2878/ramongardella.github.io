@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Ramón Gardella</title>
 
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -18,10 +17,7 @@
       --btn-hover: #000000;
     }
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -36,7 +32,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 16px 60px 8px;
+      padding: 16px 60px;
       background: rgba(248,250,252,0.95);
       border-bottom: 1px solid #e5e7eb;
       z-index: 10;
@@ -48,10 +44,7 @@
       align-items: center;
     }
 
-    .brand strong {
-      display: block;
-      font-size: 0.9rem;
-    }
+    .brand strong { display: block; font-size: 0.9rem; }
 
     .brand span {
       font-size: 0.7rem;
@@ -63,7 +56,7 @@
     .nav-right a {
       color: var(--text-soft);
       text-decoration: none;
-      margin-left: 28px;
+      margin-left: 26px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -81,29 +74,7 @@
       transition: 0.3s;
     }
 
-    .nav-right a:hover::after {
-      width: 100%;
-    }
-
-    /* ---------- LANG SWITCH ---------- */
-    .lang-switch {
-      display: flex;
-      justify-content: flex-end;
-      gap: 14px;
-      margin-top: 6px;
-      font-size: 0.65rem;
-      letter-spacing: 1px;
-    }
-
-    .lang-switch a {
-      text-decoration: none;
-      color: var(--text-soft);
-    }
-
-    .lang-switch a.active {
-      font-weight: 600;
-      color: var(--text-main);
-    }
+    .nav-right a:hover::after { width: 100%; }
 
     /* ---------- HERO ---------- */
     header {
@@ -126,6 +97,29 @@
       background: rgba(0,0,0,0.45);
     }
 
+    /* ---------- LANG OVER HERO ---------- */
+    .lang-overlay {
+      position: absolute;
+      top: 140px;
+      right: 60px;
+      z-index: 5;
+      display: flex;
+      gap: 18px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .lang-overlay a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+
+    .lang-overlay a.active {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
     .hero {
       position: relative;
       max-width: 900px;
@@ -141,9 +135,7 @@
       margin-bottom: 34px;
     }
 
-    .hero-manifesto span {
-      display: block;
-    }
+    .hero-manifesto span { display: block; }
 
     .hero p {
       max-width: 700px;
@@ -163,38 +155,26 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       border-radius: 3px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-    }
-
-    .btn:hover {
-      background: var(--btn-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
     }
 
     /* ---------- SECTIONS ---------- */
     section {
-      padding: 60px 60px;
+      padding: 60px;
       max-width: 860px;
       margin: auto;
       text-align: center;
     }
 
-    section.alt {
-      background: var(--bg-alt);
-      padding: 60px;
-    }
+    section.alt { background: var(--bg-alt); }
 
     section h3 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.6rem;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     /* ---------- STORY ---------- */
-    .story {
-      max-width: 720px;
-    }
+    .story { max-width: 720px; }
 
     .story-intro {
       font-size: 1.4rem;
@@ -202,9 +182,7 @@
       margin-bottom: 40px;
     }
 
-    .story-intro span {
-      font-weight: 600;
-    }
+    .story-intro span { font-weight: 600; }
 
     .story-quote {
       margin: 40px auto;
@@ -212,9 +190,7 @@
       color: var(--text-soft);
     }
 
-    .story-close p {
-      margin-bottom: 6px;
-    }
+    .story-close p { margin-bottom: 6px; }
 
     /* ---------- OFFERS ---------- */
     .offers {
@@ -224,24 +200,12 @@
     }
 
     .offer-card {
-      display: block;
       padding: 52px 40px;
       border-radius: 14px;
-      background: linear-gradient(
-        160deg,
-        #0f172a 0%,
-        #1e293b 45%,
-        #0f172a 100%
-      );
+      background: linear-gradient(160deg,#0f172a,#1e293b,#0f172a);
       color: white;
       text-decoration: none;
       text-align: center;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .offer-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 28px 70px rgba(0,0,0,0.45);
     }
 
     .offer-card h4 {
@@ -250,11 +214,7 @@
       margin-bottom: 22px;
     }
 
-    .offer-card p {
-      font-size: 1.05rem;
-      margin-bottom: 10px;
-      opacity: 0.9;
-    }
+    .offer-card p { font-size: 1.05rem; margin-bottom: 10px; }
 
     .highlight {
       margin-top: 26px;
@@ -263,7 +223,6 @@
       padding: 12px 18px;
       border-radius: 999px;
       display: inline-block;
-      letter-spacing: 1px;
     }
 
     /* ---------- ES ESTO PARA MI ---------- */
@@ -272,40 +231,33 @@
       margin: 0 auto;
       font-size: 1.25rem;
       line-height: 1.45;
-      color: var(--text-main);
     }
 
-    .para-mi-text p {
-      margin-bottom: 16px;
-    }
+    .para-mi-text p { margin-bottom: 14px; }
 
     .para-mi-text .intro {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 24px;
-    }
-
-    .para-mi-text .requisitos {
-      font-weight: 500;
     }
 
     .para-mi-text .frases {
-      margin-top: 22px;
       font-style: italic;
       color: var(--text-soft);
     }
 
-    .para-mi-text .frases p {
-      margin-bottom: 10px;
-    }
-
     @media (max-width: 768px) {
-      nav { padding: 16px 30px 6px; }
+      nav { padding: 16px 30px; }
+
       section { padding: 50px 25px; }
+
       .hero-manifesto { font-size: 2rem; }
-      section h3 { font-size: 2.1rem; }
-      .lang-switch { justify-content: center; }
+
+      .lang-overlay {
+        top: 110px;
+        right: 50%;
+        transform: translateX(50%);
+      }
     }
   </style>
 </head>
@@ -328,15 +280,17 @@
       <a href="media.html">Media</a>
       <a href="contacto.html">Contacto</a>
     </div>
-  <div class="lang-switch">
+  </div>
+</nav>
+
+<header id="inicio">
+  <div class="lang-overlay">
     <a href="#" class="active">ES</a>
     <a href="#">EN</a>
     <a href="#">DE</a>
     <a href="#">PT</a>
   </div>
-</nav>
 
-<header id="inicio">
   <div class="hero">
     <div class="hero-manifesto">
       <span>Escuchar el interior emocional</span>
@@ -433,17 +387,12 @@
   <h3>¿Es esto para mí?</h3>
 
   <div class="para-mi-text">
-    <p class="intro">
-      Para saber si esto es para vos, tenes que cumplir estos requisitos:
-    </p>
-
-    <p class="requisitos">sos musico, estudiante de musica, profesional de la musica y/o creador artistico.</p>
-    <p class="requisitos">sentis que algo en tu vida artistica musical está trabado</p>
-    <p class="requisitos">Algo te cuesta y no se soluciona perfeccionando tus habilidades fisicas</p>
-    <p class="requisitos">Tenes ganas de vivir plenamente tu arte y expandir tu carrera</p>
-    <p class="requisitos">
-      te sentis identificado con alguna (o todas) estas frases:
-    </p>
+    <p class="intro">Para saber si esto es para vos, tenes que cumplir estos requisitos:</p>
+    <p>sos musico, estudiante de musica, profesional de la musica y/o creador artistico.</p>
+    <p>sentis que algo en tu vida artistica musical está trabado</p>
+    <p>Algo te cuesta y no se soluciona perfeccionando tus habilidades fisicas</p>
+    <p>Tenes ganas de vivir plenamente tu arte y expandir tu carrera</p>
+    <p>te sentis identificado con alguna (o todas) estas frases:</p>
 
     <div class="frases">
       <p>"cuando toco la paso mal"</p>
