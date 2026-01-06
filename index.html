@@ -17,7 +17,10 @@
       --btn-hover: #000000;
     }
 
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -44,7 +47,10 @@
       align-items: center;
     }
 
-    .brand strong { display: block; font-size: 0.9rem; }
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+    }
 
     .brand span {
       font-size: 0.7rem;
@@ -56,7 +62,7 @@
     .nav-right a {
       color: var(--text-soft);
       text-decoration: none;
-      margin-left: 26px;
+      margin-left: 24px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -74,7 +80,9 @@
       transition: 0.3s;
     }
 
-    .nav-right a:hover::after { width: 100%; }
+    .nav-right a:hover::after {
+      width: 100%;
+    }
 
     /* ---------- HERO ---------- */
     header {
@@ -100,7 +108,7 @@
     /* ---------- LANG OVER HERO ---------- */
     .lang-overlay {
       position: absolute;
-      top: 120px; /* SUBIDO 2 CM */
+      top: 110px;
       right: 60px;
       z-index: 5;
       display: flex;
@@ -135,7 +143,9 @@
       margin-bottom: 34px;
     }
 
-    .hero-manifesto span { display: block; }
+    .hero-manifesto span {
+      display: block;
+    }
 
     .hero p {
       max-width: 700px;
@@ -143,7 +153,6 @@
       color: #e5e7eb;
     }
 
-    /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
       margin-top: 30px;
@@ -165,7 +174,9 @@
       text-align: center;
     }
 
-    section.alt { background: var(--bg-alt); }
+    section.alt {
+      background: var(--bg-alt);
+    }
 
     section h3 {
       font-family: 'Montserrat', sans-serif;
@@ -174,7 +185,9 @@
     }
 
     /* ---------- STORY ---------- */
-    .story { max-width: 720px; }
+    .story {
+      max-width: 720px;
+    }
 
     .story-intro {
       font-size: 1.4rem;
@@ -182,7 +195,9 @@
       margin-bottom: 40px;
     }
 
-    .story-intro span { font-weight: 600; }
+    .story-intro span {
+      font-weight: 600;
+    }
 
     .story-quote {
       margin: 40px auto;
@@ -190,7 +205,9 @@
       color: var(--text-soft);
     }
 
-    .story-close p { margin-bottom: 6px; }
+    .story-close p {
+      margin-bottom: 6px;
+    }
 
     /* ---------- OFFERS ---------- */
     .offers {
@@ -200,6 +217,7 @@
     }
 
     .offer-card {
+      display: block;
       padding: 52px 40px;
       border-radius: 14px;
       background: linear-gradient(160deg,#0f172a,#1e293b,#0f172a);
@@ -214,7 +232,10 @@
       margin-bottom: 22px;
     }
 
-    .offer-card p { font-size: 1.05rem; margin-bottom: 10px; }
+    .offer-card p {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
 
     .highlight {
       margin-top: 26px;
@@ -233,7 +254,9 @@
       line-height: 1.45;
     }
 
-    .para-mi-text p { margin-bottom: 14px; }
+    .para-mi-text p {
+      margin-bottom: 14px;
+    }
 
     .para-mi-text .intro {
       font-family: 'Montserrat', sans-serif;
@@ -252,7 +275,6 @@
       .hero-manifesto { font-size: 2rem; }
 
       .lang-overlay {
-        top: 90px; /* SUBIDO TAMBIÉN EN MOBILE */
         right: 50%;
         transform: translateX(50%);
       }
@@ -305,8 +327,112 @@
   </div>
 </header>
 
-<!-- EL RESTO DEL CONTENIDO SIGUE EXACTAMENTE IGUAL -->
-<!-- (conoceme, lugar, trabajo, para-mi, contacto) -->
+<section id="conoceme" class="story">
+  <p class="story-intro">
+    ¿Te sentís mal, frustrado, cansado?<br>
+    <span>Lo sé y te entiendo.</span>
+  </p>
+
+  <p>
+    Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
+    atravesé una crisis que me impedía subirme al escenario y tocar.
+  </p>
+
+  <div class="story-quote">
+    <p>Que todo estaba mal.</p>
+    <p>Que era un fracasado.</p>
+    <p>Que esto no era para mí.</p>
+  </div>
+
+  <div class="story-close">
+    <p>Ahí entendí que no podía seguir desarrollando mi música sin escuchar lo que me estaba pasando por dentro.</p>
+    <p>Desde entonces estoy en proceso.</p>
+    <p>Hoy quiero ayudarte.</p>
+    <p>No es terapia. No es motivacional.</p>
+    <p>Acompaño desde mi experiencia.</p>
+  </div>
+
+  <a class="btn" href="#trabajo">Qué te ofrezco</a>
+</section>
+
+<section id="lugar" class="alt">
+  <h3>Estás en el lugar correcto</h3>
+
+  <p>
+    Diseñé este espacio para acompañarte en tu <strong>vida musical</strong>, dando escucha
+    a lo que sentís al momento de hacer música.
+  </p>
+
+  <p>
+    Parto de la idea de que el desarrollo pleno de una carrera musical no es posible
+    si el ejecutante no se desarrolla, a su vez, personalmente.
+  </p>
+
+  <p>
+    Como músicos, pasamos gran parte —si no toda— nuestra vida tocando para otros:
+    en concursos, clases, audiciones, exámenes de ingreso.
+  </p>
+
+  <p>
+    Experiencias como el pánico escénico, la frustración, la comparación constante con
+    colegas o la sensación de estancamiento en la carrera existen, y no son fallas:
+    son un llamado a mirar y trabajar este plano personal.
+  </p>
+</section>
+
+<section id="trabajo">
+  <h3>Qué te ofrezco</h3>
+
+  <div class="offers">
+    <a href="encuentros.html#individual" class="offer-card">
+      <h4>Encuentros individuales</h4>
+      <p>Sesiones de 60 minutos</p>
+      <p>Modalidad online</p>
+      <p>Disponibles en español, portugués, inglés y alemán</p>
+      <p>Primer encuentro gratuito</p>
+      <span class="highlight">Reservá tu lugar</span>
+    </a>
+
+    <a href="encuentros.html#grupal" class="offer-card">
+      <h4>Encuentros grupales</h4>
+      <p>modalidad online</p>
+      <p>grupos organizados por idioma</p>
+      <p>Disponibles en español, portugués, inglés y alemán</p>
+      <span class="highlight">Reservá tu lugar</span>
+    </a>
+  </div>
+</section>
+
+<section id="para-mi">
+  <h3>¿Es esto para mí?</h3>
+
+  <div class="para-mi-text">
+    <p class="intro">Para saber si esto es para vos, tenes que cumplir estos requisitos:</p>
+    <p>sos musico, estudiante de musica, profesional de la musica y/o creador artistico.</p>
+    <p>sentis que algo en tu vida artistica musical está trabado</p>
+    <p>Algo te cuesta y no se soluciona perfeccionando tus habilidades fisicas</p>
+    <p>Tenes ganas de vivir plenamente tu arte y expandir tu carrera</p>
+    <p>te sentis identificado con alguna (o todas) estas frases:</p>
+
+    <div class="frases">
+      <p>"cuando toco la paso mal"</p>
+      <p>"nunca me salen los pasajes difíciles"</p>
+      <p>"me la paso practicando y se que cuando haya publico esto no me va a salir"</p>
+      <p>"No puedo ganar dinero con la música"</p>
+      <p>"estoy estancado en mi carrera"</p>
+      <p>"mira todo lo que hacen los otros y lo poco que hago yo"</p>
+      <p>"que pensaran mis padres/amigos/pareja de mi?"</p>
+    </div>
+
+    <a href="contacto.html" class="btn">Si llegaste hasta acá, escribime</a>
+  </div>
+</section>
+
+<section id="contacto" class="alt">
+  <h3>Contacto</h3>
+  <p>Primer encuentro sin compromiso.</p>
+  <a class="btn" href="contacto.html">Escribime</a>
+</section>
 
 </body>
 </html>
