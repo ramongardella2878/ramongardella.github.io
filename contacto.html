@@ -10,10 +10,15 @@
   <style>
     :root {
       --bg-main: #f8fafc;
+      --bg-alt: #eef2f7;
       --text-main: #0f172a;
       --text-soft: #475569;
       --btn-main: #1f2933;
       --btn-hover: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -22,8 +27,10 @@
       background: var(--bg-main);
       color: var(--text-main);
       line-height: 1.7;
+      font-size: 18px;
     }
 
+    /* ---------- NAV (MISMO EN TODO EL SITIO) ---------- */
     nav {
       position: fixed;
       top: 0;
@@ -34,18 +41,37 @@
       z-index: 10;
     }
 
-    nav a {
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .nav-right a {
       color: var(--text-soft);
       text-decoration: none;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-right: 24px;
+      margin-left: 24px;
     }
 
+    /* ---------- CONTENT ---------- */
     main {
-      max-width: 560px;
-      margin: 160px auto 120px;
+      max-width: 620px;
+      margin: 180px auto 140px;
       padding: 0 30px;
       text-align: center;
     }
@@ -53,69 +79,68 @@
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.2rem;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
-    p {
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
       color: var(--text-soft);
-      margin-bottom: 40px;
-      font-size: 1.05rem;
+      line-height: 1.5;
     }
 
     form {
-      text-align: left;
-    }
-
-    label {
-      display: block;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      color: var(--text-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
     }
 
     input,
     textarea {
       width: 100%;
       padding: 14px 16px;
-      margin-bottom: 26px;
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
-      border: 1px solid #cbd5e1;
-      border-radius: 4px;
+      border-radius: 6px;
+      border: 1px solid #cbd5f5;
       background: white;
+      resize: vertical;
     }
 
     textarea {
-      resize: vertical;
       min-height: 140px;
     }
 
-    .btn {
-      display: inline-block;
+    button {
+      margin-top: 20px;
+      align-self: center;
       padding: 18px 48px;
       background: var(--btn-main);
       color: white;
-      text-decoration: none;
+      border: none;
+      border-radius: 3px;
       font-size: 0.7rem;
       letter-spacing: 3px;
       text-transform: uppercase;
-      border-radius: 3px;
-      border: none;
       cursor: pointer;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     }
 
-    .btn:hover {
+    button:hover {
       background: var(--btn-hover);
       transform: translateY(-3px);
       box-shadow: 0 12px 26px rgba(0,0,0,0.35);
     }
 
     @media (max-width: 768px) {
-      nav { padding: 16px 30px; }
-      main { margin-top: 140px; padding: 0 20px; }
+      nav {
+        padding: 16px 30px;
+      }
+
+      main {
+        margin-top: 150px;
+        padding: 0 20px;
+      }
     }
   </style>
 </head>
@@ -123,30 +148,40 @@
 <body>
 
 <nav>
-  <a href="index.html">Inicio</a>
-  <a href="conoceme.html">Conoceme</a>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Músico · Performer · Educador</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#conoceme">Conoceme</a>
+      <a href="index.html#lugar">El espacio</a>
+      <a href="index.html#trabajo">Qué te ofrezco</a>
+      <a href="index.html#para-mi">¿Es esto para mí?</a>
+      <a href="media.html">Media</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
 </nav>
 
 <main>
+
   <h1>Contacto</h1>
 
-  <p>
+  <p class="intro">
     Contame quién sos y en qué te puedo ayudar.<br>
     Te respondo a la brevedad.
   </p>
 
   <form action="mailto:gardellavia2878@gmail.com" method="post" enctype="text/plain">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="Nombre" required>
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="Email" required>
-
-    <label for="mensaje">Mensaje</label>
-    <textarea id="mensaje" name="Mensaje" required></textarea>
-
-    <button type="submit" class="btn">Enviar mensaje</button>
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+    <button type="submit">Enviar</button>
   </form>
+
 </main>
 
 </body>
