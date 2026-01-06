@@ -4,110 +4,188 @@
   <meta charset="UTF-8">
   <title>Encuentros · Ramón Gardella</title>
 
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg-main:#f8fafc;
-      --bg-alt:#eef2f7;
-      --text-main:#0f172a;
-      --text-soft:#475569;
-      --btn-main:#1f2933;
+    :root {
+      --bg-main: #f8fafc;
+      --bg-alt: #eef2f7;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+      --btn-main: #1f2933;
+      --btn-hover: #000000;
     }
 
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      background:var(--bg-main);
-      color:var(--text-main);
-      line-height:1.8;
-      font-size:18px;
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    /* NAV */
-    nav{
-      position:fixed;
-      top:0;
-      width:100%;
-      padding:16px 60px;
-      background:rgba(248,250,252,.95);
-      border-bottom:1px solid #e5e7eb;
-      z-index:10;
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.8;
+      font-size: 18px;
     }
 
-    .nav-top{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
+    /* ---------- NAV (MISMO EN TODO EL SITIO) ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(248,250,252,0.95);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
     }
 
-    .brand strong{display:block;font-size:.9rem}
-    .brand span{
-      font-size:.7rem;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      color:var(--text-soft)
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .nav-right a{
-      margin-left:24px;
-      font-size:.75rem;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      text-decoration:none;
-      color:var(--text-soft)
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
     }
 
-    /* CONTENT */
-    main{
-      max-width:760px;
-      margin:160px auto 120px;
-      padding:0 30px;
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-soft);
     }
 
-    section{margin-bottom:120px}
-
-    h2{
-      font-family:'Montserrat',sans-serif;
-      font-size:2rem;
-      margin-bottom:20px;
+    .nav-right a {
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-left: 24px;
     }
 
-    h3{
-      font-family:'Montserrat',sans-serif;
-      font-size:1.4rem;
-      margin:50px 0 20px;
+    /* ---------- CONTENT ---------- */
+    main {
+      max-width: 760px;
+      margin: 160px auto 120px;
+      padding: 0 30px;
     }
 
-    p{margin-bottom:26px}
-
-    .info-list{
-      list-style:none;
-      padding:0;
-      margin-bottom:40px;
-      font-weight:500;
+    section {
+      margin-bottom: 120px;
     }
 
-    .info-list li{margin-bottom:10px}
-
-    .btn-reservar{
-      display:inline-block;
-      margin-top:30px;
-      padding:16px 42px;
-      background:var(--btn-main);
-      color:white;
-      text-decoration:none;
-      font-size:.7rem;
-      letter-spacing:3px;
-      text-transform:uppercase;
-      border-radius:999px;
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin: 0;
     }
 
-    @media(max-width:768px){
-      nav{padding:16px 30px}
-      main{margin-top:140px;padding:0 20px}
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      margin: 50px 0 20px;
+    }
+
+    p {
+      margin-bottom: 26px;
+    }
+
+    /* ---------- SECTION HEADER ---------- */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* ---------- INFO LIST ---------- */
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
+    }
+
+    /* ---------- TOPICS ---------- */
+    ol {
+      margin: 20px 0 40px;
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 14px;
+    }
+
+    /* ---------- RESERVAR BUTTON (DESTACADO) ---------- */
+    .btn-reservar {
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: #ffffff;
+      padding: 14px 28px;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(37,99,235,0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-reservar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 45px rgba(37,99,235,0.6);
+    }
+
+    /* ---------- CTA ---------- */
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 18px 48px;
+      background: var(--btn-main);
+      color: white;
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 30px;
+      }
+
+      main {
+        margin-top: 140px;
+        padding: 0 20px;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-reservar {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -120,6 +198,7 @@
       <strong>Ramón Gardella</strong>
       <span>Músico · Performer · Educador</span>
     </div>
+
     <div class="nav-right">
       <a href="index.html#inicio">Inicio</a>
       <a href="index.html#conoceme">Conoceme</a>
@@ -134,39 +213,76 @@
 
 <main>
 
+  <!-- ===== ENCUENTROS INDIVIDUALES ===== -->
   <section id="individual">
-    <h2>Encuentros individuales</h2>
+
+    <div class="section-header">
+      <h2>Encuentros individuales</h2>
+      <a href="contacto.html" class="btn-reservar">Reservar</a>
+    </div>
 
     <ul class="info-list">
-      <li>Sesiones de 60 minutos</li>
-      <li>Modalidad online</li>
-      <li>Disponible en español, portugués, inglés y alemán</li>
-      <li>Primer encuentro gratuito</li>
+      <li>Duración: 60 minutos</li>
+      <li>Modalidad: online</li>
+      <li>Encuentros personalizados</li>
+      <li>Primer encuentro gratuito y sin compromiso</li>
     </ul>
 
+    <h3>¿Qué son?</h3>
+
     <p>
-      Espacios uno a uno para músicos que sienten que algo en su relación con la música
-      se traba y no se resuelve solamente practicando más.
+      Los encuentros individuales son espacios uno a uno, pensados para músicos y artistas
+      que sienten que algo se traba en su relación con la música o con su proceso creativo.
     </p>
 
-    <a href="contacto.html" class="btn-reservar">Reservá tu lugar</a>
+    <p>
+      No se trata de clases tradicionales ni de correcciones técnicas.
+      Es un espacio de escucha y acompañamiento, donde el punto de partida
+      es lo que te está pasando hoy.
+    </p>
+
+    <h3>Temáticas a abordar</h3>
+
+    <ol>
+      <li>Indagar de dónde viene el malestar al hacer mi música.</li>
+      <li>Reglas prácticas para volver a hacer de la práctica instrumental un ámbito de juego y disfrute.</li>
+      <li>El proyecto personal de cada músico. ¿Tengo uno o simplemente toco siempre para otro/s?</li>
+      <li>Organización y gestión de una carrera musical: estudios en el extranjero, posgrado, contacto con universidades.</li>
+    </ol>
+
+    <div class="cta">
+      <a href="encuentros-individuales.html" class="btn">Más info</a>
+    </div>
+
   </section>
 
+  <!-- ===== ENCUENTROS GRUPALES ===== -->
   <section id="grupal">
-    <h2>Encuentros grupales</h2>
+
+    <div class="section-header">
+      <h2>Encuentros grupales</h2>
+      <a href="contacto.html" class="btn-reservar">Reservar</a>
+    </div>
 
     <ul class="info-list">
-      <li>modalidad online</li>
-      <li>grupos organizados por idioma</li>
-      <li>Disponible en español, portugués, inglés y alemán</li>
+      <li>Modalidad: online</li>
+      <li>Grupos reducidos</li>
+      <li>Procesos de varias semanas</li>
+      <li>Fechas puntuales a lo largo del año</li>
     </ul>
 
+    <h3>¿Qué son?</h3>
+
     <p>
-      Espacios compartidos donde la experiencia individual se enriquece
-      a partir del intercambio con otros músicos.
+      Los encuentros grupales proponen un espacio compartido entre músicos,
+      donde las experiencias individuales se enriquecen a partir del intercambio.
     </p>
 
-    <a href="contacto.html" class="btn-reservar">Reservá tu lugar</a>
+    <p>
+      Escuchar a otros, reconocer dificultades comunes y descubrir
+      que muchas veces no estamos solos en lo que nos pasa.
+    </p>
+
   </section>
 
 </main>
