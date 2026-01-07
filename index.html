@@ -5,14 +5,15 @@
   <title>Mental Notes — Ramón Gardella</title>
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-main: #ffffff;
-      --bg-alt: #eef2f7;
+      --bg-alt: #f6f7f9;
       --text-main: #0f172a;
-      --text-soft: #475569;
+      --text-soft: #64748b;
+      --text-muted: #94a3b8;
       --btn-main: #1f2933;
       --btn-hover: #000000;
     }
@@ -27,7 +28,7 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg-main);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* ---------- NAV ---------- */
@@ -57,11 +58,11 @@
       font-size: 0.7rem;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--text-soft);
+      color: var(--text-muted);
     }
 
     .nav-right a {
-      color: var(--text-soft);
+      color: var(--text-muted);
       text-decoration: none;
       margin-left: 24px;
       font-size: 0.75rem;
@@ -106,7 +107,7 @@
 
     .lang-overlay a {
       text-decoration: none;
-      color: var(--text-soft);
+      color: var(--text-muted);
       font-size: 0.85rem;
       letter-spacing: 2px;
     }
@@ -133,8 +134,8 @@
     }
 
     .hero-subtitle {
-      font-size: 1.15rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.7;
       color: var(--text-soft);
       opacity: 0;
       animation: subtitleEnter 0.8s ease forwards;
@@ -142,52 +143,19 @@
     }
 
     @keyframes titleEnter {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes subtitleEnter {
-      from {
-        opacity: 0;
-        transform: translateY(6px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ---------- BUTTON ---------- */
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 20px 54px;
-      background: var(--btn-main);
-      color: white;
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-radius: 3px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-    }
-
-    .btn:hover {
-      background: var(--btn-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ---------- SECTIONS ---------- */
     section {
-      padding: 60px;
-      max-width: 860px;
+      padding: 80px 60px;
+      max-width: 760px;
       margin: auto;
       text-align: center;
     }
@@ -198,33 +166,33 @@
 
     section h3 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.6rem;
-      margin-bottom: 60px;
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: 48px;
+      letter-spacing: 0.02em;
+    }
+
+    section p {
+      color: var(--text-soft);
+      font-size: 1.05rem;
     }
 
     /* ---------- STORY ---------- */
     .story {
-      max-width: 720px;
+      max-width: 680px;
     }
 
     .story-intro {
-      font-size: 1.4rem;
-      line-height: 1.5;
+      font-size: 1.25rem;
+      line-height: 1.55;
       margin-bottom: 40px;
-    }
-
-    .story-intro span {
-      font-weight: 600;
+      color: var(--text-main);
     }
 
     .story-quote {
       margin: 40px auto;
       font-style: italic;
-      color: var(--text-soft);
-    }
-
-    .story-close p {
-      margin-bottom: 6px;
+      color: var(--text-muted);
     }
 
     /* ---------- OFFERS ---------- */
@@ -236,7 +204,7 @@
 
     .offer-card {
       display: block;
-      padding: 52px 40px;
+      padding: 44px 36px;
       border-radius: 14px;
       background: linear-gradient(
         160deg,
@@ -250,59 +218,47 @@
       transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
-    .offer-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 28px 70px rgba(0,0,0,0.45);
-    }
-
     .offer-card h4 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.7rem;
-      margin-bottom: 22px;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-weight: 500;
     }
 
     .offer-card p {
-      font-size: 1.05rem;
-      margin-bottom: 10px;
-      opacity: 0.9;
+      font-size: 1rem;
+      opacity: 0.85;
     }
 
-    .highlight {
-      margin-top: 26px;
-      font-weight: 700;
-      background: rgba(255,255,255,0.12);
-      padding: 12px 18px;
-      border-radius: 999px;
-      display: inline-block;
-      letter-spacing: 1px;
-    }
-
-    /* ---------- ES ESTO PARA MI ---------- */
+    /* ---------- PARA MI ---------- */
     .para-mi-text {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 1.25rem;
-      line-height: 1.45;
-    }
-
-    .para-mi-text p {
-      margin-bottom: 14px;
-    }
-
-    .para-mi-text .intro {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 600;
+      max-width: 720px;
+      font-size: 1.15rem;
+      line-height: 1.55;
     }
 
     .para-mi-text .frases {
       font-style: italic;
-      color: var(--text-soft);
+      color: var(--text-muted);
+    }
+
+    /* ---------- BUTTON ---------- */
+    .btn {
+      display: inline-block;
+      margin-top: 36px;
+      padding: 18px 48px;
+      background: var(--btn-main);
+      color: white;
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 3px;
     }
 
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
-      section { padding: 50px 25px; }
+      section { padding: 70px 25px; }
 
       .lang-overlay {
         right: 50%;
