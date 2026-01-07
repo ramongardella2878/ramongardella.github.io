@@ -2,32 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Algo de lo que soy · Ramón Gardella</title>
+  <title>Conoceme — Mental Notes</title>
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-main: #f8fafc;
-      --text-main: #0f172a;
-      --text-soft: #475569;
-      --btn-main: #1f2933;
-      --btn-hover: #000000;
+      --bg-main: #ffffff;
+      --bg-alt: #f3f4f6;
+      --text-main: #0b1220;
+      --text-soft: #334155;
+      --text-muted: #64748b;
     }
 
     * {
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: var(--bg-main);
-      color: var(--text-main);
-      line-height: 1.9;
-      font-size: 18.5px; /* ⬅️ texto base más grande */
+      color: var(--text-soft);
+      line-height: 1.65;
     }
 
     /* ---------- NAV ---------- */
@@ -36,110 +34,110 @@
       top: 0;
       width: 100%;
       padding: 16px 60px;
-      background: rgba(248,250,252,0.95);
+      background: rgba(255,255,255,0.97);
       border-bottom: 1px solid #e5e7eb;
       z-index: 10;
     }
 
-    nav a {
-      color: var(--text-soft);
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-right a {
+      color: var(--text-muted);
       text-decoration: none;
+      margin-left: 24px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
+      position: relative;
+      font-weight: 500;
     }
 
-    /* ---------- CONTENT ---------- */
+    .nav-right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--text-main);
+      transition: 0.3s;
+    }
+
+    .nav-right a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-right a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- MAIN ---------- */
     main {
-      max-width: 640px;
-      margin: 150px auto 110px;
-      padding: 0 30px;
+      padding-top: 140px;
+      padding-bottom: 100px;
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
     }
 
     h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.6rem;
+      font-size: 2.3rem;
       font-weight: 600;
-      text-align: center;
-      margin-bottom: 80px;
+      color: var(--text-main);
+      margin-bottom: 48px;
+    }
+
+    .story-intro {
+      font-size: 1.55rem;
+      line-height: 1.45;
+      margin-bottom: 44px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .story-intro span {
+      font-weight: 700;
     }
 
     p {
-      margin-bottom: 32px;
-    }
-
-    /* ---------- INTRO ---------- */
-    .intro {
-      font-size: 1.55rem; /* ⬅️ intro claramente protagonista */
-      line-height: 2;
-      font-weight: 500;
-      margin-bottom: 60px;
-    }
-
-    /* ---------- EMPHASIS ---------- */
-    .emphasis {
-      font-style: italic;
+      font-size: 1.08rem;
       color: var(--text-soft);
-      margin: 34px 0;
+      margin-bottom: 18px;
     }
 
-    /* ---------- PAUSE BLOCK ---------- */
-    .pause {
-      margin: 60px 0;
+    .story-quote {
+      margin: 42px auto;
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 1.05rem;
     }
 
-    .pause p {
-      margin-bottom: 14px;
-    }
-
-    /* ---------- CLOSING ---------- */
-    .closing {
-      margin-top: 55px;
-      font-weight: 500;
-    }
-
-    /* ---------- BUTTON ---------- */
-    .btn {
-      display: inline-block;
-      margin-top: 70px;
-      padding: 20px 54px;
-      background: var(--btn-main);
-      color: white;
-      text-decoration: none;
-      font-size: 0.7rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-radius: 3px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-    }
-
-    .btn:hover {
-      background: var(--btn-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    .story-close p {
+      margin-bottom: 6px;
     }
 
     @media (max-width: 768px) {
-      body {
-        font-size: 17px; /* mobile un poco más chico pero cómodo */
-      }
-
-      nav {
-        padding: 16px 30px;
-      }
-
-      main {
-        margin-top: 130px;
-        padding: 0 20px;
-      }
-
-      h1 {
-        font-size: 2.1rem;
-      }
-
-      .intro {
-        font-size: 1.3rem;
-      }
+      nav { padding: 16px 30px; }
+      main { padding-top: 130px; padding-left: 25px; padding-right: 25px; }
     }
   </style>
 </head>
@@ -147,59 +145,51 @@
 <body>
 
 <nav>
-  <a href="index.html">Inicio</a>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Músico · Performer · Educador</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="conoceme.html">Conoceme</a>
+      <a href="index.html#lugar">El espacio</a>
+      <a href="index.html#trabajo">Qué te ofrezco</a>
+      <a href="index.html#para-mi">¿Es esto para mí?</a>
+      <a href="media.html">Media</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
 </nav>
 
 <main>
 
-  <h1>Algo de lo que soy</h1>
+  <h1>Conoceme</h1>
 
-  <p class="intro">
-    Decidí hacer estudios de posgrado en percusión y, para eso, me fui de Argentina a Alemania.
+  <p class="story-intro">
+    ¿Te sentís mal, frustrado, cansado?<br>
+    <span>Lo sé y te entiendo.</span>
   </p>
 
   <p>
-    A los pocos meses, algo se rompió.
+    Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
+    atravesé una crisis que me impedía subirme al escenario y tocar.
   </p>
 
-  <p>
-    Subirme al escenario se volvió imposible.
-  </p>
-
-  <p class="emphasis">
-    Cada vez que tocaba sentía que todo estaba mal.  
-    Que yo estaba mal.
-  </p>
-
-  <p>
-    Ese quiebre inició un proceso que no fue solo musical, sino profundamente personal.
-  </p>
-
-  <p>
-    Con el tiempo entendí que no podía desarrollar mi música sin escuchar lo que me estaba pasando por dentro.
-  </p>
-
-  <div class="pause">
-    <p>Hoy estoy acá por eso.</p>
-    <p>Por haberme detenido.</p>
-    <p>Por haber escuchado.</p>
-    <p>Por haber trabajado sobre lo que aparecía.</p>
+  <div class="story-quote">
+    <p>Que todo estaba mal.</p>
+    <p>Que era un fracasado.</p>
+    <p>Que esto no era para mí.</p>
   </div>
 
-  <p class="closing">
-    Si algo de esto te resuena, no estás solo.
-  </p>
-
-  <p class="closing">
-    Acompaño a músicos y artistas que sienten que algo se traba cuando hacen lo que aman.
-  </p>
-
-  <p class="closing">
-    Porque una carrera musical no se construye solo con técnica,
-    sino también con un desarrollo personal que vaya en paralelo.
-  </p>
-
-  <a href="index.html#contacto" class="btn">Contacto</a>
+  <div class="story-close">
+    <p>Ahí entendí que no podía seguir desarrollando mi música sin escuchar lo que me estaba pasando por dentro.</p>
+    <p>Desde entonces estoy en proceso.</p>
+    <p>Hoy quiero ayudarte.</p>
+    <p>No es terapia. No es motivacional.</p>
+    <p>Acompaño desde mi experiencia.</p>
+  </div>
 
 </main>
 
