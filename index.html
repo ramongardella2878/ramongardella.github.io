@@ -17,7 +17,10 @@
       --btn-hover: #000000;
     }
 
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -44,7 +47,11 @@
       align-items: center;
     }
 
-    .brand strong { font-size: 0.9rem; display: block; }
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
     .brand span {
       font-size: 0.7rem;
       letter-spacing: 1px;
@@ -73,24 +80,27 @@
       transition: 0.3s;
     }
 
-    .nav-right a:hover::after { width: 100%; }
+    .nav-right a:hover::after {
+      width: 100%;
+    }
 
-    /* ---------- HERO (OPCIÓN A) ---------- */
+    /* ---------- HERO (MODIFICADO) ---------- */
     header {
-      min-height: calc(100vh - 80px);
-      padding-top: 120px;
+      min-height: 100vh;
       background: var(--bg-main);
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 120px;
+      text-align: center;
     }
 
     .lang-overlay {
       position: absolute;
-      top: 90px;
+      top: 100px;
       right: 60px;
+      z-index: 5;
       display: flex;
       gap: 18px;
       font-family: 'Montserrat', sans-serif;
@@ -99,7 +109,7 @@
     .lang-overlay a {
       text-decoration: none;
       color: var(--text-soft);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       letter-spacing: 2px;
     }
 
@@ -109,29 +119,28 @@
     }
 
     .hero {
-      width: 100%;
-      max-width: 1200px;
+      max-width: 900px;
       padding: 0 40px;
     }
 
     .hero-logo img {
       width: 100%;
-      max-width: 1000px;
+      max-width: 900px;
       height: auto;
+      margin-bottom: 32px;
       opacity: 0;
-      animation: logoFade 1.6s ease forwards;
+      animation: logoFade 1.4s ease forwards;
     }
 
     .hero-subtitle {
-      margin-top: 36px;
-      font-size: 1.1rem;
-      color: var(--text-soft);
       max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
+      color: var(--text-soft);
+      font-size: 1.1rem;
+      line-height: 1.6;
       opacity: 0;
       animation: fadeUp 1.6s ease forwards;
-      animation-delay: 0.4s;
+      animation-delay: 0.3s;
     }
 
     @keyframes logoFade {
@@ -144,7 +153,28 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ---------- SECTIONS (IGUALES A TU INDEX) ---------- */
+    /* ---------- BUTTON ---------- */
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 20px 54px;
+      background: var(--btn-main);
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--btn-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    }
+
+    /* ---------- SECTIONS ---------- */
     section {
       padding: 60px;
       max-width: 860px;
@@ -152,7 +182,9 @@
       text-align: center;
     }
 
-    section.alt { background: var(--bg-alt); }
+    section.alt {
+      background: var(--bg-alt);
+    }
 
     section h3 {
       font-family: 'Montserrat', sans-serif;
@@ -160,7 +192,113 @@
       margin-bottom: 60px;
     }
 
-    /* resto del CSS exactamente igual al tuyo… */
+    /* ---------- STORY ---------- */
+    .story {
+      max-width: 720px;
+    }
+
+    .story-intro {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .story-intro span {
+      font-weight: 600;
+    }
+
+    .story-quote {
+      margin: 40px auto;
+      font-style: italic;
+      color: var(--text-soft);
+    }
+
+    .story-close p {
+      margin-bottom: 6px;
+    }
+
+    /* ---------- OFFERS ---------- */
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 36px;
+    }
+
+    .offer-card {
+      display: block;
+      padding: 52px 40px;
+      border-radius: 14px;
+      background: linear-gradient(
+        160deg,
+        #0f172a 0%,
+        #1e293b 45%,
+        #0f172a 100%
+      );
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 70px rgba(0,0,0,0.45);
+    }
+
+    .offer-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7rem;
+      margin-bottom: 22px;
+    }
+
+    .offer-card p {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .highlight {
+      margin-top: 26px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.12);
+      padding: 12px 18px;
+      border-radius: 999px;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+
+    /* ---------- ES ESTO PARA MI ---------- */
+    .para-mi-text {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+
+    .para-mi-text p {
+      margin-bottom: 14px;
+    }
+
+    .para-mi-text .intro {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .para-mi-text .frases {
+      font-style: italic;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 30px; }
+      section { padding: 50px 25px; }
+
+      .lang-overlay {
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
   </style>
 </head>
 
@@ -172,6 +310,7 @@
       <strong>Ramón Gardella</strong>
       <span>Músico · Performer · Educador</span>
     </div>
+
     <div class="nav-right">
       <a href="#inicio">Inicio</a>
       <a href="#conoceme">Conoceme</a>
@@ -186,21 +325,23 @@
 
 <header id="inicio">
   <div class="lang-overlay">
-    <a class="active">ES</a><a>EN</a><a>DE</a><a>PT</a>
+    <a href="#" class="active">ES</a>
+    <a href="#">EN</a>
+    <a href="#">DE</a>
+    <a href="#">PT</a>
   </div>
 
   <div class="hero">
     <div class="hero-logo">
       <img src="logo.jpg" alt="Mental Notes">
     </div>
+
     <p class="hero-subtitle">
       un espacio para escuchar el interior emocional de un músico
     </p>
   </div>
 </header>
 
-</body>
-</html>
 <section id="conoceme" class="story">
   <p class="story-intro">
     ¿Te sentís mal, frustrado, cansado?<br>
