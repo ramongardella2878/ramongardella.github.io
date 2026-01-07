@@ -5,11 +5,11 @@
   <title>Mental Notes — Ramón Gardella</title>
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-main: #f8fafc;
+      --bg-main: #ffffff;
       --bg-alt: #eef2f7;
       --text-main: #0f172a;
       --text-soft: #475569;
@@ -35,8 +35,8 @@
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 14px 60px;
-      background: rgba(248,250,252,0.95);
+      padding: 18px 60px 14px;
+      background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
       z-index: 10;
     }
@@ -44,19 +44,27 @@
     .nav-top {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
     }
 
-    .brand strong {
-      display: block;
-      font-size: 0.9rem;
+    /* LOGO / IDENTIDAD */
+    .brand {
+      line-height: 1.1;
     }
 
-    .brand span {
+    .brand-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
       font-size: 0.7rem;
       letter-spacing: 1px;
-      text-transform: uppercase;
       color: var(--text-soft);
+      margin-top: 4px;
     }
 
     .nav-right a {
@@ -76,7 +84,7 @@
       bottom: -4px;
       width: 0;
       height: 1px;
-      background: var(--btn-main);
+      background: var(--text-main);
       transition: 0.3s;
     }
 
@@ -84,23 +92,17 @@
       width: 100%;
     }
 
-    /* ---------- HERO (MODIFICADO) ---------- */
+    /* ---------- HERO ---------- */
     header {
-      min-height: 100vh;
-      background: var(--bg-main);
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 120px;
+      padding-top: 160px;
+      padding-bottom: 60px;
       text-align: center;
     }
 
     .lang-overlay {
       position: absolute;
-      top: 100px;
+      top: 90px;
       right: 60px;
-      z-index: 5;
       display: flex;
       gap: 18px;
       font-family: 'Montserrat', sans-serif;
@@ -109,48 +111,21 @@
     .lang-overlay a {
       text-decoration: none;
       color: var(--text-soft);
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       letter-spacing: 2px;
     }
 
     .lang-overlay a.active {
       color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .hero {
-      max-width: 900px;
-      padding: 0 40px;
-    }
-
-    .hero-logo img {
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-      margin-bottom: 32px;
-      opacity: 0;
-      animation: logoFade 1.4s ease forwards;
+      font-weight: 500;
     }
 
     .hero-subtitle {
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto;
+      font-size: 1.25rem;
+      line-height: 1.5;
       color: var(--text-soft);
-      font-size: 1.1rem;
-      line-height: 1.6;
-      opacity: 0;
-      animation: fadeUp 1.6s ease forwards;
-      animation-delay: 0.3s;
-    }
-
-    @keyframes logoFade {
-      from { opacity: 0; transform: scale(0.97); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ---------- BUTTON ---------- */
@@ -291,7 +266,7 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 14px 30px; }
+      nav { padding: 16px 30px; }
       section { padding: 50px 25px; }
 
       .lang-overlay {
@@ -307,8 +282,8 @@
 <nav>
   <div class="nav-top">
     <div class="brand">
-      <strong>Ramón Gardella</strong>
-      <span>Músico · Performer · Educador</span>
+      <div class="brand-title">Mental Notes</div>
+      <div class="brand-sub">Ramón Gardella · Músico · Performer · Educador</div>
     </div>
 
     <div class="nav-right">
@@ -331,15 +306,9 @@
     <a href="#">PT</a>
   </div>
 
-  <div class="hero">
-    <div class="hero-logo">
-      <img src="logo.jpg" alt="Mental Notes">
-    </div>
-
-    <p class="hero-subtitle">
-      un espacio para escuchar el interior emocional de un músico
-    </p>
-  </div>
+  <p class="hero-subtitle">
+    un espacio para escuchar el interior emocional de un músico
+  </p>
 </header>
 
 <section id="conoceme" class="story">
