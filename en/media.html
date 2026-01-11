@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media — Mental Notes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --bg-alt: #f3f4f6;
+      --text-main: #0b1220;
+      --text-soft: #334155;
+      --text-muted: #64748b;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-right a {
+      margin-left: 24px;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--text-muted);
+    }
+
+    main {
+      max-width: 760px;
+      margin: auto;
+      padding: 160px 40px 120px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.4rem;
+      color: var(--text-main);
+      margin-bottom: 48px;
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      margin-bottom: 56px;
+    }
+
+    .entry {
+      padding: 48px 32px;
+      background: var(--bg-alt);
+      border-radius: 14px;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+
+    .entry h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .entry p {
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Musician · Performer · Educator</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="index.html#inicio">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#lugar">The Space</a>
+      <a href="index.html#trabajo">What I Offer</a>
+      <a href="index.html#para-mi">Is This for Me?</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <h1>Media</h1>
+
+  <p class="intro">
+    This space gathers texts, reflections, and notes
+    related to the inner life of musicians.
+  </p>
+
+  <div class="entry">
+    <h3>A voice that said: “not like this”</h3>
+    <p>
+      A text about inner criticism, discomfort,
+      and the moment when listening becomes unavoidable.
+    </p>
+  </div>
+
+</main>
+
+</body>
+</html>
