@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Encounters · Ramón Gardella</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-alt: #eef2f7;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+      --btn-main: #1f2933;
+      --btn-hover: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(248,250,252,0.95);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .nav-right a {
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-left: 24px;
+    }
+
+    /* ---------- CONTENT ---------- */
+    main {
+      max-width: 760px;
+      margin: 160px auto 120px;
+      padding: 0 30px;
+    }
+
+    section {
+      margin-bottom: 120px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      margin: 50px 0 20px;
+    }
+
+    p {
+      margin-bottom: 26px;
+    }
+
+    /* ---------- SECTION HEADER ---------- */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* ---------- INFO LIST ---------- */
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
+    }
+
+    /* ---------- TOPICS ---------- */
+    ol {
+      margin: 20px 0 40px;
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 14px;
+    }
+
+    /* ---------- RESERVE BUTTON ---------- */
+    .btn-reservar {
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: #ffffff;
+      padding: 14px 28px;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(37,99,235,0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-reservar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 45px rgba(37,99,235,0.6);
+    }
+
+    /* ---------- CTA ---------- */
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 18px 48px;
+      background: var(--btn-main);
+      color: white;
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 30px;
+      }
+
+      main {
+        margin-top: 140px;
+        padding: 0 20px;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-reservar {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Musician · Performer · Educator</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="index-en.html#inicio">Home</a>
+      <a href="index-en.html#conoceme">About</a>
+      <a href="index-en.html#lugar">The space</a>
+      <a href="index-en.html#trabajo">What I offer</a>
+      <a href="index-en.html#para-mi">Is this for me?</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ===== INDIVIDUAL ENCOUNTERS ===== -->
+  <section id="individual">
+
+    <div class="section-header">
+      <h2>Individual encounters</h2>
+      <a href="contact.html" class="btn-reservar">Reserve</a>
+    </div>
+
+    <ul class="info-list">
+      <li>Duration: 60 minutes</li>
+      <li>Format: online</li>
+      <li>Personalized one-to-one sessions</li>
+      <li>First encounter is free and without commitment</li>
+    </ul>
+
+    <h3>What are they?</h3>
+
+    <p>
+      Individual encounters are one-to-one spaces for musicians and artists
+      who feel that something is blocked in their relationship with music
+      or in their creative process.
+    </p>
+
+    <p>
+      This is not a traditional lesson and not technical correction.
+      It is a space for listening and accompaniment,
+      starting from what you are experiencing today.
+    </p>
+
+    <h3>Topics we may work on</h3>
+
+    <ol>
+      <li>Understanding where discomfort in making music comes from.</li>
+      <li>Practical ways to bring play and enjoyment back into practice.</li>
+      <li>Your personal project as a musician.</li>
+      <li>Organization and orientation of a musical career.</li>
+    </ol>
+
+    <div class="cta">
+      <a href="contact.html" class="btn">More information</a>
+    </div>
+
+  </section>
+
+  <!-- ===== GROUP ENCOUNTERS ===== -->
+  <section id="group">
+
+    <div class="section-header">
+      <h2>Group encounters</h2>
+      <a href="contact.html" class="btn-reservar">Reserve</a>
+    </div>
+
+    <ul class="info-list">
+      <li>Format: online</li>
+      <li>Small groups</li>
+      <li>Processes over several weeks</li>
+      <li>Specific dates during the year</li>
+    </ul>
+
+    <h3>What are they?</h3>
+
+    <p>
+      Group encounters offer a shared space for musicians,
+      where individual experiences grow through exchange.
+    </p>
+
+    <p>
+      Listening to others, recognizing common difficulties,
+      and discovering that we are often not alone in what we feel.
+    </p>
+
+  </section>
+
+</main>
+
+</body>
+</html>
