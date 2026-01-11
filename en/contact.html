@@ -15,6 +15,10 @@
       --btn-main: #0f172a;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -23,6 +27,7 @@
       line-height: 1.7;
     }
 
+    /* ---------- NAV (IGUAL EN TODAS LAS PÁGINAS EN) ---------- */
     nav {
       position: fixed;
       top: 0;
@@ -40,6 +45,7 @@
     }
 
     .brand strong {
+      display: block;
       font-size: 0.9rem;
       font-weight: 700;
       color: var(--text-main);
@@ -53,14 +59,36 @@
     }
 
     .nav-right a {
+      color: var(--text-muted);
+      text-decoration: none;
       margin-left: 24px;
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
-      text-decoration: none;
-      color: var(--text-muted);
+      position: relative;
+      font-weight: 500;
     }
 
+    .nav-right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--text-main);
+      transition: 0.3s;
+    }
+
+    .nav-right a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-right a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- MAIN ---------- */
     main {
       max-width: 720px;
       margin: auto;
@@ -91,6 +119,12 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       border-radius: 4px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px; }
+      main { padding: 150px 25px 100px; }
     }
   </style>
 </head>
