@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About — Mental Notes</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --text-main: #0b1220;
+      --text-soft: #334155;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-right a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .nav-right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--text-main);
+      transition: 0.3s;
+    }
+
+    .nav-right a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-right a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+      padding-top: 150px;
+      padding-bottom: 120px;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 56px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+      color: var(--text-soft);
+    }
+
+    .emphasis {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .closing {
+      margin-top: 48px;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px; }
+      main { padding: 140px 25px 100px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Musician · Performer · Educator</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="index.html#inicio">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#lugar">The Space</a>
+      <a href="index.html#trabajo">What I Offer</a>
+      <a href="index.html#para-mi">Is This for Me?</a>
+      <a href="../media.html">Media</a>
+      <a href="../contacto.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <h1>I’m Ramón Gardella</h1>
+
+  <p>
+    I am a person who chose to dedicate his life to music.
+    To do so, I left my home country, Argentina, and moved to Germany
+    to continue my postgraduate studies in percussion.
+    A few months after arriving in Cologne (the city where I have lived since 2015),
+    I went through a deep crisis that prevented me from stepping onto the stage and playing.
+    Or rather, every time I did step on stage, I felt that everything I was doing was wrong,
+    that I was a failure, and that this path was not for me.
+  </p>
+
+  <p>
+    From that moment on, a process began in my life that has led me,
+    ten years later, to become a successful musician with a growing career,
+    collaborating and performing with important ensembles and orchestras throughout Europe,
+    and developing artistic collaborations with countries across Latin America.
+  </p>
+
+  <p>
+    This process — which included therapy, courses, workshops, meetings,
+    setbacks, and more doubts than certainties —
+    was not only musical, but deeply personal.
+    It was a process that made me realize I could not continue developing my music
+    without paying attention to what I was feeling
+    and to what was happening inside me.
+  </p>
+
+  <p class="emphasis">
+    I am where I am today because I chose to listen to what was happening within me
+    and to work consciously on it.
+  </p>
+
+  <p>
+    Did I really have to go that far to realize this?
+    Was it necessary to travel 14,000 kilometers and leave everything behind
+    to start over in a foreign and cold country?
+    Yes.
+  </p>
+
+  <p>
+    Looking back now, I can say it was the best —
+    and the most difficult — decision I have ever made.
+  </p>
+
+  <p>
+    Now that I have come to understand many aspects of this process,
+    I feel ready to support those who are going through something similar
+    and/or resonate with this experience.
+  </p>
+
+  <p class="closing">
+    A successful musical career is not built solely through study
+    and technical mastery of an instrument,
+    but through personal development alongside it.
+  </p>
+
+</main>
+
+</body>
+</html>
