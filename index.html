@@ -262,15 +262,23 @@
       color: #fff;
     }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
   nav { padding: 16px 30px; }
   header { padding-top: 120px; }
   section { padding: 70px 30px; }
   .lang-overlay { right: 30px; }
-  #lugar {
-    padding-top: 60px;
-  }
 }
+
+#lugar {
+  padding-top: 60px;
+}
+
+#trabajo > p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: var(--text-muted);
+}
+
   </style>
 </head>
 
@@ -381,6 +389,11 @@
 
 <section id="trabajo">
   <h3>Cómo puedo acompañarte</h3>
+   <p>
+    Acompañar, en este contexto, no significa corregir ni empujar.
+    Significa crear un espacio donde lo que te pasa
+    pueda ser mirado con tiempo, sin juicio y sin apuro.
+  </p>
 
   <div class="offers">
     <a href="encuentros.html#individual" class="offer-card">
