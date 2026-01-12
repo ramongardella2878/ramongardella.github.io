@@ -102,27 +102,6 @@
       text-align: center;
     }
 
-    .lang-overlay {
-      position: absolute;
-      top: 100px;
-      right: 60px;
-      display: flex;
-      gap: 18px;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .lang-overlay a {
-      text-decoration: none;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      letter-spacing: 2px;
-    }
-
-    .lang-overlay a.active {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
     .hero {
       max-width: 900px;
       padding: 0 40px;
@@ -144,6 +123,16 @@
       color: var(--text-soft);
       max-width: 560px;
       margin: 0 auto;
+    }
+
+    .hero-text {
+      margin-top: 36px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--text-soft);
     }
 
     /* ---------- SECTIONS ---------- */
@@ -171,112 +160,47 @@
       color: var(--text-soft);
     }
 
-    /* ---------- STORY ---------- */
-    .story {
-      max-width: 720px;
+    /* ---------- ORIGIN / STORY ---------- */
+    .origin {
+      max-width: 620px;
+      margin: auto;
+      text-align: left;
     }
 
-    .story-intro {
-      font-size: 1.55rem;
-      line-height: 1.45;
-      margin-bottom: 44px;
-      color: var(--text-main);
-      font-weight: 600;
+    .origin p {
+      margin-bottom: 28px;
+      line-height: 1.75;
     }
 
-    .story-intro span {
-      font-weight: 700;
-    }
-
-    .story-quote {
-      margin: 42px auto;
+    .origin-close {
       font-style: italic;
+      margin-top: 36px;
       color: var(--text-muted);
-      font-size: 1.05rem;
-    }
-
-    /* ---------- OFFERS ---------- */
-    .offers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 36px;
-    }
-
-    .offer-card {
-      display: block;
-      padding: 56px 44px;
-      border-radius: 16px;
-      background: linear-gradient(
-        160deg,
-        #0f172a 0%,
-        #1e293b 45%,
-        #0f172a 100%
-      );
-      color: #ffffff;
-      text-decoration: none;
-      text-align: center;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .offer-card:hover {
-      transform: translateY(-10px) rotate(-0.3deg);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
-    }
-
-    .offer-card h4 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.7rem;
-      margin-bottom: 22px;
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    .offer-card p {
-      font-size: 1.05rem;
-      opacity: 0.95;
-      color: #f8fafc;
-    }
-
-    .highlight {
-      margin-top: 28px;
-      font-weight: 700;
-      background: rgba(255,255,255,0.18);
-      padding: 14px 22px;
-      border-radius: 999px;
-      display: inline-block;
-      letter-spacing: 1px;
-      color: #ffffff;
     }
 
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 36px;
-      padding: 20px 56px;
-      background: var(--btn-main);
-      color: #ffffff;
+      margin-top: 24px;
+      padding: 14px 28px;
+      border: 1px solid var(--btn-main);
+      color: var(--btn-main);
       text-decoration: none;
       font-size: 0.8rem;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+      background: var(--btn-hover);
+      color: #ffffff;
     }
 
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
-      section { padding: 80px 25px; }
-
-      .lang-overlay {
-        right: 50%;
-        transform: translateX(50%);
-      }
+      header { padding-top: 120px; }
+      section { padding: 70px 30px; }
     }
   </style>
 </head>
@@ -292,10 +216,8 @@
 
     <div class="nav-right">
       <a href="#inicio">Inicio</a>
-      <a href="conoceme.html">Conoceme</a>
-      <a href="#lugar">El espacio</a>
+      <a href="#conoceme">Conoceme</a>
       <a href="#trabajo">Qué te ofrezco</a>
-      <a href="#para-mi">¿Es esto para mí?</a>
       <a href="media.html">Media</a>
       <a href="contacto.html">Contacto</a>
     </div>
@@ -303,57 +225,52 @@
 </nav>
 
 <header id="inicio">
-  <div class="lang-overlay">
-    <a href="#" class="active">ES</a>
-    <a href="en/index.html">EN</a>
-    <a href="#">DE</a>
-    <a href="#">PT</a>
-  </div>
   <div class="hero">
-  <div class="hero-title">Mental Notes</div>
+    <div class="hero-title">Mental Notes</div>
 
-  <div class="hero-subtitle">
-    Un espacio para músicos que quieren entender<br>
-    qué les pasa por dentro cuando hacen música
-  </div>
+    <div class="hero-subtitle">
+      Un espacio para músicos que quieren entender<br>
+      qué les pasa por dentro cuando hacen música
+    </div>
 
-  <div class="hero-text">
-    A través de textos y encuentros,<br>
-    comparto herramientas desde mi experiencia<br>
-    para revisar, reordenar<br>
-    y sostener un camino musical propio.
+    <div class="hero-text">
+      A través de textos y encuentros,<br>
+      comparto herramientas desde mi experiencia<br>
+      para revisar, reordenar<br>
+      y sostener un camino musical propio.
+    </div>
   </div>
-</div>
 </header>
 
-<section id="conoceme" class="story">
-  <p class="story-intro">
-    ¿Te sentís mal, frustrado, cansado?<br>
-    <span>Lo sé y te entiendo.</span>
+<section class="origin" id="conoceme">
+
+  <p>
+    Hace más de diez años, mientras comenzaba estudios de posgrado en Alemania,
+    atravesé un momento que me impedía subirme al escenario y tocar.
   </p>
 
   <p>
-    Hace 10 años, cuando comenzaba estudios de posgrado en Alemania,
-    atravesé una crisis que me impedía subirme al escenario y tocar.
+    No había un hecho puntual ni un problema técnico.
+    Había algo que no estaba encontrando lugar.
   </p>
 
-  <div class="story-quote">
-    <p>Que todo estaba mal.</p>
-    <p>Que era un fracasado.</p>
-    <p>Que esto no era para mí.</p>
-  </div>
+  <p>
+    Ese quiebre me llevó a una certeza:<br>
+    no podía seguir desarrollando mi música
+    sin escuchar lo que me estaba pasando por dentro.
+  </p>
 
-  <div class="story-close">
-    <p>Ahí entendí que no podía seguir desarrollando mi música sin escuchar lo que me estaba pasando por dentro.</p>
-    <p>Desde entonces estoy en proceso.</p>
-    <p>Hoy quiero ayudarte.</p>
-    <p>No es terapia. No es motivacional.</p>
-    <p>Acompaño desde mi experiencia.</p>
-  </div>
+  <p class="origin-close">
+    Mental Notes nace de ese proceso,
+    que sigue abierto hasta hoy.
+  </p>
 
-  <a class="btn" href="#trabajo">Qué te ofrezco</a>
+  <a class="btn" href="#trabajo">Cómo puedo acompañarte</a>
+
 </section>
 
+</body>
+</html>
 <section id="lugar" class="alt">
   <h3>Estás en el lugar correcto</h3>
 
