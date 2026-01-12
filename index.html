@@ -178,7 +178,6 @@
 
     section p {
       font-size: 1.08rem;
-      color: var(--text-soft);
     }
 
     /* ---------- ORIGIN ---------- */
@@ -188,7 +187,6 @@
       text-align: center;
       font-size: 1.05rem;
       line-height: 1.75;
-      color: var(--text-soft);
     }
 
     .origin p {
@@ -199,6 +197,50 @@
       font-style: italic;
       margin-top: 36px;
       color: var(--text-muted);
+    }
+
+    /* ---------- OFFERS ---------- */
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 36px;
+      margin-top: 60px;
+    }
+
+    .offer-card {
+      display: block;
+      padding: 36px 30px;
+      background: var(--bg-alt);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text-soft);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    }
+
+    .offer-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+      color: var(--text-main);
+    }
+
+    .offer-card p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .offer-card .highlight {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-main);
     }
 
     /* ---------- BUTTON ---------- */
@@ -217,7 +259,7 @@
 
     .btn:hover {
       background: var(--btn-hover);
-      color: #ffffff;
+      color: #fff;
     }
 
     @media (max-width: 768px) {
@@ -252,6 +294,7 @@
 <div class="lang-overlay">
   <a href="index.html" class="active">ES</a>
   <a href="en/index.html">EN</a>
+  <a href="de/index.html">DE</a>
 </div>
 
 <header id="inicio">
@@ -277,63 +320,32 @@
     Hace más de diez años, mientras comenzaba estudios de posgrado en Alemania,
     atravesé un momento que me impedía subirme al escenario y tocar.
   </p>
-
   <p>
     No había un hecho puntual ni un problema técnico.
     Había algo que no estaba encontrando lugar.
   </p>
-
   <p>
     Ese quiebre me llevó a una certeza:<br>
     no podía seguir desarrollando mi música
     sin escuchar lo que me estaba pasando por dentro.
   </p>
-
   <p class="origin-close">
     Mental Notes nace de ese proceso,
     que sigue abierto hasta hoy.
   </p>
-
   <a class="btn" href="#trabajo">Cómo puedo acompañarte</a>
 </section>
 
-</body>
-</html>
-</section>
-
-</body>
-</html>
 <section id="lugar" class="alt">
   <h3>Estás en el lugar correcto</h3>
-
-  <p>
-    Diseñé este espacio para acompañarte en tu <strong>vida musical</strong>, dando escucha
-    a lo que sentís al momento de hacer música.
-  </p>
-
-  <p>
-    Parto de la idea de que el desarrollo pleno de una carrera musical no es posible
-    si el ejecutante no se desarrolla, a su vez, personalmente.
-  </p>
-
-  <p>
-    Como músicos, pasamos gran parte —si no toda— nuestra vida tocando para otros:
-    en concursos, clases, audiciones, exámenes de ingreso.
-  </p>
-
-  <p>
-    Experiencias como el pánico escénico, la frustración, la comparación constante con
-    colegas o la sensación de estancamiento en la carrera existen, y no son fallas:
-    son un llamado a mirar y trabajar este plano personal.
-  </p>
+  <p>Diseñé este espacio para acompañarte en tu vida musical, dando escucha a lo que sentís al momento de hacer música.</p>
+  <p>El desarrollo de una carrera musical no es posible sin un desarrollo personal paralelo.</p>
 </section>
 
 <section id="trabajo">
-
   <h3>Cómo puedo acompañarte</h3>
 
   <div class="offers">
-
     <a href="encuentros.html#individual" class="offer-card">
       <h4>Encuentros individuales</h4>
       <p>Sesiones de 60 minutos</p>
@@ -350,34 +362,13 @@
       <p>Disponibles en español, portugués, inglés y alemán</p>
       <span class="highlight">Más información</span>
     </a>
-
   </div>
-
 </section>
 
 <section id="para-mi">
   <h3>¿Es esto para mí?</h3>
-
-  <div class="para-mi-text">
-    <p class="intro">Para saber si esto es para vos, tenes que cumplir estos requisitos:</p>
-    <p>sos musico, estudiante de musica, profesional de la musica y/o creador artistico.</p>
-    <p>sentis que algo en tu vida artistica musical está trabado</p>
-    <p>Algo te cuesta y no se soluciona perfeccionando tus habilidades fisicas</p>
-    <p>Tenes ganas de vivir plenamente tu arte y expandir tu carrera</p>
-    <p>te sentis identificado con alguna (o todas) estas frases:</p>
-
-    <div class="frases">
-      <p>"cuando toco la paso mal"</p>
-      <p>"nunca me salen los pasajes difíciles"</p>
-      <p>"me la paso practicando y se que cuando haya publico esto no me va a salir"</p>
-      <p>"No puedo ganar dinero con la música"</p>
-      <p>"estoy estancado en mi carrera"</p>
-      <p>"mira todo lo que hacen los otros y lo poco que hago yo"</p>
-      <p>"que pensaran mis padres/amigos/pareja de mi?"</p>
-    </div>
-
-    <a href="contacto.html" class="btn">Si llegaste hasta acá, escribime</a>
-  </div>
+  <p>Este espacio es para músicos que sienten que algo en su vida artística está trabado y quieren mirarlo con más profundidad.</p>
+  <a href="contacto.html" class="btn">Si llegaste hasta acá, escribime</a>
 </section>
 
 <section id="contacto" class="alt">
