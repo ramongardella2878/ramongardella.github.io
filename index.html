@@ -102,6 +102,27 @@
       text-align: center;
     }
 
+    .lang-overlay {
+      position: absolute;
+      top: 100px;
+      right: 60px;
+      display: flex;
+      gap: 18px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .lang-overlay a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .lang-overlay a.active {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
     .hero {
       max-width: 900px;
       padding: 0 40px;
@@ -160,16 +181,18 @@
       color: var(--text-soft);
     }
 
-    /* ---------- ORIGIN / STORY ---------- */
+    /* ---------- ORIGIN ---------- */
     .origin {
-      max-width: 620px;
-      margin: auto;
-      text-align: left;
+      max-width: 600px;
+      margin: 140px auto;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-soft);
     }
 
     .origin p {
       margin-bottom: 28px;
-      line-height: 1.75;
     }
 
     .origin-close {
@@ -181,7 +204,7 @@
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 24px;
+      margin-top: 32px;
       padding: 14px 28px;
       border: 1px solid var(--btn-main);
       color: var(--btn-main);
@@ -201,6 +224,7 @@
       nav { padding: 16px 30px; }
       header { padding-top: 120px; }
       section { padding: 70px 30px; }
+      .lang-overlay { right: 30px; }
     }
   </style>
 </head>
@@ -218,11 +242,17 @@
       <a href="#inicio">Inicio</a>
       <a href="#conoceme">Conoceme</a>
       <a href="#trabajo">Qué te ofrezco</a>
+      <a href="#para-mi">¿Es esto para mí?</a>
       <a href="media.html">Media</a>
       <a href="contacto.html">Contacto</a>
     </div>
   </div>
 </nav>
+
+<div class="lang-overlay">
+  <a href="index.html" class="active">ES</a>
+  <a href="en/index.html">EN</a>
+</div>
 
 <header id="inicio">
   <div class="hero">
@@ -243,7 +273,6 @@
 </header>
 
 <section class="origin" id="conoceme">
-
   <p>
     Hace más de diez años, mientras comenzaba estudios de posgrado en Alemania,
     atravesé un momento que me impedía subirme al escenario y tocar.
@@ -266,7 +295,10 @@
   </p>
 
   <a class="btn" href="#trabajo">Cómo puedo acompañarte</a>
+</section>
 
+</body>
+</html>
 </section>
 
 </body>
