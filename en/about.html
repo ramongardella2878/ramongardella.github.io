@@ -25,6 +25,7 @@
       line-height: 1.7;
     }
 
+    /* ---------- NAV ---------- */
     nav {
       position: fixed;
       top: 0;
@@ -35,6 +36,57 @@
       z-index: 10;
     }
 
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-right a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .nav-right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--text-main);
+      transition: 0.3s;
+    }
+
+    .nav-right a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-right a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- LANG ---------- */
     .lang-overlay {
       position: fixed;
       top: 100px;
@@ -57,6 +109,7 @@
       font-weight: 600;
     }
 
+    /* ---------- MAIN ---------- */
     main {
       max-width: 760px;
       margin: auto;
@@ -88,13 +141,25 @@
 
 <body>
 
-<!-- NAV INCLUDE -->
-<nav id="nav"></nav>
-<script>
-fetch("nav.html")
-  .then(r => r.text())
-  .then(html => document.getElementById("nav").innerHTML = html);
-</script>
+<!-- NAV (COPIADO DEL INDEX) -->
+<nav>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Musician · Performer · Educator</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="index.html#inicio">Home</a>
+      <a href="index.html#enfoque">Approach</a>
+      <a href="about.html">About</a>
+      <a href="index.html#trabajo">What I Offer</a>
+      <a href="index.html#para-mi">Is This for Me?</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 
 <!-- LANGUAGE SELECTOR -->
 <div class="lang-overlay">
