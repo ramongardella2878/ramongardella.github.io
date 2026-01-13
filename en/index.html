@@ -103,12 +103,13 @@
     }
 
     .lang-overlay {
-      position: absolute;
+      position: fixed;
       top: 100px;
       right: 60px;
       display: flex;
       gap: 18px;
       font-family: 'Montserrat', sans-serif;
+      z-index: 20;
     }
 
     .lang-overlay a {
@@ -146,6 +147,16 @@
       margin: 0 auto;
     }
 
+    .hero-text {
+      margin-top: 36px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--text-soft);
+    }
+
     /* ---------- SECTIONS ---------- */
     section {
       padding: 90px 60px;
@@ -168,7 +179,25 @@
 
     section p {
       font-size: 1.08rem;
-      color: var(--text-soft);
+    }
+
+    /* ---------- ORIGIN ---------- */
+    .origin {
+      max-width: 600px;
+      margin: 100px auto 60px;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .origin p {
+      margin-bottom: 28px;
+    }
+
+    .origin-close {
+      font-style: italic;
+      margin-top: 36px;
+      color: var(--text-muted);
     }
 
     /* ---------- OFFERS ---------- */
@@ -176,83 +205,69 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 36px;
+      margin-top: 60px;
     }
 
     .offer-card {
       display: block;
-      padding: 56px 44px;
-      border-radius: 16px;
-      background: linear-gradient(
-        160deg,
-        #0f172a 0%,
-        #1e293b 45%,
-        #0f172a 100%
-      );
-      color: #ffffff;
+      padding: 36px 30px;
+      background: var(--bg-alt);
+      border-radius: 14px;
       text-decoration: none;
-      text-align: center;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      color: var(--text-soft);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .offer-card:hover {
-      transform: translateY(-10px) rotate(-0.3deg);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
     }
 
     .offer-card h4 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.7rem;
-      margin-bottom: 22px;
-      font-weight: 600;
-      color: #ffffff;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+      color: var(--text-main);
     }
 
     .offer-card p {
-      font-size: 1.05rem;
-      opacity: 0.95;
-      color: #f8fafc;
+      margin: 6px 0;
+      font-size: 0.95rem;
     }
 
-    .highlight {
-      margin-top: 28px;
-      font-weight: 700;
-      background: rgba(255,255,255,0.18);
-      padding: 14px 22px;
-      border-radius: 999px;
+    .offer-card .highlight {
       display: inline-block;
-      letter-spacing: 1px;
-      color: #ffffff;
+      margin-top: 18px;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-main);
     }
 
     /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
-      margin-top: 36px;
-      padding: 20px 56px;
-      background: var(--btn-main);
-      color: #ffffff;
+      margin-top: 32px;
+      padding: 14px 28px;
+      border: 1px solid var(--btn-main);
+      color: var(--btn-main);
       text-decoration: none;
       font-size: 0.8rem;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+      background: var(--btn-hover);
+      color: #fff;
     }
 
     @media (max-width: 768px) {
       nav { padding: 16px 30px; }
-      section { padding: 80px 25px; }
-
-      .lang-overlay {
-        right: 50%;
-        transform: translateX(50%);
-      }
+      header { padding-top: 120px; }
+      section { padding: 70px 30px; }
+      .lang-overlay { right: 30px; }
     }
   </style>
 </head>
@@ -268,8 +283,8 @@
 
     <div class="nav-right">
       <a href="index.html#inicio">Home</a>
+      <a href="index.html#enfoque">Approach</a>
       <a href="about.html">About</a>
-      <a href="index.html#lugar">The Space</a>
       <a href="index.html#trabajo">What I Offer</a>
       <a href="index.html#para-mi">Is This for Me?</a>
       <a href="media.html">Media</a>
@@ -278,113 +293,178 @@
   </div>
 </nav>
 
-<header id="inicio">
-  <div class="lang-overlay">
-    <a href="../index.html">ES</a>
-    <a href="#" class="active">EN</a>
-    <a href="#" class="disabled">DE</a>
-    <a href="#" class="disabled">PT</a>
-  </div>
+<div class="lang-overlay">
+  <a href="../index.html">ES</a>
+  <a href="index.html" class="active">EN</a>
+  <a href="#">DE</a>
+</div>
 
+<header id="inicio">
   <div class="hero">
     <div class="hero-title">Mental Notes</div>
+
     <div class="hero-subtitle">
-      a space to listen to the inner life of a musician
+      A space for musicians who want to understand<br>
+      what happens inside when they make music
+    </div>
+
+    <div class="hero-text">
+      Through texts and shared encounters,<br>
+      I offer tools drawn from my own experience<br>
+      to reflect on, reorganize,<br>
+      and sustain a personal musical path.
     </div>
   </div>
 </header>
 
-<section>
+<section class="origin" id="enfoque">
   <p>
-    One-to-one and group meetings for musicians who wish to deepen their personal process
-    and, through that, develop a healthy musical life.
-    <br><br>
-    Intended for music students, graduates, professionals, amateurs,
-    and anyone involved in artistic creation.
+    More than ten years ago, while starting postgraduate studies in Germany,
+    I went through a period that made it impossible for me to step on stage and play.
   </p>
+
+  <p>
+    There was no specific event and no technical problem.
+    There was simply something that had no place.
+  </p>
+
+  <p>
+    That break led me to a certainty:<br>
+    I could not continue developing my music
+    without listening to what was happening inside.
+  </p>
+
+  <p class="origin-close">
+    Mental Notes was born from that process,
+    which is still ongoing today.
+  </p>
+
+  <a class="btn" href="#trabajo">How I can accompany you</a>
 </section>
 
-<section class="alt" id="lugar">
-  <h3>You Are in the Right Place</h3>
+<section id="lugar" class="alt">
+  <h3>You are in the right place</h3>
 
   <p>
-    I designed this space to accompany you in your musical life,
-    giving attention to what you feel when making music.
+    Musical practice constantly exposes us:
+    concerts, lessons, auditions, exams,
+    competitions, and external judgment.
   </p>
 
   <p>
-    I start from the idea that the full development of a musical career
-    is not possible if the performer does not also develop personally.
+    Along that path, experiences such as
+    performance anxiety, frustration,
+    constant comparison with other musicians,
+    or a feeling of being stuck often appear.
   </p>
 
   <p>
-    As musicians, we spend a large part — if not all — of our lives playing for others:
-    competitions, lessons, auditions, entrance exams.
+    These aspects, however, are usually left
+    outside formal training spaces.
+    Musical education rightly focuses
+    on technique, repertoire, and performance,
+    but rarely offers tools
+    to work with what happens inside.
   </p>
 
   <p>
-    Experiences such as stage fright, frustration, constant comparison with colleagues,
-    or the feeling of being stuck in one’s career exist — and they are not failures.
-    They are a call to look inward and work on this personal dimension.
+    Not because it is unimportant,
+    but because historically
+    it has not been a central topic
+    within institutions.
+  </p>
+
+  <p>
+    Mental Notes exists to give space
+    to that inner dimension of making music,
+    which, when unheard,
+    often shows up as discomfort,
+    blockage, or unnecessary suffering.
   </p>
 </section>
 
 <section id="trabajo">
-  <h3>What I Offer</h3>
+  <h3>How I can accompany you</h3>
+
+  <p>
+    To accompany, in this context,
+    does not mean to correct or push.
+    It means creating a space
+    where what you are experiencing
+    can be looked at with time,
+    without judgment and without urgency.
+  </p>
 
   <div class="offers">
-    <!-- ✅ CORREGIDO -->
     <a href="encounters.html#individual" class="offer-card">
-      <h4>One-to-One Meetings</h4>
+      <h4>Individual encounters</h4>
       <p>60-minute sessions</p>
       <p>Online format</p>
-      <p>Available in Spanish, Portuguese, English and German</p>
-      <p>First meeting free of charge</p>
-      <span class="highlight">Reserve your spot</span>
+      <p>Available in Spanish, Portuguese, English, and German</p>
+      <p>A first meeting to get to know each other</p>
+      <span class="highlight">More information</span>
     </a>
 
-    <!-- ✅ CORREGIDO -->
-    <a href="encounters.html#group" class="offer-card">
-      <h4>Group Meetings</h4>
+    <a href="encounters.html#grupal" class="offer-card">
+      <h4>Group encounters</h4>
       <p>Online format</p>
       <p>Groups organized by language</p>
-      <p>Available in Spanish, Portuguese, English and German</p>
-      <span class="highlight">Reserve your spot</span>
+      <p>Available in Spanish, Portuguese, English, and German</p>
+      <span class="highlight">More information</span>
     </a>
   </div>
 </section>
 
 <section id="para-mi">
-  <h3>Is This for Me?</h3>
+  <h3>Is this for me?</h3>
 
-  <div class="para-mi-text">
-    <p class="intro">
-      To know whether this is for you, you should meet the following criteria:
-    </p>
+  <p>
+    This space may be for you if you are a musician
+    and feel that something in your way of making music
+    does not quite settle.
+  </p>
 
-    <p>You are a musician, music student, music professional and/or artistic creator.</p>
-    <p>You feel that something in your artistic or musical life is blocked.</p>
-    <p>Something feels difficult and cannot be solved by improving physical skills alone.</p>
-    <p>You want to fully live your art and expand your career.</p>
-    <p>You identify with one (or several) of these statements:</p>
+  <p>
+    Not necessarily because of a lack of technique,
+    study, or discipline,
+    but because some things
+    do not get resolved
+    simply by practicing more.
+  </p>
 
-    <div class="frases">
-      <p>"When I play, I feel uncomfortable"</p>
-      <p>"The difficult passages never work out"</p>
-      <p>"I practice all the time, but I know it won’t work in front of an audience"</p>
-      <p>"I can’t make a living from music"</p>
-      <p>"I feel stuck in my career"</p>
-      <p>"I look at what others do and feel I do so little"</p>
-      <p>"What will my parents / friends / partner think of me?"</p>
-    </div>
+  <p>
+    Sometimes questions like these appear:
+  </p>
 
-    <a href="/ramongardella.github.io/en/contact.html">Write to me</a>
+  <div class="frases">
+    <p>“When I play, I feel bad”</p>
+    <p>“I practice a lot, but I know it won’t work in front of an audience”</p>
+    <p>“I constantly compare myself to other musicians”</p>
+    <p>“I feel stuck in my career”</p>
+    <p>“I don’t know how to sustain myself financially through music”</p>
   </div>
+
+  <p>
+    If any of these sentences feel familiar,
+    this might be a good place
+    to pause and look at that more calmly.
+  </p>
+
+  <p>
+    Not to force solutions,
+    but to better understand
+    what place music occupies
+    in your life today.
+  </p>
+
+  <a href="contact.html" class="btn">
+    If this resonates, write to me
+  </a>
 </section>
 
 <section id="contacto" class="alt">
   <h3>Contact</h3>
-  <a class="btn" href="../contacto.html">Write to me</a>
+  <a class="btn" href="contact.html">Write to me</a>
 </section>
 
 </body>
