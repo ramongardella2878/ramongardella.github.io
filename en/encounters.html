@@ -69,6 +69,29 @@
       margin-left: 24px;
     }
 
+    /* ---------- LANG ---------- */
+    .lang-overlay {
+      position: fixed;
+      top: 100px;
+      right: 60px;
+      display: flex;
+      gap: 18px;
+      font-family: 'Montserrat', sans-serif;
+      z-index: 20;
+    }
+
+    .lang-overlay a {
+      text-decoration: none;
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .lang-overlay a.active {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
     /* ---------- CONTENT ---------- */
     main {
       max-width: 760px;
@@ -127,65 +150,31 @@
       margin-bottom: 14px;
     }
 
-    /* ---------- RESERVE BUTTON ---------- */
-    .btn-reservar {
-      background: linear-gradient(135deg, #2563eb, #1e3a8a);
-      color: #ffffff;
-      padding: 14px 28px;
-      font-size: 0.7rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-      box-shadow: 0 10px 30px rgba(37,99,235,0.45);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .btn-reservar:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 45px rgba(37,99,235,0.6);
-    }
-
-    /* ---------- CTA ---------- */
-    .cta {
-      margin-top: 50px;
-      text-align: center;
-    }
-
+    /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
       margin-top: 20px;
-      padding: 18px 48px;
-      background: var(--btn-main);
-      color: white;
+      padding: 14px 28px;
+      border: 1px solid var(--btn-main);
+      color: var(--btn-main);
       text-decoration: none;
-      font-size: 0.7rem;
-      letter-spacing: 3px;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--btn-hover);
+      color: #fff;
     }
 
     /* ---------- MOBILE ---------- */
     @media (max-width: 768px) {
-      nav {
-        padding: 16px 30px;
-      }
-
-      main {
-        margin-top: 140px;
-        padding: 0 20px;
-      }
-
-      .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .btn-reservar {
-        margin-top: 10px;
-      }
+      nav { padding: 16px 30px; }
+      main { margin-top: 140px; padding: 0 20px; }
+      .section-header { flex-direction: column; align-items: flex-start; }
+      .lang-overlay { right: 30px; }
     }
   </style>
 </head>
@@ -200,16 +189,22 @@
     </div>
 
     <div class="nav-right">
-      <a href="index-en.html#inicio">Home</a>
-      <a href="index-en.html#conoceme">About</a>
-      <a href="index-en.html#lugar">The space</a>
-      <a href="index-en.html#trabajo">What I offer</a>
-      <a href="index-en.html#para-mi">Is this for me?</a>
+      <a href="index.html#inicio">Home</a>
+      <a href="index.html#enfoque">Approach</a>
+      <a href="about.html">About</a>
+      <a href="index.html#trabajo">What I Offer</a>
+      <a href="index.html#para-mi">Is This for Me?</a>
       <a href="media.html">Media</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
+
+<div class="lang-overlay">
+  <a href="../encuentros.html">ES</a>
+  <a href="encounters.html" class="active">EN</a>
+  <a href="#">DE</a>
+</div>
 
 <main>
 
@@ -218,26 +213,26 @@
 
     <div class="section-header">
       <h2>Individual encounters</h2>
-      <a href="contact.html" class="btn-reservar">Reserve</a>
     </div>
 
     <ul class="info-list">
       <li>Duration: 60 minutes</li>
       <li>Format: online</li>
-      <li>Personalized one-to-one sessions</li>
-      <li>First encounter is free and without commitment</li>
+      <li>Personal one-to-one sessions</li>
+      <li>A first meeting to get to know each other</li>
     </ul>
 
     <h3>What are they?</h3>
 
     <p>
-      Individual encounters are one-to-one spaces for musicians and artists
-      who feel that something is blocked in their relationship with music
-      or in their creative process.
+      Individual encounters are one-to-one spaces for musicians
+      who feel that something in their relationship with music
+      or in their creative process does not quite settle.
     </p>
 
     <p>
-      This is not a traditional lesson and not technical correction.
+      This is not a traditional lesson,
+      nor a space for technical correction.
       It is a space for listening and accompaniment,
       starting from what you are experiencing today.
     </p>
@@ -246,43 +241,43 @@
 
     <ol>
       <li>Understanding where discomfort in making music comes from.</li>
-      <li>Practical ways to bring play and enjoyment back into practice.</li>
+      <li>Practical ways to bring play and ease back into instrumental practice.</li>
       <li>Your personal project as a musician.</li>
-      <li>Organization and orientation of a musical career.</li>
+      <li>Orientation and organization of a musical career.</li>
     </ol>
 
-    <div class="cta">
-      <a href="contact.html" class="btn">More information</a>
-    </div>
+    <a href="contact.html" class="btn">Write to me</a>
 
   </section>
 
   <!-- ===== GROUP ENCOUNTERS ===== -->
-  <section id="group">
+  <section id="grupal">
 
     <div class="section-header">
       <h2>Group encounters</h2>
-      <a href="contact.html" class="btn-reservar">Reserve</a>
     </div>
 
     <ul class="info-list">
       <li>Format: online</li>
       <li>Small groups</li>
       <li>Processes over several weeks</li>
-      <li>Specific dates during the year</li>
+      <li>Specific dates throughout the year</li>
     </ul>
 
     <h3>What are they?</h3>
 
     <p>
       Group encounters offer a shared space for musicians,
-      where individual experiences grow through exchange.
+      where individual experiences are enriched through listening and exchange.
     </p>
 
     <p>
-      Listening to others, recognizing common difficulties,
-      and discovering that we are often not alone in what we feel.
+      Hearing others, recognizing common difficulties,
+      and discovering that many of these experiences
+      are shared more widely than we might think.
     </p>
+
+    <a href="contact.html" class="btn">Write to me</a>
 
   </section>
 
