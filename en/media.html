@@ -170,15 +170,25 @@
 
 <body>
 
-<!-- NAV INCLUDE -->
-<div id="nav"></div>
-<script>
-fetch("nav.html")
-  .then(r => r.text())
-  .then(html => document.getElementById("nav").innerHTML = html);
-</script>
+<nav>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Musician · Performer · Educator</span>
+    </div>
 
-<!-- LANGUAGE SELECTOR -->
+    <div class="nav-right">
+      <a href="index.html#inicio">Home</a>
+      <a href="index.html#enfoque">Approach</a>
+      <a href="about.html">About</a>
+      <a href="index.html#trabajo">What I Offer</a>
+      <a href="index.html#para-mi">Is This for Me?</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
 <div class="lang-overlay">
   <a href="../media.html">ES</a>
   <a href="media.html" class="active">EN</a>
