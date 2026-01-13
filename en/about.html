@@ -34,6 +34,7 @@
       background: rgba(255,255,255,0.97);
       border-bottom: 1px solid #e5e7eb;
       z-index: 10;
+      display: block; /* 🔴 ESTA LÍNEA ES LA CLAVE */
     }
 
     .nav-top {
@@ -136,114 +137,6 @@
       main { padding: 150px 25px 100px; }
       .lang-overlay { right: 30px; }
     }
-    .nav-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand strong {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-.brand span {
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.nav-right a {
-  color: var(--text-muted);
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 500;
-}
-
-.nav-right a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 1px;
-  background: var(--text-main);
-  transition: 0.3s;
-}
-
-.nav-right a:hover {
-  color: var(--text-main);
-}
-
-.nav-right a:hover::after {
-  width: 100%;
-}
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 16px 60px;
-  background: rgba(255,255,255,0.97);
-  border-bottom: 1px solid #e5e7eb;
-  z-index: 10;
-}
-
-.nav-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand strong {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-.brand span {
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.nav-right a {
-  color: var(--text-muted);
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 500;
-}
-
-.nav-right a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 1px;
-  background: var(--text-main);
-  transition: 0.3s;
-}
-
-.nav-right a:hover {
-  color: var(--text-main);
-}
-
-.nav-right a:hover::after {
-  width: 100%;
-}
   </style>
 </head>
 
@@ -268,7 +161,6 @@ nav {
   </div>
 </nav>
 
-<!-- LANGUAGE SELECTOR -->
 <div class="lang-overlay">
   <a href="../about.html">ES</a>
   <a href="about.html" class="active">EN</a>
