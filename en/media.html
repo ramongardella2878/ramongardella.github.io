@@ -15,9 +15,7 @@
       --text-muted: #64748b;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -96,7 +94,7 @@
       display: flex;
       gap: 18px;
       font-family: 'Montserrat', sans-serif;
-      z-index: 20;
+      z-index: 30;
     }
 
     .lang-overlay a {
@@ -167,75 +165,26 @@
       main { padding: 150px 25px 100px; }
       .lang-overlay { right: 30px; }
     }
-    /* ---------- LANGUAGE SELECTOR ---------- */
-.lang-overlay {
-  position: fixed;
-  top: 100px;
-  right: 60px;
-  display: flex;
-  gap: 18px;
-  font-family: 'Montserrat', sans-serif;
-  z-index: 30;
-}
-
-.lang-overlay a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-}
-
-.lang-overlay a.active {
-  color: var(--text-main);
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .lang-overlay {
-    right: 30px;
-  }
-}
   </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="nav-top">
-    <div class="brand">
-      <strong>Ramón Gardella</strong>
-      <span>Musician · Performer · Educator</span>
-    </div>
+<!-- NAV INCLUDE -->
+<div id="nav"></div>
+<script>
+fetch("nav.html")
+  .then(r => r.text())
+  .then(html => document.getElementById("nav").innerHTML = html);
+</script>
 
-    <div class="nav-right">
-      <a href="index.html#inicio">Home</a>
-      <a href="index.html#enfoque">Approach</a>
-      <a href="about.html">About</a>
-      <a href="index.html#trabajo">What I Offer</a>
-      <a href="index.html#para-mi">Is This for Me?</a>
-      <a href="media.html">Media</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</nav>
+<!-- LANGUAGE SELECTOR -->
 <div class="lang-overlay">
   <a href="../media.html">ES</a>
   <a href="media.html" class="active">EN</a>
-  <a href="#">DE</a>
+  <a href="../de/media.html">DE</a>
 </div>
 
-<main>
-
-<div class="lang-overlay">
-  <a href="../media.html">ES</a>
-  <a href="media.html" class="active">EN</a>
-  <a href="#">DE</a>
-</div>
-<div class="lang-overlay">
-  <a href="../media.html">ES</a>
-  <a href="media.html" class="active">EN</a>
-  <a href="#">DE</a>
-</div>
 <main>
   <h1>Media</h1>
 
@@ -268,7 +217,6 @@
       and how inner worlds take shape through sound.
     </p>
   </div>
-
 </main>
 
 </body>
