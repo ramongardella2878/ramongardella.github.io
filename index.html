@@ -278,7 +278,27 @@
   margin: 0 auto 40px;
   color: var(--text-muted);
 }
+.lang-overlay {
+  position: fixed;
+  top: 100px;
+  right: 60px;
+  display: flex;
+  gap: 18px;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 20;
+}
 
+.lang-overlay a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.lang-overlay a.active {
+  color: var(--text-main);
+  font-weight: 600;
+}
   </style>
 </head>
 
@@ -306,7 +326,7 @@
 <div class="lang-overlay">
   <a href="index.html" class="active">ES</a>
   <a href="en/index.html">EN</a>
-  <a href="de/index.html">DE</a>
+  <a href="#">DE</a>
 </div>
 
 <header id="inicio">
