@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Encuentros · Ramón Gardella</title>
 
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -13,8 +12,8 @@
       --bg-alt: #eef2f7;
       --text-main: #0f172a;
       --text-soft: #475569;
-      --btn-main: #1f2933;
-      --btn-hover: #000000;
+      --text-muted: #64748b;
+      --btn-main: #0f172a;
     }
 
     * {
@@ -31,7 +30,7 @@
       font-size: 18px;
     }
 
-    /* ---------- NAV (MISMO EN TODO EL SITIO) ---------- */
+    /* ---------- NAV ---------- */
     nav {
       position: fixed;
       top: 0;
@@ -57,11 +56,11 @@
       font-size: 0.7rem;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--text-soft);
+      color: var(--text-muted);
     }
 
     .nav-right a {
-      color: var(--text-soft);
+      color: var(--text-muted);
       text-decoration: none;
       font-size: 0.75rem;
       letter-spacing: 1px;
@@ -127,65 +126,34 @@
       margin-bottom: 14px;
     }
 
-    /* ---------- RESERVAR BUTTON (DESTACADO) ---------- */
-    .btn-reservar {
-      background: linear-gradient(135deg, #2563eb, #1e3a8a);
-      color: #ffffff;
-      padding: 14px 28px;
-      font-size: 0.7rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+    /* ---------- BUTTONS ---------- */
+    .btn-soft {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 1px solid var(--btn-main);
+      color: var(--btn-main);
       text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-      box-shadow: 0 10px 30px rgba(37,99,235,0.45);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.3s;
       white-space: nowrap;
     }
 
-    .btn-reservar:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 45px rgba(37,99,235,0.6);
+    .btn-soft:hover {
+      background: var(--btn-main);
+      color: #ffffff;
     }
 
-    /* ---------- CTA ---------- */
     .cta {
       margin-top: 50px;
       text-align: center;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 18px 48px;
-      background: var(--btn-main);
-      color: white;
-      text-decoration: none;
-      font-size: 0.7rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-radius: 3px;
-    }
-
-    /* ---------- MOBILE ---------- */
     @media (max-width: 768px) {
-      nav {
-        padding: 16px 30px;
-      }
-
-      main {
-        margin-top: 140px;
-        padding: 0 20px;
-      }
-
-      .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .btn-reservar {
-        margin-top: 10px;
-      }
+      nav { padding: 16px 30px; }
+      main { margin-top: 140px; padding: 0 20px; }
+      .section-header { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -201,8 +169,7 @@
 
     <div class="nav-right">
       <a href="index.html#inicio">Inicio</a>
-      <a href="index.html#conoceme">Conoceme</a>
-      <a href="index.html#lugar">El espacio</a>
+      <a href="index.html#enfoque">Enfoque</a>
       <a href="index.html#trabajo">Qué te ofrezco</a>
       <a href="index.html#para-mi">¿Es esto para mí?</a>
       <a href="media.html">Media</a>
@@ -218,40 +185,39 @@
 
     <div class="section-header">
       <h2>Encuentros individuales</h2>
-      <a href="contacto.html" class="btn-reservar">Reservar</a>
+      <a href="contacto.html" class="btn-soft">Escribirme</a>
     </div>
 
     <ul class="info-list">
       <li>Duración: 60 minutos</li>
       <li>Modalidad: online</li>
       <li>Encuentros personalizados</li>
-      <li>Primer encuentro gratuito y sin compromiso</li>
+      <li>Primer encuentro para conocernos</li>
     </ul>
 
-    <h3>¿Qué son?</h3>
-
     <p>
-      Los encuentros individuales son espacios uno a uno, pensados para músicos y artistas
-      que sienten que algo se traba en su relación con la música o con su proceso creativo.
+      Los encuentros individuales son espacios de conversación y escucha,
+      pensados para músicos que quieren detenerse a mirar
+      qué les está pasando en su relación con la música.
     </p>
 
     <p>
-      No se trata de clases tradicionales ni de correcciones técnicas.
-      Es un espacio de escucha y acompañamiento, donde el punto de partida
-      es lo que te está pasando hoy.
+      No se trata de clases tradicionales ni de correcciones técnicas,
+      sino de un acompañamiento donde el punto de partida
+      es la experiencia actual de cada persona.
     </p>
 
-    <h3>Temáticas a abordar</h3>
+    <h3>Algunos temas que pueden aparecer</h3>
 
     <ol>
-      <li>Indagar de dónde viene el malestar al hacer mi música.</li>
-      <li>Reglas prácticas para volver a hacer de la práctica instrumental un ámbito de juego y disfrute.</li>
-      <li>El proyecto personal de cada músico. ¿Tengo uno o simplemente toco siempre para otro/s?</li>
-      <li>Organización y gestión de una carrera musical: estudios en el extranjero, posgrado, contacto con universidades.</li>
+      <li>Indagar de dónde viene el malestar al hacer música.</li>
+      <li>Volver a habitar la práctica instrumental como un espacio posible.</li>
+      <li>El proyecto personal de cada músico.</li>
+      <li>Decisiones de formación, carrera y organización del recorrido artístico.</li>
     </ol>
 
     <div class="cta">
-      <a href="encuentros-individuales.html" class="btn">Más info</a>
+      <a href="contacto.html" class="btn-soft">Consultar</a>
     </div>
 
   </section>
@@ -261,7 +227,7 @@
 
     <div class="section-header">
       <h2>Encuentros grupales</h2>
-      <a href="contacto.html" class="btn-reservar">Reservar</a>
+      <a href="contacto.html" class="btn-soft">Escribirme</a>
     </div>
 
     <ul class="info-list">
@@ -271,16 +237,16 @@
       <li>Fechas puntuales a lo largo del año</li>
     </ul>
 
-    <h3>¿Qué son?</h3>
-
     <p>
       Los encuentros grupales proponen un espacio compartido entre músicos,
-      donde las experiencias individuales se enriquecen a partir del intercambio.
+      donde las experiencias individuales se enriquecen
+      a partir de la escucha y el intercambio.
     </p>
 
     <p>
-      Escuchar a otros, reconocer dificultades comunes y descubrir
-      que muchas veces no estamos solos en lo que nos pasa.
+      Reconocer preguntas comunes, ponerlas en palabras
+      y descubrir que muchas veces no estamos solos
+      en lo que nos pasa al hacer música.
     </p>
 
   </section>
