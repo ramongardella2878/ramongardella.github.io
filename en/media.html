@@ -167,6 +167,34 @@
       main { padding: 150px 25px 100px; }
       .lang-overlay { right: 30px; }
     }
+    /* ---------- LANGUAGE SELECTOR ---------- */
+.lang-overlay {
+  position: fixed;
+  top: 100px;
+  right: 60px;
+  display: flex;
+  gap: 18px;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 20;
+}
+
+.lang-overlay a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.lang-overlay a.active {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .lang-overlay {
+    right: 30px;
+  }
+}
   </style>
 </head>
 
@@ -196,7 +224,11 @@
   <a href="media.html" class="active">EN</a>
   <a href="#">DE</a>
 </div>
-
+<div class="lang-overlay">
+  <a href="../media.html">ES</a>
+  <a href="media.html" class="active">EN</a>
+  <a href="#">DE</a>
+</div>
 <main>
   <h1>Media</h1>
 
