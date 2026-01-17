@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt · Ramón Gardella</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-alt: #eef2f7;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+      --btn-main: #1f2933;
+      --btn-hover: #000000;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(248,250,252,0.95);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .nav-right a {
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-left: 24px;
+    }
+
+    /* ---------- CONTENT ---------- */
+    main {
+      max-width: 620px;
+      margin: 180px auto 140px;
+      padding: 0 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5f5;
+      background: white;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 140px;
+    }
+
+    button {
+      margin-top: 20px;
+      align-self: center;
+      padding: 18px 48px;
+      background: var(--btn-main);
+      color: white;
+      border: none;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    button:hover {
+      background: var(--btn-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    }
+
+    /* ---------- LANG ---------- */
+    .lang-overlay {
+      position: fixed;
+      top: 100px;
+      right: 60px;
+      display: flex;
+      gap: 18px;
+      font-family: 'Montserrat', sans-serif;
+      z-index: 20;
+    }
+
+    .lang-overlay a {
+      text-decoration: none;
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .lang-overlay a.active {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px; }
+      main { margin-top: 150px; padding: 0 20px; }
+      .lang-overlay { right: 30px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Musiker · Performer · Pädagoge</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="./index.html#inicio">Start</a>
+      <a href="./index.html#enfoque">Ansatz</a>
+      <a href="./about.html">Über mich</a>
+      <a href="./index.html#trabajo">Angebot</a>
+      <a href="./index.html#para-mi">Ist das etwas für mich?</a>
+      <a href="./media.html">Media</a>
+      <a href="./contact.html">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<div class="lang-overlay">
+  <a href="../contacto.html">ES</a>
+  <a href="../en/contact.html">EN</a>
+  <a href="./contact.html" class="active">DE</a>
+</div>
+
+<main>
+
+  <h1>Kontakt</h1>
+
+  <p class="intro">
+    Erzähl mir, wer du bist
+    und wobei ich dich unterstützen kann.<br>
+    Ich melde mich so bald wie möglich bei dir.
+  </p>
+
+  <form action="mailto:gardellavia2878@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="E-Mail" required>
+    <textarea name="message" placeholder="Nachricht" required></textarea>
+    <button type="submit">Senden</button>
+  </form>
+
+</main>
+
+</body>
+</html>
