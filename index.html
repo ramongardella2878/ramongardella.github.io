@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Mental Notes — Ramón Gardella</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -31,7 +30,6 @@
       line-height: 1.65;
     }
 
-    /* ---------- NAV ---------- */
     nav {
       position: fixed;
       top: 0;
@@ -69,30 +67,9 @@
       font-size: 0.75rem;
       letter-spacing: 1px;
       text-transform: uppercase;
-      position: relative;
       font-weight: 500;
     }
 
-    .nav-right a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 1px;
-      background: var(--text-main);
-      transition: 0.3s;
-    }
-
-    .nav-right a:hover {
-      color: var(--text-main);
-    }
-
-    .nav-right a:hover::after {
-      width: 100%;
-    }
-
-    /* ---------- HERO ---------- */
     header {
       min-height: 100vh;
       padding-top: 140px;
@@ -141,23 +118,17 @@
 
     .hero-subtitle {
       font-size: 1.2rem;
-      line-height: 1.6;
-      color: var(--text-soft);
       max-width: 560px;
       margin: 0 auto;
     }
 
     .hero-text {
       margin-top: 36px;
-      font-size: 1.05rem;
-      line-height: 1.75;
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
-      color: var(--text-soft);
     }
 
-    /* ---------- SECTIONS ---------- */
     section {
       padding: 90px 60px;
       max-width: 820px;
@@ -169,38 +140,13 @@
       background: var(--bg-alt);
     }
 
-    section h3 {
+    h3 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.3rem;
-      font-weight: 600;
       margin-bottom: 52px;
       color: var(--text-main);
     }
 
-    section p {
-      font-size: 1.08rem;
-    }
-
-    /* ---------- ORIGIN ---------- */
-    .origin {
-      max-width: 600px;
-      margin: 100px auto 60px;
-      text-align: center;
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
-
-    .origin p {
-      margin-bottom: 28px;
-    }
-
-    .origin-close {
-      font-style: italic;
-      margin-top: 36px;
-      color: var(--text-muted);
-    }
-
-    /* ---------- OFFERS ---------- */
     .offers {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -209,42 +155,13 @@
     }
 
     .offer-card {
-      display: block;
       padding: 36px 30px;
       background: var(--bg-alt);
       border-radius: 14px;
       text-decoration: none;
       color: var(--text-soft);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .offer-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
-    }
-
-    .offer-card h4 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.35rem;
-      margin-bottom: 18px;
-      color: var(--text-main);
-    }
-
-    .offer-card p {
-      margin: 6px 0;
-      font-size: 0.95rem;
-    }
-
-    .offer-card .highlight {
-      display: inline-block;
-      margin-top: 18px;
-      font-size: 0.75rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text-main);
-    }
-
-    /* ---------- BUTTON ---------- */
     .btn {
       display: inline-block;
       margin-top: 32px;
@@ -255,24 +172,18 @@
       font-size: 0.8rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      transition: 0.3s;
     }
 
-    .btn:hover {
-      background: var(--btn-hover);
-      color: #fff;
+    #trabajo,
+    #para-mi {
+      max-width: 1100px;
     }
 
     @media (max-width: 768px) {
-  nav { padding: 16px 30px; }
-  header { padding-top: 120px; }
-  section { padding: 70px 30px; }
-  .lang-overlay { right: 30px; }
-}
-  #trabajo,
-  #para-mi {
-  max-width: 1100px;
-}
+      nav { padding: 16px 30px; }
+      section { padding: 70px 30px; }
+      .lang-overlay { right: 30px; }
+    }
   </style>
 </head>
 
@@ -286,14 +197,13 @@
     </div>
 
     <div class="nav-right">
-  <a href="index.html#inicio">Inicio</a>
-  <a href="index.html#enfoque">Enfoque</a>
-  <a href="sobre-mi.html">Sobre mí</a>
-  <a href="index.html#trabajo">Qué te ofrezco</a>
-  <a href="index.html#para-mi">¿Es esto para mí?</a>
-  <a href="media.html">Media</a>
-  <a href="contacto.html">Contacto</a>
-</div>
+      <a href="#inicio">Inicio</a>
+      <a href="#enfoque">Enfoque</a>
+      <a href="#trabajo">Qué te ofrezco</a>
+      <a href="#para-mi">¿Es esto para mí?</a>
+      <a href="media.html">Media</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
   </div>
 </nav>
 
@@ -301,7 +211,6 @@
   <a href="index.html#inicio" class="active">ES</a>
   <a href="en/index.html#inicio">EN</a>
   <a href="de/index.html#inicio">DE</a>
-</div>
 </div>
 
 <header id="inicio">
@@ -322,19 +231,23 @@
   </div>
 </header>
 
-  
-<section class="origin" id="enfoque">
+<section id="enfoque">
   <h3>Enfoque</h3>
-<p>
+
+  <p>
     La práctica musical nos expone constantemente:
     conciertos, clases, audiciones, exámenes,
     concursos y miradas externas.
   </p>
+
+  <p>
     En ese recorrido aparecen experiencias como
     el miedo escénico, la frustración,
     la comparación permanente con otros músicos
     o la sensación de estar estancado.
   </p>
+
+  <p>
     Sin embargo, estos aspectos suelen quedar
     fuera de los espacios formales de formación.
     La enseñanza musical pone el foco —con razón—
@@ -342,19 +255,25 @@
     pero rara vez ofrece herramientas
     para trabajar lo que pasa por dentro.
   </p>
+
+  <p>
     No porque no sea importante,
     sino porque históricamente no ha sido
     un tema central dentro de las instituciones.
   </p>
+
+  <p>
     Mental Notes nace para darle lugar
     a ese plano interno del hacer musical,
     que cuando no es escuchado,
     termina apareciendo como malestar,
     bloqueo o sufrimiento innecesario.
   </p>
+</section>
 
 <section id="para-mi">
   <h3>¿Es esto para mí?</h3>
+
   <p>
     Este espacio puede ser para vos si sos músico
     y sentís que algo en tu manera de hacer música
@@ -368,9 +287,7 @@
     solo practicando más.
   </p>
 
-  <p>
-    A veces aparecen preguntas como:
-  </p>
+  <p>A veces aparecen preguntas como:</p>
 
   <div class="frases">
     <p>“cuando toco, la paso mal”</p>
@@ -396,12 +313,11 @@
     Si te resuena, escribime
   </a>
 </section>
- 
-  <section id="lugar" class="alt">
 
 <section id="trabajo">
   <h3>Cómo puedo acompañarte</h3>
-   <p>
+
+  <p>
     Acompañar, en este contexto, no significa corregir ni empujar.
     Significa crear un espacio donde lo que te pasa
     pueda ser mirado con tiempo, sin juicio y sin apuro.
@@ -426,6 +342,7 @@
     </a>
   </div>
 </section>
+
 <section id="contacto" class="alt">
   <h3>Contacto</h3>
   <a class="btn" href="contacto.html">Escribime</a>
