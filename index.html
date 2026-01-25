@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Mental Notes — Ramón Gardella</title>
 
-  <!-- Tipografías -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -103,12 +103,13 @@
     }
 
     .lang-overlay {
-      position: absolute;
+      position: fixed;
       top: 100px;
       right: 60px;
       display: flex;
       gap: 18px;
       font-family: 'Montserrat', sans-serif;
+      z-index: 20;
     }
 
     .lang-overlay a {
@@ -181,13 +182,13 @@
     }
 
     /* ---------- ORIGIN ---------- */
-   .origin {
-  max-width: 600px;
-  margin: 100px auto 60px;
-  text-align: center;
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
+    .origin {
+      max-width: 600px;
+      margin: 100px auto 60px;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
 
     .origin p {
       margin-bottom: 28px;
@@ -262,49 +263,12 @@
       color: #fff;
     }
 
-@media (max-width: 768px) {
-  nav { padding: 16px 30px; }
-  header { padding-top: 120px; }
-  section { padding: 70px 30px; }
-  .lang-overlay { right: 30px; }
-}
-
-#lugar {
-  padding-top: 60px;
-}
-
-#trabajo > p {
-  max-width: 600px;
-  margin: 0 auto 40px;
-  color: var(--text-muted);
-}
-.lang-overlay {
-  position: fixed;
-  top: 100px;
-  right: 60px;
-  display: flex;
-  gap: 18px;
-  font-family: 'Montserrat', sans-serif;
-  z-index: 20;
-}
-
-.lang-overlay a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-}
-
-.lang-overlay a.active {
-  color: var(--text-main);
-  font-weight: 600;
-}
-#trabajo > p,
-#para-mi > p {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px; }
+      header { padding-top: 120px; }
+      section { padding: 70px 30px; }
+      .lang-overlay { right: 30px; }
+    }
   </style>
 </head>
 
