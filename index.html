@@ -8,8 +8,8 @@
 
   <title>Ramón Gardella</title>
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -22,7 +22,7 @@
       font-family: 'Inter', sans-serif;
       height: 100vh;
       background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url("home-bg.jpg") 70% 20% / cover no-repeat;
       color: #fff;
     }
@@ -30,17 +30,18 @@
     /* Idiomas */
     .lang-overlay {
       position: fixed;
-      top: 30px;
+      top: 28px;
       right: 40px;
-      font-size: 14px;
-      letter-spacing: 0.15em;
+      font-size: 13px;
+      letter-spacing: 0.18em;
       z-index: 10;
     }
 
     .lang-overlay a {
-      color: #aaa;
+      color: rgba(255,255,255,0.6);
       text-decoration: none;
-      margin-left: 12px;
+      margin-left: 14px;
+      font-weight: 500;
     }
 
     .lang-overlay a.active {
@@ -56,69 +57,70 @@
     }
 
     .content {
-      max-width: 520px;
+      max-width: 560px;
     }
 
-    /* Tipografía */
+    /* Nombre */
     .name {
-      font-family: 'Playfair Display', serif;
-      font-size: 62px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
+      font-size: 64px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
     }
 
     .role {
       font-size: 13px;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
-      opacity: 0.65;
-      margin-bottom: 60px;
+      opacity: 0.6;
+      margin-bottom: 64px;
     }
 
+    /* Pregunta */
     .question {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 500;
+      font-size: 34px;
+      font-weight: 600;
       margin-bottom: 56px;
+      line-height: 1.2;
     }
 
-    /* Opciones */
+    /* Caminos */
     .paths {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 34px;
     }
 
     .path {
       text-decoration: none;
       color: #fff;
-      border-left: 2px solid rgba(255,255,255,0.3);
-      padding-left: 18px;
-      transition: border-color 0.3s, opacity 0.3s;
+      border-left: 3px solid rgba(255,255,255,0.25);
+      padding-left: 20px;
+      transition: border-color 0.3s, transform 0.2s;
     }
 
     .path:hover {
       border-color: #fff;
+      transform: translateX(4px);
     }
 
     .path-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 30px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      margin-bottom: 10px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
     }
 
     .path-desc {
       font-size: 15px;
-      line-height: 1.7;
-      opacity: 0.7;
+      line-height: 1.6;
+      opacity: 0.75;
+      max-width: 480px;
     }
 
-    /* Mental Notes destacado */
+    /* Mental Notes aún más fuerte */
     .path.primary .path-title {
-      font-size: 34px;
+      font-size: 36px;
     }
 
     @media (max-width: 768px) {
@@ -127,7 +129,7 @@
       }
 
       .name {
-        font-size: 46px;
+        font-size: 48px;
       }
 
       .question {
@@ -169,9 +171,8 @@
         <a href="#" class="path">
           <div class="path-title">The Inner Take</div>
           <div class="path-desc">
-            Podcast.<br>
-            Conversaciones con músicos sobre experiencia,
-            proceso y camino.
+            Podcast. Conversaciones con músicos
+            sobre experiencia, proceso y camino.
           </div>
         </a>
 
