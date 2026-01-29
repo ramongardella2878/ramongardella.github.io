@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- BASE para GitHub Pages -->
+  <base href="/ramongardella.github.io/">
+
+  <title>Ramón Gardella</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("home-bg.jpg") center/cover no-repeat;
+      color: #fff;
+    }
+
+    /* Idiomas */
+    .lang-overlay {
+      position: fixed;
+      top: 30px;
+      right: 40px;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      z-index: 10;
+    }
+
+    .lang-overlay a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 12px;
+    }
+
+    .lang-overlay a.active {
+      color: #fff;
+    }
+
+    /* Contenedor central */
+    .home {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 10%;
+    }
+
+    .content {
+      max-width: 520px;
+    }
+
+    .name {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .role {
+      font-size: 14px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 50px;
+    }
+
+    .question {
+      font-size: 26px;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    /* Lista */
+    .paths {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .path {
+      text-decoration: none;
+      color: #fff;
+      border-left: 2px solid rgba(255,255,255,0.3);
+      padding-left: 18px;
+      transition: border-color 0.3s, opacity 0.3s;
+    }
+
+    .path:hover {
+      border-color: #fff;
+      opacity: 1;
+    }
+
+    .path-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .path-desc {
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0.75;
+    }
+
+    @media (max-width: 768px) {
+      .home {
+        padding: 0 8%;
+      }
+
+      .name {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Idiomas -->
+  <div class="lang-overlay">
+    <a href="index.html" class="active">ES</a>
+    <a href="en/index.html">EN</a>
+    <a href="de/index.html">DE</a>
+  </div>
+
+  <!-- HOME -->
+  <div class="home">
+    <div class="content">
+
+      <div class="name">Ramón Gardella</div>
+      <div class="role">Músico · Educador · Creador</div>
+
+      <div class="question">¿Qué estás buscando?</div>
+
+      <div class="paths">
+
+        <a href="mental-notes/index.html" class="path">
+          <div class="path-title">Mental Notes</div>
+          <div class="path-desc">
+            Espacio para músicos.<br>
+            Reflexión, procesos internos y acompañamiento
+            para comprender qué sucede al hacer música.
+          </div>
+        </a>
+
+        <a href="#" class="path">
+          <div class="path-title">The Inner Take</div>
+          <div class="path-desc">
+            Podcast.<br>
+            Conversaciones con músicos sobre experiencia,
+            proceso y camino.
+          </div>
+        </a>
+
+        <a href="#" class="path">
+          <div class="path-title">Música</div>
+          <div class="path-desc">
+            Conciertos, grabaciones y proyectos profesionales.
+          </div>
+        </a>
+
+        <a href="#" class="path">
+          <div class="path-title">Educación</div>
+          <div class="path-desc">
+            Clases privadas y acompañamiento
+            para carreras musicales.
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
 
