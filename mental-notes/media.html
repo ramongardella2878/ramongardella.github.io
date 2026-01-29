@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media — Mental Notes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --bg-alt: #f3f4f6;
+      --text-main: #0b1220;
+      --text-soft: #334155;
+      --text-muted: #64748b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-right a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .nav-right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--text-main);
+      transition: 0.3s;
+    }
+
+    .nav-right a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-right a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- LANG ---------- */
+    .lang-overlay {
+      position: fixed;
+      top: 100px;
+      right: 60px;
+      display: flex;
+      gap: 18px;
+      font-family: 'Montserrat', sans-serif;
+      z-index: 30;
+    }
+
+    .lang-overlay a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .lang-overlay a.active {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+      max-width: 760px;
+      margin: auto;
+      padding: 160px 40px 120px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.4rem;
+      color: var(--text-main);
+      margin-bottom: 48px;
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      margin-bottom: 56px;
+      color: var(--text-soft);
+    }
+
+    .entry {
+      padding: 48px 32px;
+      background: var(--bg-alt);
+      border-radius: 14px;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+
+    .entry h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .entry h3 a {
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .entry h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .entry p {
+      font-size: 1.05rem;
+      margin-bottom: 0;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px; }
+      main { padding: 150px 25px 100px; }
+      .lang-overlay { right: 30px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-top">
+    <div class="brand">
+      <strong>Ramón Gardella</strong>
+      <span>Musician · Performer · Educator</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="index.html#inicio">Home</a>
+      <a href="index.html#enfoque">Approach</a>
+      <a href="about.html">About</a>
+      <a href="index.html#trabajo">What I Offer</a>
+      <a href="index.html#para-mi">Is This for Me?</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="lang-overlay">
+  <a href="../media.html">ES</a>
+  <a href="media.html" class="active">EN</a>
+  <a href="../de/media.html">DE</a>
+</div>
+
+<main>
+  <h1>Texts</h1>
+
+  <p class="intro">
+    The texts you find here are part of the same listening process 
+    that also runs through the sessions.
+  </p>
+
+  <div class="entry">
+    <h3>
+      <a href="a-voice-saying-not-like-that.html">
+        A voice that said: “not like that”
+      </a>
+    </h3>
+    <p>
+      A text about inner criticism,
+      discomfort while playing,
+      and the moment when listening becomes unavoidable.
+    </p>
+  </div>
+
+  <div class="entry">
+    <h3>
+      <a href="an-adult-making-music-is-like-a-child-at-play.html">
+        An adult making music is like a child at play
+      </a>
+    </h3>
+    <p>
+      A reflection on music and play,
+      and how inner worlds take shape through sound.
+    </p>
+  </div>
+</main>
+
+</body>
+</html>
 
