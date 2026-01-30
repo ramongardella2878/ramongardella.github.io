@@ -54,7 +54,7 @@
   line-height: 1.9;
   font-weight: 300;
   max-width: 720px;
-  margin: 0 auto 120px;
+  margin: 0 auto 72px;
   opacity: 0.95;
 }
 
@@ -86,7 +86,7 @@
 /* LINKS */
 
 .music-links {
-  margin-top: 120px;
+  margin-top: 48px;
   display: flex;
   gap: 64px;
 }
