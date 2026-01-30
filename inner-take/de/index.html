@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+
+  <base href="/ramongardella.github.io/">
+
+  <title>The Inner Take – Podcast</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    /* Idiomas */
+    .lang-overlay {
+      position: fixed;
+      top: 28px;
+      right: 40px;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      z-index: 10;
+    }
+
+    .lang-overlay a {
+      color: rgba(242,242,242,0.6);
+      text-decoration: none;
+      margin-left: 14px;
+      font-weight: 500;
+    }
+
+    .lang-overlay a.active {
+      color: #f2f2f2;
+    }
+
+    /* Layout */
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 140px 8% 120px;
+    }
+
+    /* Animaciones */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .fade-up.delay-1 { animation-delay: 0.2s; }
+    .fade-up.delay-2 { animation-delay: 0.4s; }
+    .fade-up.delay-3 { animation-delay: 0.6s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Tipografía */
+    h1 {
+      font-size: 54px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .mic {
+      font-size: 0.7em;
+      margin-left: 12px;
+      opacity: 0.7;
+      vertical-align: middle;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      opacity: 0.75;
+      margin-bottom: 48px;
+    }
+
+    .text-block {
+      font-size: 20px;
+      max-width: 720px;
+      margin-bottom: 56px;
+    }
+
+    .text-block p {
+      margin-bottom: 28px;
+    }
+
+    /* Waveform */
+    .waveform {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 22px;
+      margin-top: 16px;
+      margin-bottom: 56px;
+    }
+
+    .waveform span {
+      width: 3px;
+      height: 100%;
+      background-color: rgba(242,242,242,0.6);
+      animation: wave 1.8s ease-in-out infinite;
+      border-radius: 2px;
+      transform-origin: bottom;
+    }
+
+    .waveform span:nth-child(1) { animation-delay: 0s; }
+    .waveform span:nth-child(2) { animation-delay: 0.2s; }
+    .waveform span:nth-child(3) { animation-delay: 0.4s; }
+    .waveform span:nth-child(4) { animation-delay: 0.2s; }
+    .waveform span:nth-child(5) { animation-delay: 0s; }
+
+    @keyframes wave {
+      0%   { transform: scaleY(0.3); opacity: 0.4; }
+      50%  { transform: scaleY(1);   opacity: 0.9; }
+      100% { transform: scaleY(0.3); opacity: 0.4; }
+    }
+
+    /* Plataformas */
+    .platforms {
+      margin-top: 80px;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .platforms a {
+      text-decoration: none;
+      color: #f2f2f2;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(242,242,242,0.3);
+      transition: border-color 0.3s;
+    }
+
+    .platforms a:hover {
+      border-color: #f2f2f2;
+    }
+
+    .back {
+      margin-top: 120px;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    .back a {
+      color: #f2f2f2;
+      text-decoration: none;
+    }
+
+    .back a:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .text-block {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Idiomas -->
+  <div class="lang-overlay">
+    <a href="inner-take/es/index.html">ES</a>
+    <a href="inner-take/index.html">EN</a>
+    <a href="inner-take/de/index.html" class="active">DE</a>
+  </div>
+
+  <div class="wrapper">
+
+    <h1 class="fade-up">
+      The Inner Take
+      <span class="mic">🎙</span>
+    </h1>
+
+    <div class="waveform fade-up delay-1">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="subtitle fade-up delay-2">
+      Ein Podcast für Musiker
+    </div>
+
+    <div class="text-block fade-up delay-3">
+      <p>
+        The Inner Take ist ein Podcast für MusikerInnen.  
+        Ein Raum, um darüber zu sprechen, was in uns geschieht, wenn wir Musik machen.
+      </p>
+
+      <p>
+        Gedanken, Gefühle und innere Prozesse,  
+        die beeinflussen, wie wir spielen, wie wir üben  
+        und wie wir unser musikalisches Leben erleben.
+      </p>
+
+      <p>
+        Ich teile meine Erfahrungen als Musiker,  
+        was ich auf meinem Weg gelernt habe,  
+        und spreche mit anderen MusikerInnen über ihre eigenen Wege.
+      </p>
+
+      <p>
+        Dieser Podcast handelt nicht von Technik.  
+        Er handelt von dem, was in uns passiert, wenn wir Musik machen.
+      </p>
+    </div>
+
+    <div class="platforms">
+      <a href="#" target="_blank">Spotify</a>
+      <a href="#" target="_blank">Apple Podcasts</a>
+      <a href="#" target="_blank">YouTube</a>
+    </div>
+
+    <div class="back">
+      <a href="index.html">← Zurück zur Home</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
