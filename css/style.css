@@ -1,5 +1,5 @@
 /* =========================
-   MUSIC – VIDEO BACKGROUND
+   MUSIC – FINAL DEFINITIVO
    ========================= */
 
 .music-page {
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-/* VIDEO */
+/* VIDEO DE FONDO */
 
 .music-video-bg {
   position: fixed;
@@ -23,7 +23,7 @@
   pointer-events: none;
 }
 
-/* OVERLAY */
+/* OVERLAY OSCURO */
 
 .music-overlay {
   position: fixed;
@@ -44,10 +44,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 140px 32px 120px;
+  padding: 120px 32px 80px;
 }
 
-/* TEXT */
+/* TEXTO */
 
 .music-text {
   font-size: 1.25rem;
@@ -58,7 +58,7 @@
   opacity: 0.95;
 }
 
-/* PROJECT */
+/* PROYECTO */
 
 .music-label {
   display: block;
@@ -66,13 +66,13 @@
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.6;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .music-project h2 {
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .music-project p {
@@ -83,49 +83,43 @@
   opacity: 0.85;
 }
 
-/* LINKS */
+/* PLATAFORMAS */
 
 .music-links {
   margin-top: 48px;
   display: flex;
-  gap: 64px;
+  justify-content: center;
+  gap: 56px;
 }
 
 .music-links a {
-  display: flex;
-  align-items: center;
-  gap: 18px;                /* más aire */
-  font-size: 1.05rem;       /* texto más presente */
-  letter-spacing: 0.22em;   /* editorial */
-  text-transform: uppercase;
-  color: #eaeaea;
-  opacity: 0.85;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: transform 0.3s ease;
 }
 
 .music-links a:hover {
-  opacity: 1;
-  transform: translateY(-3px);
-   
-   .music-links {
-  margin-top: 120px;
-  display: flex;
-  gap: 64px;
-  justify-content: center; /* 👈 AGREGAR */
-
-    .music-links svg {
-  width: 40px;      /* 👈 más grandes */
-  height: 40px;
-  flex-shrink: 0;
-
+  transform: translateY(-4px) scale(1.05);
 }
 
-/* WAVE */
+/* LOGOS */
+
+.yt-logo,
+.ig-logo {
+  width: 72px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* ANIMACIÓN MUSICAL */
 
 .music-wave {
   display: flex;
   gap: 6px;
   height: 28px;
+  margin-bottom: 40px;
 }
 
 .music-wave span {
