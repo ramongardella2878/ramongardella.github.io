@@ -1,127 +1,88 @@
 /* =========================
-   RESET / BASE
-   ========================= */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #eaeaea;
-  background: #0e0e0e;
-}
-
-/* =========================
-   MUSIC PAGE
+   MUSIC – EXPERIMENTAL
    ========================= */
 
 .music-page {
   min-height: 100vh;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.85)
-    ),
-    radial-gradient(
-      circle at 20% 15%,
-      #2a2a2a 0%,
-      #121212 55%,
-      #0a0a0a 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #f2f1ee 0%,
+    #e6e4df 100%
+  );
+  color: #1a1a1a;
 }
 
-.music-wrapper {
-  max-width: 900px;
-  padding: 140px 40px 120px;
-}
-
-/* Header */
-
-.music-header {
-  margin-bottom: 80px;
+.music-centered {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 160px 32px;
+  text-align: center;
 }
 
 .music-title {
-  font-size: clamp(3rem, 6vw, 4rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  margin: 0;
+  font-size: clamp(3.2rem, 7vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin-bottom: 56px;
 }
 
-/* Intro */
-
-.music-intro {
-  max-width: 720px;
-  margin-bottom: 120px;
-}
-
-.music-intro p {
-  font-size: 1.1rem;
+.music-text {
+  font-size: 1.15rem;
   line-height: 1.9;
   font-weight: 300;
-  opacity: 0.9;
+  max-width: 680px;
+  margin: 0 auto 120px;
 }
 
-/* Project */
-
-.music-projects {
-  margin-bottom: 140px;
-}
-
-.section-label {
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.45;
-  margin-bottom: 24px;
-}
-
-.project-title {
-  font-size: 1.6rem;
+.music-project h2 {
+  font-size: 1.8rem;
   font-weight: 600;
-  margin: 0 0 16px 0;
+  margin-bottom: 16px;
 }
 
-.project-description {
-  max-width: 560px;
+.music-project p {
   font-size: 1rem;
   line-height: 1.7;
-  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto;
   opacity: 0.85;
 }
 
-/* =========================
-   SOCIAL LINKS
-   ========================= */
-
-.music-links {
-  display: flex;
-  gap: 56px;
+.label {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
-.social-link {
+/* SOCIALS */
+
+.music-socials {
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+
+.music-socials a {
   display: flex;
   align-items: center;
   gap: 14px;
   text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
+  color: #1a1a1a;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #eaeaea;
-  opacity: 0.75;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.social-link img {
-  width: 28px;
-  height: 28px;
-}
-
-.social-link:hover {
-  opacity: 1;
+.music-socials a:hover {
   transform: translateY(-3px);
+}
+
+.music-socials svg {
+  width: 26px;
+  height: 26px;
 }
