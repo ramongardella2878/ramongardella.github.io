@@ -23,17 +23,16 @@
   pointer-events: none;
 }
 
-/* OVERLAY (igual lógica HOME) */
+/* OVERLAY */
 
 .music-overlay {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.6),
-      rgba(0,0,0,0.85)
-    );
+  background: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.85)
+  );
 }
 
 /* HERO */
@@ -46,15 +45,6 @@
   justify-content: center;
   text-align: center;
   padding: 140px 32px 120px;
-}
-
-/* TITLE */
-
-.music-title {
-  font-size: clamp(3.4rem, 7vw, 4.6rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  margin: 64px 0 48px;
 }
 
 /* TEXT */
@@ -102,12 +92,15 @@
 }
 
 .music-links a {
-  color: #eaeaea;
+  display: flex;
+  align-items: center;
+  gap: 14px;
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  opacity: 0.8;
+  color: #eaeaea;
+  opacity: 0.85;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -140,33 +133,4 @@
 @keyframes wave {
   0%, 100% { height: 6px; }
   50% { height: 28px; }
-}
-
-.music-links {
-  margin-top: 120px;
-  display: flex;
-  gap: 64px;
-}
-
-.music-links a {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #eaeaea;
-  opacity: 0.85;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.music-links a:hover {
-  opacity: 1;
-  transform: translateY(-3px);
-}
-
-.music-links svg {
-  width: 26px;
-  height: 26px;
 }
