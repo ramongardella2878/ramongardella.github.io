@@ -1,12 +1,16 @@
 /* =========================
-   BASE
+   RESET / BASE
    ========================= */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  background: #0e0e0e;
-  color: #eaeaea;
   font-family: 'Inter', sans-serif;
+  color: #eaeaea;
+  background: #0e0e0e;
 }
 
 /* =========================
@@ -14,65 +18,110 @@ body {
    ========================= */
 
 .music-page {
-  background: #0e0e0e;
-  color: #eaeaea;
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.85)
+    ),
+    radial-gradient(
+      circle at 20% 15%,
+      #2a2a2a 0%,
+      #121212 55%,
+      #0a0a0a 100%
+    );
 }
 
-.section.music {
+.music-wrapper {
+  max-width: 900px;
+  padding: 140px 40px 120px;
+}
+
+/* Header */
+
+.music-header {
+  margin-bottom: 80px;
+}
+
+.music-title {
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+/* Intro */
+
+.music-intro {
   max-width: 720px;
-  padding: 120px 24px 80px;
+  margin-bottom: 120px;
 }
 
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 400;
-  margin-bottom: 32px;
-}
-
-.intro {
-  font-size: 1rem;
-  line-height: 1.7;
+.music-intro p {
+  font-size: 1.1rem;
+  line-height: 1.9;
   font-weight: 300;
-  max-width: 640px;
-  margin-bottom: 72px;
+  opacity: 0.9;
 }
 
-.projects-title {
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
+/* Project */
+
+.music-projects {
+  margin-bottom: 140px;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: 32px;
-  opacity: 0.6;
+  opacity: 0.45;
+  margin-bottom: 24px;
 }
 
 .project-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
 }
 
 .project-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  max-width: 560px;
+  font-size: 1rem;
+  line-height: 1.7;
   font-weight: 300;
-  max-width: 520px;
+  opacity: 0.85;
 }
 
-.external-links {
-  margin-top: 96px;
+/* =========================
+   SOCIAL LINKS
+   ========================= */
+
+.music-links {
   display: flex;
-  gap: 32px;
+  gap: 56px;
 }
 
-.external-links a {
-  font-size: 0.9rem;
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: #eaeaea;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  opacity: 0.75;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.external-links a:hover {
+.social-link img {
+  width: 28px;
+  height: 28px;
+}
+
+.social-link:hover {
   opacity: 1;
+  transform: translateY(-3px);
 }
