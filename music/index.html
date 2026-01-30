@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   >
 
@@ -19,50 +19,54 @@
 
 <body class="music-page">
 
-  <main class="section music">
+  <main class="music-wrapper">
 
-    <h1 class="section-title">Música</h1>
+    <header class="music-header">
+      <h1 class="music-title">Música</h1>
+    </header>
 
-    <p class="intro">
-      Desarrollo proyectos musicales desde una búsqueda personal y procesual.
-      Me interesa la música como espacio de escucha, de transformación y de identidad.
-      Colaboro con ensambles, compositores y orquestas en distintos contextos y formatos.
-    </p>
-
-    <section class="projects">
-      <h2 class="projects-title">Proyectos (selección)</h2>
-
-      <article class="project">
-        <h3 class="project-title">Limited Edition</h3>
-        <p class="project-description">
-          Proyecto musical de carácter autoral, concebido para un performer con un instrumental reducido.
-        </p>
-      </article>
+    <section class="music-intro">
+      <p>
+        Desarrollo proyectos musicales desde una búsqueda personal y procesual.
+        Me interesa la música como espacio de escucha, de transformación y de identidad.
+        Colaboro con ensambles, compositores y orquestas en distintos contextos y formatos.
+      </p>
     </section>
 
-    <nav class="external-links">
+    <section class="music-projects">
+      <span class="section-label">Proyecto</span>
 
-      <a href="https://www.youtube.com/TU_CANAL"
-         target="_blank"
-         rel="noopener"
-         aria-label="YouTube">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.9 2.5 12 2.5 12 2.5h0s-4.9 0-8.2.3c-.4.1-1.5.1-2.4 1C.7 4.5.5 6.2.5 6.2S.2 8.1.2 10v1.9c0 1.9.3 3.8.3 3.8s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 8 .3 8 .3s4.9 0 8.2-.3c.4-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.8 14.6V7.9l6.4 3.4-6.4 3.3z"/>
-        </svg>
+      <h2 class="project-title">Limited Edition</h2>
+
+      <p class="project-description">
+        Proyecto musical de carácter autoral, concebido para un performer
+        con un instrumental reducido.
+      </p>
+    </section>
+
+    <section class="music-links">
+      <a
+        href="https://www.youtube.com/TU_CANAL"
+        target="_blank"
+        rel="noopener"
+        class="social-link youtube"
+        aria-label="YouTube"
+      >
+        <img src="../assets/icons/youtube-color.svg" alt="YouTube">
         <span>YouTube</span>
       </a>
 
-      <a href="https://www.instagram.com/TU_USUARIO"
-         target="_blank"
-         rel="noopener"
-         aria-label="Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.2A4.8 4.8 0 0 0 7.2 12 4.8 4.8 0 0 0 12 16.8 4.8 4.8 0 0 0 16.8 12 4.8 4.8 0 0 0 12 7.2zm0 7.8A3 3 0 1 1 12 9a3 3 0 0 1 0 6zm4.9-7.9a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2z"/>
-        </svg>
+      <a
+        href="https://www.instagram.com/TU_USUARIO"
+        target="_blank"
+        rel="noopener"
+        class="social-link instagram"
+        aria-label="Instagram"
+      >
+        <img src="../assets/icons/instagram-color.svg" alt="Instagram">
         <span>Instagram</span>
       </a>
-
-    </nav>
+    </section>
 
   </main>
 
