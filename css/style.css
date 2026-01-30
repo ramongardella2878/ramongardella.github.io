@@ -94,10 +94,9 @@
 .music-links a {
   display: flex;
   align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.18em;
+  gap: 18px;                /* más aire */
+  font-size: 1.05rem;       /* texto más presente */
+  letter-spacing: 0.22em;   /* editorial */
   text-transform: uppercase;
   color: #eaeaea;
   opacity: 0.85;
@@ -114,10 +113,11 @@
   gap: 64px;
   justify-content: center; /* 👈 AGREGAR */
 
-      .music-links svg {
-  width: 26px;
-  height: 26px;
+    .music-links svg {
+  width: 40px;      /* 👈 más grandes */
+  height: 40px;
   flex-shrink: 0;
+
 }
 
 /* WAVE */
