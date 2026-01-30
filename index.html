@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- BASE GitHub Pages -->
   <base href="/ramongardella.github.io/">
 
   <title>Ramón Gardella</title>
 
-  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -54,7 +52,7 @@
       display: flex;
       align-items: center;
       padding-left: 10%;
-      padding-top: 40px; /* aire arriba */
+      padding-top: 60px;
     }
 
     .content {
@@ -63,18 +61,19 @@
 
     /* Nombre */
     .name {
-      font-size: 54px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      margin-bottom: 10px;
+      color: rgba(242,242,242,0.85);
     }
 
     .role {
-      font-size: 12px;
-      letter-spacing: 0.32em;
+      font-size: 11px;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
-      opacity: 0.55;
-      margin-bottom: 64px;
+      opacity: 0.45;
+      margin-bottom: 72px;
     }
 
     /* Caminos */
@@ -119,26 +118,33 @@
     @media (max-width: 768px) {
       .home {
         padding: 0 8%;
-        padding-top: 60px;
+        padding-top: 70px;
       }
 
       .name {
-        font-size: 42px;
+        font-size: 40px;
       }
     }
+    .photo-credit {
+  position: fixed;
+  bottom: 18px;
+  right: 28px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(242,242,242,0.45);
+  z-index: 5;
+}
   </style>
 </head>
 
 <body>
 
-  <!-- Idiomas -->
   <div class="lang-overlay">
     <a href="index.html" class="active">ES</a>
     <a href="en/index.html">EN</a>
     <a href="de/index.html">DE</a>
   </div>
 
-  <!-- HOME -->
   <div class="home">
     <div class="content">
 
@@ -182,6 +188,9 @@
       </div>
     </div>
   </div>
+<div class="photo-credit">
+  © Foto: Jelena Staubach
+</div>
 
 </body>
 </html>
