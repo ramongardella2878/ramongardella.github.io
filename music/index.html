@@ -5,11 +5,11 @@
   <title>Música · Ramón Gardella</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Inter -->
+  <!-- Inter (igual que Inner Take) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
     rel="stylesheet"
   >
 
@@ -18,9 +18,22 @@
 
 <body class="music-page">
 
+  <!-- VIDEO BACKGROUND -->
+  <div class="video-bg">
+    <iframe
+      src="https://www.youtube.com/embed/hLDGqq3FIE8?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=hLDGqq3FIE8"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="video-overlay"></div>
+
   <main class="music-container">
 
-    <!-- ANIMACIÓN MUSICAL -->
+    <!-- WAVE -->
     <div class="music-wave">
       <span></span><span></span><span></span><span></span><span></span>
     </div>
@@ -43,12 +56,8 @@
     </section>
 
     <nav class="music-platforms">
-      <a href="https://www.youtube.com/TU_CANAL" target="_blank" aria-label="YouTube">
-        <span class="yt">YouTube</span>
-      </a>
-      <a href="https://www.instagram.com/TU_USUARIO" target="_blank" aria-label="Instagram">
-        <span class="ig">Instagram</span>
-      </a>
+      <a href="https://www.youtube.com/TU_CANAL" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/TU_USUARIO" target="_blank">Instagram</a>
     </nav>
 
   </main>
