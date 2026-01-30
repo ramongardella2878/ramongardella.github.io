@@ -1,0 +1,78 @@
+/* =========================
+   BASE
+   ========================= */
+
+body {
+  margin: 0;
+  background: #0e0e0e;
+  color: #eaeaea;
+  font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   MUSIC PAGE
+   ========================= */
+
+.music-page {
+  background: #0e0e0e;
+  color: #eaeaea;
+}
+
+.section.music {
+  max-width: 720px;
+  padding: 120px 24px 80px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 640px;
+  margin-bottom: 72px;
+}
+
+.projects-title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  opacity: 0.6;
+}
+
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 520px;
+}
+
+.external-links {
+  margin-top: 96px;
+  display: flex;
+  gap: 32px;
+}
+
+.external-links a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #eaeaea;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.external-links a:hover {
+  opacity: 1;
+}
