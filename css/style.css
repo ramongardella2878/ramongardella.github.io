@@ -107,6 +107,17 @@
 .music-links a:hover {
   opacity: 1;
   transform: translateY(-3px);
+   
+   .music-links {
+  margin-top: 120px;
+  display: flex;
+  gap: 64px;
+  justify-content: center; /* 👈 AGREGAR */
+
+      .music-links svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
 }
 
 /* WAVE */
