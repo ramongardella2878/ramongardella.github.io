@@ -1,48 +1,51 @@
 /* =========================
-   MUSIC – SAME AS INNER TAKE
+   MUSIC – VIDEO BACKGROUND
    ========================= */
 
 .music-page {
-  min-height: 100vh;
   font-family: 'Inter', sans-serif;
   color: #eaeaea;
   overflow: hidden;
 }
 
-/* VIDEO BACKGROUND */
+/* VIDEO */
 
-.video-bg {
+.music-video-bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: -2;
   overflow: hidden;
 }
 
-.video-bg iframe {
+.music-video-bg iframe {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
 }
 
-/* OVERLAY */
+/* OVERLAY (igual lógica HOME) */
 
-.video-overlay {
+.music-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.65);
   z-index: -1;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.85)
+    );
 }
 
-/* CONTENT */
+/* HERO */
 
-.music-container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 160px 32px 140px;
+.music-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 140px 32px 120px;
 }
 
 /* TITLE */
@@ -51,12 +54,12 @@
   font-size: clamp(3.4rem, 7vw, 4.6rem);
   font-weight: 400;
   letter-spacing: -0.03em;
-  margin: 80px 0 48px;
+  margin: 64px 0 48px;
 }
 
 /* TEXT */
 
-.music-description {
+.music-text {
   font-size: 1.25rem;
   line-height: 1.9;
   font-weight: 300;
@@ -90,16 +93,15 @@
   opacity: 0.85;
 }
 
-/* PLATFORMS */
+/* LINKS */
 
-.music-platforms {
-  margin-top: 140px;
+.music-links {
+  margin-top: 120px;
   display: flex;
-  justify-content: center;
   gap: 64px;
 }
 
-.music-platforms a {
+.music-links a {
   color: #eaeaea;
   text-decoration: none;
   font-size: 0.9rem;
@@ -109,7 +111,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.music-platforms a:hover {
+.music-links a:hover {
   opacity: 1;
   transform: translateY(-3px);
 }
@@ -118,16 +120,15 @@
 
 .music-wave {
   display: flex;
-  justify-content: center;
   gap: 6px;
-  height: 32px;
+  height: 28px;
 }
 
 .music-wave span {
   width: 4px;
   background: #eaeaea;
   opacity: 0.6;
-  animation: wave 1.2s ease-in-out infinite;
+  animation: wave 1.4s ease-in-out infinite;
 }
 
 .music-wave span:nth-child(1) { animation-delay: 0s; }
@@ -138,5 +139,5 @@
 
 @keyframes wave {
   0%, 100% { height: 6px; }
-  50% { height: 32px; }
+  50% { height: 28px; }
 }
