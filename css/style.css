@@ -1,23 +1,42 @@
 /* =========================
-   MUSIC – INNER TAKE STYLE
+   MUSIC – SAME AS INNER TAKE
    ========================= */
 
 .music-page {
   min-height: 100vh;
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.85)
-    ),
-    radial-gradient(
-      circle at 50% 20%,
-      #2a2a2a 0%,
-      #0f0f0f 60%,
-      #000 100%
-    );
-  color: #eaeaea;
   font-family: 'Inter', sans-serif;
+  color: #eaeaea;
+  overflow: hidden;
 }
+
+/* VIDEO BACKGROUND */
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-bg iframe {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* OVERLAY */
+
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
+}
+
+/* CONTENT */
 
 .music-container {
   max-width: 860px;
@@ -26,16 +45,16 @@
   text-align: center;
 }
 
-/* TITULO */
+/* TITLE */
 
 .music-title {
   font-size: clamp(3.4rem, 7vw, 4.6rem);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.03em;
   margin: 80px 0 48px;
 }
 
-/* TEXTO */
+/* TEXT */
 
 .music-description {
   font-size: 1.25rem;
@@ -43,14 +62,23 @@
   font-weight: 300;
   max-width: 720px;
   margin: 0 auto 120px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-/* PROYECTO */
+/* PROJECT */
+
+.music-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 24px;
+}
 
 .music-project h2 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 
@@ -62,16 +90,7 @@
   opacity: 0.85;
 }
 
-.music-label {
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  opacity: 0.5;
-  margin-bottom: 24px;
-}
-
-/* PLATAFORMAS */
+/* PLATFORMS */
 
 .music-platforms {
   margin-top: 140px;
@@ -81,10 +100,12 @@
 }
 
 .music-platforms a {
+  color: #eaeaea;
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  opacity: 0.8;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -93,17 +114,7 @@
   transform: translateY(-3px);
 }
 
-.music-platforms .yt {
-  color: #ff2b2b;
-}
-
-.music-platforms .ig {
-  color: #e1306c;
-}
-
-/* =========================
-   MUSICAL ANIMATION (WAVE)
-   ========================= */
+/* WAVE */
 
 .music-wave {
   display: flex;
