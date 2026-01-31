@@ -115,11 +115,10 @@
 
 /* LOGOS */
 
-.yt-logo,
-.ig-logo {
-  width: 65px;
-  height: auto;
-  flex-shrink: 0;
+..yt-logo {
+  width: 80px;
+  transform: translateY(-2px);
+}
 }
 
 /* ANIMACIÓN MUSICAL */
