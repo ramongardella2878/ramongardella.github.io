@@ -5,7 +5,9 @@
 .music-page {
   font-family: 'Inter', sans-serif;
   color: #eaeaea;
-  overflow: hidden;
+  overflow-y: auto;   /* 👈 habilita scroll vertical */
+  overflow-x: hidden;
+
 }
 
 /* VIDEO DE FONDO */
