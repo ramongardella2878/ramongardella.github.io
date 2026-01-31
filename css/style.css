@@ -85,8 +85,9 @@
 
 /* PLATAFORMAS */
 
+/* === Logos oficiales YouTube / Instagram === */
+
 .music-links {
-  margin-top: 48px;
   display: flex;
   justify-content: center;
   gap: 56px;
@@ -96,12 +97,18 @@
   text-decoration: none;
   border: none;
   outline: none;
-  box-shadow: none;
   transition: transform 0.3s ease;
 }
 
 .music-links a:hover {
   transform: translateY(-4px) scale(1.05);
+}
+
+.yt-logo,
+.ig-logo {
+  width: 72px;   /* podés subir a 84px si querés más impacto */
+  height: auto;
+  flex-shrink: 0;
 }
 
 /* LOGOS */
