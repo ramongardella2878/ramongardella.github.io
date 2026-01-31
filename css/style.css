@@ -147,3 +147,36 @@
   0%, 100% { height: 6px; }
   50% { height: 28px; }
 }
+/* =========================
+   LANGUAGE SWITCH – MUSIC
+   (igual HOME / INNER TAKE)
+   ========================= */
+
+.lang-switch {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  gap: 20px;
+  z-index: 20;
+}
+
+.lang-switch a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eaeaea;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.lang-switch a:hover {
+  opacity: 0.85;
+}
+
+.lang-switch a.active {
+  opacity: 1;
+}
+
