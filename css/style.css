@@ -1,5 +1,5 @@
 /* =========================
-   RESET / BASE
+   RESET
    ========================= */
 
 * {
@@ -11,14 +11,12 @@
 html, body {
   width: 100%;
   min-height: 100%;
-
 }
 
 body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #eaeaea;
-
 }
 
 
@@ -61,22 +59,18 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.lang-switch a:hover {
-  opacity: 0.85;
-}
-
 .lang-switch a.active {
   opacity: 1;
 }
 
 
 /* =========================
-   HERO / CONTENIDO
+   HERO
    ========================= */
 
 .music-hero {
   min-height: 100vh;
-  padding: 120px 32px 120px;
+  padding: 120px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,23 +80,21 @@ body {
 
 
 /* =========================
-   ANIMACIÓN MUSICAL
+   WAVE
    ========================= */
 
 .music-wave {
-  margin-bottom: 32px;
-  opacity: 0.7;
+  display: flex;
+  gap: 6px;
+  height: 28px;
+  margin-bottom: 40px;
 }
-
 
 .music-wave span {
   width: 4px;
   background: #eaeaea;
   opacity: 0.65;
-  animation-name: wave;
-  animation-duration: 1.4s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation: wave 1.4s ease-in-out infinite;
 }
 
 .music-wave span:nth-child(1) { animation-delay: 0s; }
@@ -112,42 +104,35 @@ body {
 .music-wave span:nth-child(5) { animation-delay: .6s; }
 
 @keyframes wave {
-  0%, 100% {
-    height: 6px;
-  }
-  50% {
-    height: 28px;
-  }
-
+  0%, 100% { height: 6px; }
+  50% { height: 28px; }
+}
 
 
 /* =========================
    TEXTO
    ========================= */
+
 .music-text {
-  font-size: 1.15rem;
-  line-height: 1.85;
+  font-size: 1.25rem;
+  line-height: 1.9;
   font-weight: 300;
-  max-width: 640px;
-  margin: 0 auto 64px;
+  max-width: 720px;
+  margin-bottom: 72px;
   opacity: 0.95;
 }
 
 
 /* =========================
-   LINKS / PLATAFORMAS
+   LINKS
    ========================= */
 
 .music-links {
   display: flex;
-  justify-content: center;
   gap: 56px;
 }
 
 .music-links a {
-  text-decoration: none;
-  border: none;
-  outline: none;
   transition: transform 0.3s ease;
 }
 
@@ -157,9 +142,8 @@ body {
 
 .yt-logo,
 .ig-logo {
-  width: 85px;
+  width: 96px;
   height: auto;
-  flex-shrink: 0;
 }
 
 
@@ -173,13 +157,9 @@ body {
     font-size: 1.1rem;
   }
 
-  .music-links {
-    gap: 40px;
-  }
-
   .yt-logo,
   .ig-logo {
-    width: 72px;
+    width: 80px;
   }
 
 }
