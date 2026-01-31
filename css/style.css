@@ -108,7 +108,7 @@
 
 .yt-logo,
 .ig-logo {
-  width: 72px;   /* podés subir a 84px si querés más impacto */
+  width: 80px;   /* podés subir a 84px si querés más impacto */
   height: auto;
   flex-shrink: 0;
 }
