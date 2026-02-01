@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kontakt · Ramón Gardella</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Typografie -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #1e1f22 0%, #24262a 100%);
+      font-family: 'Inter', sans-serif;
+      color: #f2f2f2;
+    }
+
+    .contact {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 120px 24px;
+    }
+
+    .contact h1 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .contact p {
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.75;
+      margin-bottom: 48px;
+      max-width: 520px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    input,
+    textarea {
+      background: transparent;
+      border: 1px solid rgba(242,242,242,0.35);
+      padding: 14px;
+      color: #f2f2f2;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+    }
+
+    textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(242,242,242,0.45);
+    }
+
+    button {
+      align-self: flex-start;
+      padding: 14px 32px;
+      background: none;
+      border: 1px solid rgba(242,242,242,0.5);
+      color: #f2f2f2;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    button:hover {
+      background: #f2f2f2;
+      color: #1e1f22;
+      border-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="contact">
+    <h1>Kontakt</h1>
+
+    <p>
+      Hallo! Erzähl mir, wer du bist und wobei ich dir helfen kann.
+    </p>
+
+    <form action="https://formspree.io/f/mzdvzwdk" method="POST">
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="E-Mail"
+        required
+      >
+
+      <textarea
+        name="message"
+        placeholder="Nachricht"
+        required
+      ></textarea>
+
+      <button type="submit">
+        Senden
+      </button>
+
+    </form>
+  </main>
+
+</body>
+</html>
