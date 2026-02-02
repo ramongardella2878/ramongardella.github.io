@@ -7,33 +7,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-main: #f8fafc;
-      --bg-alt: #eef2f7;
-      --text-main: #0f172a;
-      --text-soft: #475569;
+   :root {
+  --bg-main: #f5f2ea;
+  --bg-alt: #f3f4f6;
+  --text-main: #0b1220;
+  --text-soft: #334155;
+  --text-muted: #64748b;
+  --btn-main: #0f172a;
+  --btn-hover: #000000;
+
     }
 
     * { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-main);
-      color: var(--text-main);
-      line-height: 1.7;
-      font-size: 18px;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-soft);
+  line-height: 1.7;
+  font-size: 18px;
+
     }
 
     /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 16px 60px;
-      background: rgba(248,250,252,0.95);
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 10;
+ nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 60px;
+  background: rgba(240, 238, 232, 0.92);
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 10;
+
     }
 
     .nav-top {
@@ -55,13 +61,17 @@
     }
 
     .nav-right a {
-      color: var(--text-soft);
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-left: 24px;
-    }
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 24px;
+}
+
+.nav-right a:hover {
+  color: var(--text-main);
+}
 
     /* CONTENT */
     main {
@@ -110,13 +120,14 @@
     </div>
 
     <div class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="index.html#space">The Space</a>
-    <a href="encounters.html">Encounters</a>
-    <a href="index.html#for-me">Is This for Me?</a>
-    <a href="media.html">Media</a>
-    <a href="contact.html">Contact</a>
+<a href="index.html#inicio">Home</a>
+<a href="index.html#enfoque">Approach</a>
+<a href="about.html">About</a>
+<a href="index.html#trabajo">What I Offer</a>
+<a href="index.html#para-mi">Is This for Me?</a>
+<a href="media.html">Media</a>
+<a href="contact.html">Contact</a>
+
 </div>
 
   </div>
