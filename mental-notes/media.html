@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <base href="/ramongardella.github.io/mental-notes/">
@@ -9,14 +9,19 @@
 
   <style>
     :root {
-      --bg-main: #ffffff;
+      --bg-main: #f5f2ea;
       --bg-alt: #f3f4f6;
       --text-main: #0b1220;
       --text-soft: #334155;
       --text-muted: #64748b;
+      --btn-main: #0f172a;
+      --btn-hover: #000000;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -32,7 +37,7 @@
       top: 0;
       width: 100%;
       padding: 16px 60px;
-      background: rgba(255,255,255,0.97);
+      background: rgba(240, 238, 232, 0.92);
       border-bottom: 1px solid #e5e7eb;
       z-index: 10;
     }
@@ -95,7 +100,7 @@
       display: flex;
       gap: 18px;
       font-family: 'Montserrat', sans-serif;
-      z-index: 30;
+      z-index: 20;
     }
 
     .lang-overlay a {
@@ -133,7 +138,8 @@
 
     .entry {
       padding: 48px 32px;
-      background: var(--bg-alt);
+      background: rgba(245, 242, 234, 0.6);
+      border: 1px solid rgba(15, 23, 42, 0.45);
       border-radius: 14px;
       margin-bottom: 36px;
       text-align: left;
@@ -175,17 +181,17 @@
   <div class="nav-top">
     <div class="brand">
       <strong>Ramón Gardella</strong>
-      <span>Musician · Performer · Educator</span>
+      <span>Músico · Performer · Educador</span>
     </div>
 
     <div class="nav-right">
-      <a href="index.html#inicio">Home</a>
-      <a href="index.html#enfoque">Approach</a>
-      <a href="about.html">About</a>
-      <a href="index.html#trabajo">What I Offer</a>
-      <a href="index.html#para-mi">Is This for Me?</a>
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#enfoque">Enfoque</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="index.html#trabajo">Qué te ofrezco</a>
+      <a href="index.html#para-mi">¿Es esto para mí?</a>
       <a href="media.html">Media</a>
-      <a href="contact.html">Contact</a>
+      <a href="contacto.html">Contacto</a>
     </div>
   </div>
 </nav>
@@ -195,36 +201,38 @@
   <a href="/ramongardella.github.io/mental-notes/en/index.html">EN</a>
   <a href="/ramongardella.github.io/mental-notes/de/index.html">DE</a>
 </div>
+
 <main>
-  <h1>Texts</h1>
+  <h1>Textos</h1>
 
   <p class="intro">
-    The texts you find here are part of the same listening process 
-    that also runs through the sessions.
+    Los textos que encontrás acá forman parte del mismo
+    proceso de escucha que atraviesa también los encuentros.
   </p>
 
   <div class="entry">
     <h3>
-      <a href="a-voice-saying-not-like-that.html">
-        A voice that said: “not like that”
+      <a href="una-voz-que-decia-asi-no.html">
+        Una voz que decía: “así no”
       </a>
     </h3>
     <p>
-      A text about inner criticism,
-      discomfort while playing,
-      and the moment when listening becomes unavoidable.
+      Un texto sobre la crítica interna,
+      el malestar al tocar
+      y el momento en que escuchar se vuelve inevitable.
     </p>
   </div>
 
   <div class="entry">
     <h3>
-      <a href="an-adult-making-music-is-like-a-child-at-play.html">
-        An adult making music is like a child at play
+      <a href="un-adulto-que-hace-musica-es-como-un-nino-jugando.html">
+        Un adulto que hace música es como un niño jugando
       </a>
     </h3>
     <p>
-      A reflection on music and play,
-      and how inner worlds take shape through sound.
+      Una reflexión sobre la música y el juego,
+      y sobre cómo los mundos internos
+      toman forma a través del sonido.
     </p>
   </div>
 </main>
