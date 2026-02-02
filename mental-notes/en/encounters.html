@@ -8,13 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-main: #f8fafc;
-      --bg-alt: #eef2f7;
-      --text-main: #0f172a;
-      --text-soft: #475569;
-      --btn-main: #1f2933;
-      --btn-hover: #000000;
+    ::root {
+  --bg-main: #f5f2ea;
+  --bg-alt: #f3f4f6;
+  --text-main: #0b1220;
+  --text-soft: #334155;
+  --text-muted: #64748b;
+  --btn-main: #0f172a;
+  --btn-hover: #000000;
+  --border-soft: #c7d2fe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
     }
 
     * {
@@ -33,13 +41,14 @@
 
     /* ---------- NAV ---------- */
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 16px 60px;
-      background: rgba(248,250,252,0.95);
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 60px;
+  background: rgba(240, 238, 232, 0.92);
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 10;
+
     }
 
     .nav-top {
