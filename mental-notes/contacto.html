@@ -5,154 +5,184 @@
   <base href="/ramongardella.github.io/mental-notes/">
   <title>Contacto · Ramón Gardella</title>
 
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
- :root {
-  --bg-main: #f5f2ea;
-  --text-soft: #334155;
-  --text-main: #0b1220;
-  --text-muted: #64748b;
-  --btn-main: #0f172a;
-  --btn-hover: #000000;
-}
+  <style>
+    :root {
+      --bg-main: #f5f2ea;
+      --text-main: #0b1220;
+      --text-soft: #334155;
+      --text-muted: #64748b;
+      --btn-main: #0f172a;
+      --btn-hover: #000000;
+      --border-soft: #c7d2fe;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-main);
-  color: var(--text-soft);
-}
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
 
-/* ---------- NAV ---------- */
-nav {
-  background: rgba(240, 238, 232, 0.92);
-  border-bottom: 1px solid #e5e7eb;
-}
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 60px;
+      background: rgba(240, 238, 232, 0.92);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
 
-.nav-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.brand strong {
-  display: block;
-  font-size: 0.9rem;
-}
+    .brand strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
 
-.brand span {
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-soft);
-}
+    .brand span {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
 
-.nav-right a {
-  color: var(--text-muted);
-}
+    .nav-right a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      font-weight: 500;
+    }
 
-.nav-right a:hover {
-  color: var(--text-main);
-}
+    .nav-right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--text-main);
+      transition: 0.3s;
+    }
 
-/* ---------- CONTENT ---------- */
-main {
-  max-width: 620px;
-  margin: 180px auto 140px;
-  padding: 0 30px;
-  text-align: center;
-}
+    .nav-right a:hover {
+      color: var(--text-main);
+    }
 
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-}
+    .nav-right a:hover::after {
+      width: 100%;
+    }
 
-.intro {
-  font-size: 1.2rem;
-  margin-bottom: 50px;
-  color: var(--text-soft);
-  line-height: 1.5;
-}
+    /* ---------- LANG ---------- */
+    .lang-overlay {
+      position: fixed;
+      top: 100px;
+      right: 60px;
+      display: flex;
+      gap: 18px;
+      font-family: 'Montserrat', sans-serif;
+      z-index: 20;
+    }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
+    .lang-overlay a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
 
-input,
-textarea {
-  width: 100%;
-  padding: 14px 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #cbd5f5;
-  background: white;
-  resize: vertical;
-}
+    .lang-overlay a.active {
+      color: var(--text-main);
+      font-weight: 600;
+    }
 
-textarea {
-  min-height: 140px;
-}
+    /* ---------- MAIN ---------- */
+    main {
+      max-width: 760px;
+      margin: auto;
+      padding: 180px 40px 140px;
+      text-align: center;
+    }
 
-button {
-  margin-top: 20px;
-  align-self: center;
-  padding: 18px 48px;
-  background: var(--btn-main);
-  color: white;
-  border: none;
-  border-radius: 3px;
-  font-size: 0.7rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 28px;
+    }
 
-button:hover {
-  background: var(--btn-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.35);
-}
+    .intro {
+      font-size: 1.3rem;
+      margin-bottom: 60px;
+      color: var(--text-soft);
+    }
 
-/* ---------- LANG ---------- */
-.lang-overlay {
-  position: fixed;
-  top: 100px;
-  right: 60px;
-  display: flex;
-  gap: 18px;
-  font-family: 'Montserrat', sans-serif;
-  z-index: 20;
-}
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
 
-.lang-overlay a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-}
+    input, textarea {
+      width: 100%;
+      padding: 18px 20px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      border-radius: 10px;
+      border: 2px solid var(--border-soft);
+      outline: none;
+    }
 
-.lang-overlay a.active {
-  color: var(--text-main);
-  font-weight: 600;
-}
+    textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
 
-@media (max-width: 768px) {
-  nav { padding: 16px 30px; }
-  main { margin-top: 150px; padding: 0 20px; }
-  .lang-overlay { right: 30px; }
+    button {
+      align-self: center;
+      margin-top: 20px;
+      padding: 20px 56px;
+      background: var(--btn-main);
+      color: white;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
 
-}
+    button:hover {
+      background: var(--btn-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 30px; }
+      main { padding: 160px 25px 120px; }
+      .lang-overlay { right: 30px; }
+    }
   </style>
 </head>
 
@@ -166,26 +196,24 @@ button:hover {
     </div>
 
     <div class="nav-right">
-  <a href="index.html#inicio">Inicio</a>
-  <a href="index.html#enfoque">Enfoque</a>
-  <a href="sobre-mi.html">Sobre mí</a>
-  <a href="index.html#trabajo">Qué te ofrezco</a>
-  <a href="index.html#para-mi">¿Es esto para mí?</a>
-  <a href="media.html">Media</a>
-  <a href="/mental-notes/contacto.html">Contacto</a>
-</div>
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#enfoque">Enfoque</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="index.html#trabajo">Qué te ofrezco</a>
+      <a href="index.html#para-mi">¿Es esto para mí?</a>
+      <a href="media.html">Media</a>
+      <a href="contacto.html">Contacto</a>
     </div>
   </div>
 </nav>
+
 <div class="lang-overlay">
   <a href="/ramongardella.github.io/mental-notes/index.html" class="active">ES</a>
   <a href="/ramongardella.github.io/mental-notes/en/index.html">EN</a>
   <a href="/ramongardella.github.io/mental-notes/de/index.html">DE</a>
 </div>
 
-
 <main>
-
   <h1>Contacto</h1>
 
   <p class="intro">
@@ -199,7 +227,6 @@ button:hover {
     <textarea name="mensaje" placeholder="Mensaje" required></textarea>
     <button type="submit">Enviar</button>
   </form>
-
 </main>
 
 </body>
