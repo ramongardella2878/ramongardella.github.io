@@ -8,136 +8,124 @@
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
-  <style>
-  :root {
+ :root {
   --bg-main: #f5f2ea;
-  --bg-alt: #f3f4f6;
-  --text-main: #0b1220;
   --text-soft: #334155;
+  --text-main: #0b1220;
   --text-muted: #64748b;
+  --btn-main: #0f172a;
+  --btn-hover: #000000;
+}
 
-    }
+* {
+  box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-    }
-
-
-    body {
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
   background: var(--bg-main);
   color: var(--text-soft);
 }
 
-
-    /* ---------- NAV (MISMO EN TODO EL SITIO) ---------- */
-   nav {
+/* ---------- NAV ---------- */
+nav {
   background: rgba(240, 238, 232, 0.92);
   border-bottom: 1px solid #e5e7eb;
+}
 
-    }
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .nav-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.brand strong {
+  display: block;
+  font-size: 0.9rem;
+}
 
-    .brand strong {
-      display: block;
-      font-size: 0.9rem;
-    }
+.brand span {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
 
-    .brand span {
-      font-size: 0.7rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
+.nav-right a {
+  color: var(--text-muted);
+}
 
-    .nav-right a {
-      color: var(--text-soft);
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-left: 24px;
-    }
+.nav-right a:hover {
+  color: var(--text-main);
+}
 
-    /* ---------- CONTENT ---------- */
-    main {
-      max-width: 620px;
-      margin: 180px auto 140px;
-      padding: 0 30px;
-      text-align: center;
-    }
+/* ---------- CONTENT ---------- */
+main {
+  max-width: 620px;
+  margin: 180px auto 140px;
+  padding: 0 30px;
+  text-align: center;
+}
 
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-    }
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
 
-    .intro {
-      font-size: 1.2rem;
-      margin-bottom: 50px;
-      color: var(--text-soft);
-      line-height: 1.5;
-    }
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 26px;
-    }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 14px 16px;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: 1px solid #cbd5f5;
-      background: white;
-      resize: vertical;
-    }
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+  background: white;
+  resize: vertical;
+}
 
-    textarea {
-      min-height: 140px;
-    }
+textarea {
+  min-height: 140px;
+}
 
-    button {
-      margin-top: 20px;
-      align-self: center;
-      padding: 18px 48px;
-      background: var(--btn-main);
-      color: white;
-      border: none;
-      border-radius: 3px;
-      font-size: 0.7rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-    }
+button {
+  margin-top: 20px;
+  align-self: center;
+  padding: 18px 48px;
+  background: var(--btn-main);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
 
-    button:hover {
-      background: var(--btn-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.35);
-    }
+button:hover {
+  background: var(--btn-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+}
 
-    @media (max-width: 768px) {
-      nav {
-        padding: 16px 30px;
-      }
-
-      main {
-        margin-top: 150px;
-        padding: 0 20px;
-      }
-    }
-    .lang-overlay {
+/* ---------- LANG ---------- */
+.lang-overlay {
   position: fixed;
   top: 100px;
   right: 60px;
@@ -160,9 +148,10 @@
 }
 
 @media (max-width: 768px) {
-  .lang-overlay {
-    right: 30px;
-  }
+  nav { padding: 16px 30px; }
+  main { margin-top: 150px; padding: 0 20px; }
+  .lang-overlay { right: 30px; }
+
 }
   </style>
 </head>
