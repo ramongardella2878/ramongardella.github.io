@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
@@ -21,16 +21,27 @@
 
   <!-- LOKALE STILE BILDUNG -->
   <style>
-   .education-hero {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 120px 24px;
-}
+    body.education-page {
+      min-height: 100vh;
+      background: linear-gradient(
+        180deg,
+        #1e1f22 0%,
+        #24262a 100%
+      );
+      color: #f2f2f2;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .education-hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 120px 24px;
+    }
 
     .education-intro {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.6;
-      opacity: 0.75;
+      opacity: 1;
       margin-bottom: 56px;
     }
 
@@ -55,50 +66,64 @@
 
     .path-title {
       font-size: 26px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
+      font-weight: 700;
+      letter-spacing: -0.03em;
       margin-bottom: 8px;
     }
 
     .path-desc {
-      font-size: 15px;
+      font-size: 20px;
       line-height: 1.6;
-      opacity: 0.7;
+      opacity: 1;
       max-width: 520px;
     }
-    body.education-page {
-  min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    #1e1f22 0%,
-    #24262a 100%
-  );
-  color: #f2f2f2;
-}
+
     .education-cta {
-  margin-top: 80px;
-}
+      margin-top: 80px;
+    }
 
-.cta-button {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 14px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #f2f2f2;
-  border: 1px solid rgba(242,242,242,0.4);
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
-}
+    .cta-button {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #f2f2f2;
+      border: 1px solid rgba(242,242,242,0.4);
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
 
-.cta-button:hover {
-  background: #f2f2f2;
-  color: #1e1f22;
-  border-color: #f2f2f2;
-}
+    .cta-button:hover {
+      background: #f2f2f2;
+      color: #1e1f22;
+      border-color: #f2f2f2;
+    }
+
+    /* Sprachen – EXACTLY like ES / EN */
+    .lang-switch {
+      position: fixed;
+      top: 28px;
+      right: 40px;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      z-index: 10;
+      text-align: right;
+    }
+
+    .lang-switch a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(242,242,242,0.6);
+      text-decoration: none;
+      margin-left: 14px;
+    }
+
+    .lang-switch a.active {
+      color: #f2f2f2;
+    }
   </style>
-</head>
-  
+
   <!-- SPRACHEN -->
   <nav class="lang-switch">
     <a href="../">ES</a>
@@ -169,11 +194,9 @@
 
     </div>
 
-<div class="education-cta">
- <a href="contacto.html" class="cta-button">
-  Kontakt
-</a>
-</div>
+    <div class="education-cta">
+      <a href="contacto.html" class="cta-button">Kontakt</a>
+    </div>
 
   </main>
 
