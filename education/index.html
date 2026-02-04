@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
->
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- CSS global -->
   <link rel="stylesheet" href="../css/style.css">
@@ -21,18 +21,28 @@
 
   <!-- ESTILOS LOCALES EDUCACIÓN -->
   <style>
-   .education-hero {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 120px 24px;
-}
+    body.education-page {
+      min-height: 100vh;
+      background: linear-gradient(
+        180deg,
+        #1e1f22 0%,
+        #24262a 100%
+      );
+      color: #f2f2f2;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .education-hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 120px 24px;
+    }
 
     .education-intro {
-  font-size: 20px;
-  line-height: 1.6;
-  opacity: 0.75;
-  margin-bottom: 56px;
-
+      font-size: 20px;
+      line-height: 1.6;
+      opacity: 1;
+      margin-bottom: 56px;
     }
 
     .paths {
@@ -54,92 +64,79 @@
       transform: translateX(4px);
     }
 
-  .path-title {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-
+    .path-title {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
     }
 
     .path-desc {
-  font-size: 20px;
-  line-height: 1.6;
-  opacity: 0.7;
-  max-width: 520px;
-
+      font-size: 20px;
+      line-height: 1.6;
+      opacity: 1;
+      max-width: 520px;
     }
-    body.education-page {
-  min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    #1e1f22 0%,
-    #24262a 100%
-  );
-  color: #f2f2f2;
-      body.education-page {
-  font-family: 'Inter', sans-serif;
 
-}
     .education-cta {
-  margin-top: 80px;
-}
+      margin-top: 80px;
+    }
 
-.cta-button {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 14px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #f2f2f2;
-  border: 1px solid rgba(242,242,242,0.4);
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
-}
+    .cta-button {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #f2f2f2;
+      border: 1px solid rgba(242,242,242,0.4);
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
 
-.cta-button:hover {
-  background: #f2f2f2;
-  color: #1e1f22;
-  border-color: #f2f2f2;
-}
-      /* Idiomas – igual a The Inner Take */
-..lang-switch {
-  position: fixed;
-  top: 28px;
-  right: 40px;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  z-index: 10;
-}
+    .cta-button:hover {
+      background: #f2f2f2;
+      color: #1e1f22;
+      border-color: #f2f2f2;
+    }
 
-.lang-switch a {
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(242,242,242,0.6);
-  text-decoration: none;
-  margin-left: 14px;
-}
+    /* Idiomas – EXACTAMENTE igual a The Inner Take */
+    .lang-switch {
+      position: fixed;
+      top: 28px;
+      right: 40px;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      z-index: 10;
+      text-align: right;
+    }
 
-.lang-switch a.active {
-  color: #f2f2f2;
+    .lang-switch a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(242,242,242,0.6);
+      text-decoration: none;
+      margin-left: 14px;
+    }
 
-}
+    .lang-switch a.active {
+      color: #f2f2f2;
+    }
   </style>
-</head>
-  
+
   <!-- IDIOMAS -->
- <nav class="lang-switch">
-  <a href="./" class="active">ES</a>
-  <a href="en/">EN</a>
-  <a href="de/">DE</a>
-</nav>
+  <nav class="lang-switch">
+    <a href="./" class="active">ES</a>
+    <a href="en/">EN</a>
+    <a href="de/">DE</a>
+  </nav>
 
   <main class="education-hero">
 
     <p class="education-intro">
       Acompaño procesos de aprendizaje, creación y toma de decisiones
       en distintos momentos del recorrido musical y personal. Trabajo sobre repertorio, sonido, corporalidad y procesos de estudio,
-    adaptados a cada recorrido personal. Modalidad online desde cualquier lugar del mundo. Idiomas disponibles español, inglés, alemán y portugués.
+      adaptados a cada recorrido personal. Modalidad online desde cualquier lugar del mundo. Idiomas disponibles español, inglés, alemán y portugués.
     </p>
 
     <div class="paths">
@@ -149,9 +146,8 @@
         <div class="path-desc">
           Clases individuales orientadas al desarrollo técnico,
           musical y expresivo, adaptadas a cada recorrido personal. Preparación de concursos, audiciones, conciertos.
-          Todos los niveles. Modalidad online desde cualquier lugar del mundo. 
-          Idiomas disponiobles español, inglés, alemán y portugués.
-    </p>
+          Todos los niveles. Modalidad online desde cualquier lugar del mundo.
+          Idiomas disponibles español, inglés, alemán y portugués.
         </div>
       </a>
 
@@ -160,8 +156,8 @@
         <div class="path-desc">
           Acompañamiento en procesos creativos, organización de ideas,
           definición de objetivos y toma de decisiones artísticas. Te ayudo a comenzar con tu proyecto musical y/o a desarrollarlo para llevarlo al mundo.
-          Todos los niveles. Modalidad online desde cualquier lugar del mundo. 
-          Idiomas disponiobles español, inglés, alemán y portugués.
+          Todos los niveles. Modalidad online desde cualquier lugar del mundo.
+          Idiomas disponibles español, inglés, alemán y portugués.
         </div>
       </a>
 
@@ -170,8 +166,8 @@
         <div class="path-desc">
           Asesoría para aplicaciones, preparación de exámenes,
           elección de instituciones y planificación del proceso.
-         Desarrollo mi carrera en Alemania hace 10 años y puedo ayudarte a emigrar y continuar tus estudios en una universidad alemana. 
-          Becas, opciones financeras, contacto con docentes, burocracia.
+          Desarrollo mi carrera en Alemania hace 10 años y puedo ayudarte a emigrar y continuar tus estudios en una universidad alemana.
+          Becas, opciones financieras, contacto con docentes, burocracia.
         </div>
       </a>
 
@@ -179,19 +175,16 @@
         <div class="path-title">Encuentros individuales y grupales</div>
         <div class="path-desc">
           Espacios de acompañamiento online vinculados a Mental Notes:
-          escucha, reflexión y trabajo sobre la experiencia musical. Encuentros individuales y grupales para hablar de los que nos pasa por dentro cuando hacemos musica. 
-          Contenidos puntuales para entender mejor de que se trata una carrera en la música y a todo lo que estamos expuestos (a veces sin saberlo)
+          escucha, reflexión y trabajo sobre la experiencia musical. Encuentros individuales y grupales para hablar de lo que nos pasa por dentro cuando hacemos música.
+          Contenidos puntuales para entender mejor de qué se trata una carrera en la música y todo a lo que estamos expuestos.
         </div>
       </a>
 
     </div>
-<div class="education-cta">
- <a href="contacto.html" class="cta-button">
-  Contactame
-</a>
 
-  </a>
-</div>
+    <div class="education-cta">
+      <a href="contacto.html" class="cta-button">Contactame</a>
+    </div>
 
   </main>
 
