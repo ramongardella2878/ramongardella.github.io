@@ -1,86 +1,236 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>Musik · Ramón Gardella</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Music · Ramón Gardella</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Typografie -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    /* Languages */
+    .lang-overlay {
+      position: fixed;
+      top: 28px;
+      right: 40px;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      z-index: 10;
+      text-align: right;
+    }
+
+    .lang-overlay a {
+      color: rgba(242,242,242,0.6);
+      text-decoration: none;
+      margin-left: 14px;
+      font-weight: 500;
+    }
+
+    .lang-overlay a.active {
+      color: #f2f2f2;
+    }
+
+    /* Layout */
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 140px 8% 120px;
+    }
+
+    /* Animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .fade-up.delay-1 { animation-delay: 0.2s; }
+    .fade-up.delay-2 { animation-delay: 0.4s; }
+    .fade-up.delay-3 { animation-delay: 0.6s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 54px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .text-block {
+      font-size: 20px;
+      max-width: 720px;
+      margin-bottom: 56px;
+    }
+
+    .text-block p {
+      margin-bottom: 28px;
+    }
+
+    /* Waveform (4 lines) */
+    .waveform {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 22px;
+      margin-top: 16px;
+      margin-bottom: 56px;
+    }
+
+    .waveform span {
+      width: 3px;
+      height: 100%;
+      background-color: rgba(242,242,242,0.6);
+      animation: wave 1.8s ease-in-out infinite;
+      border-radius: 2px;
+      transform-origin: bottom;
+    }
+
+    .waveform span:nth-child(1) { animation-delay: 0s; }
+    .waveform span:nth-child(2) { animation-delay: 0.2s; }
+    .waveform span:nth-child(3) { animation-delay: 0.4s; }
+    .waveform span:nth-child(4) { animation-delay: 0.2s; }
+
+    @keyframes wave {
+      0%   { transform: scaleY(0.3); opacity: 0.4; }
+      50%  { transform: scaleY(1);   opacity: 0.9; }
+      100% { transform: scaleY(0.3); opacity: 0.4; }
+    }
+
+    /* Socials */
+    .socials {
+      margin-top: 80px;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .socials a:hover {
+      opacity: 1;
+    }
+
+    .socials svg {
+      width: 28px;
+      height: 28px;
+      fill: #f2f2f2;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 40px; }
+      .text-block { font-size: 18px; }
+    }
+  </style>
 </head>
 
-<body class="music-page">
+<body>
 
-  <!-- SPRACHEN -->
-  <nav class="lang-switch">
+  <!-- Languages -->
+  <div class="lang-overlay">
     <a href="../">ES</a>
     <a href="../en/">EN</a>
     <a href="./" class="active">DE</a>
-  </nav>
+  </div>
 
-  <main class="music-hero">
+  <div class="wrapper">
 
-    <!-- WAVE -->
-    <div class="music-wave">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <h1 class="fade-up">Music</h1>
+
+    <div class="waveform fade-up delay-1">
+      <span></span><span></span><span></span><span></span>
     </div>
 
-    <!-- TEXT -->
-    <p class="music-text">
-      Ich entwickle musikalische Projekte aus einer persönlichen und prozessorientierten Suche heraus.
-      Musik verstehe ich als Raum des Zuhörens, der Transformation und der Identität.
-      <br><br>
-      Ich arbeite mit Ensembles, KomponistInnen sowie Orchestern
-      in unterschiedlichen Kontexten und Formaten in Europa und Lateinamerika zusammen.
-      <br><br>
-      Ich lade Sie ein, meine Projekte und Kooperationen über meine sozialen Netzwerke zu verfolgen.
-    </p>
+    <div class="text-block fade-up delay-2">
+      <p>
+        Ich entwickle musikalische Projekte aus einer persönlichen und prozessorientierten Suche heraus.
+        Mich interessiert Musik als Raum des Zuhörens, der Transformation und der Identitätsbildung.
+      </p>
 
-    <!-- SOZIALE MEDIEN -->
-    <nav class="music-links">
+      <p>
+        Als Schlagzeuger arbeite ich mit Ensembles, Komponist*innen und Orchestern
+        in unterschiedlichen Kontexten und Formaten in Europa und Lateinamerika zusammen.
+        Dazu zählen unter anderem: WDR Sinfonieorchester, Gürzenich Orchester,
+        Beethoven Orchester Bonn, Ensemble Modern, Ensemble Musikfabrik,
+        Deutsche Radio Philharmonie Saarbrücken Kaiserslautern,
+        Düsseldorf Symphoniker, Philharmonie Südwestfalen,
+        Sinfonieorchester Münster, Sinfonieorchester Aachen,
+        Ensemble Resonanz, Kommas Ensemble, DEHIO ensemble,
+        Ensemble Tra I Tempi, Percussion Orchestra Cologne,
+        Schlagquartett Köln, Frames Percussion, Tambor Fantasma,
+        Linos Piano Trio, Marco Blaauw, Frank Pesci, Enno Poppe,
+        Rebecca Saunders, Philippe Manoury, Emilio Pomarico,
+        Baldur Brönnimann, Peter Rundel, François-Xavier Roth,
+        Bas Wiegers, Ricardo Minasi, Kent Nagano, Cristian Măcelaru,
+        Jörg Widmann, Elim Chan, Marc Urselli, Diego Espinosa,
+        Sylvain Cambreling, Helmut Lachenmann, Brad Lubman,
+        Christian Dierstein, Christian Karlsen, Johannes Schöllhorn,
+        Michael Beil, Festival Manifeste (Paris), Musikfest Berlin,
+        MärzMusik (Berlin), Huddersfield Contemporary Music Festival (UK),
+        Wien Modern (Wien), Warsaw Autumn (Warschau),
+        November Music (Niederlande) und Acht Brücken (Köln).
+      </p>
 
-      <a href="https://www.youtube.com/@MrMusicaclas" target="_blank" aria-label="YouTube">
-        <svg viewBox="0 0 256 180" class="yt-logo" aria-hidden="true">
-          <rect width="256" height="180" rx="36" fill="#FF0000"/>
-          <polygon points="105,50 105,130 170,90" fill="#FFFFFF"/>
+      <p>
+        Um meine aktuellen Auftritte zu verfolgen und mich für Konzerte oder Aufnahmen zu kontaktieren,
+        lade ich dich ein, mir in den sozialen Netzwerken zu folgen.
+      </p>
+    </div>
+
+    <div class="socials fade-up delay-3">
+      <a href="https://www.instagram.com/ramongardella" target="_blank">
+        <!-- Instagram -->
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.5-.3-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.5-1 1-1.5s.9-.8 1.5-1c.5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2z"/>
         </svg>
+        Instagram
       </a>
 
-      <a href="https://www.instagram.com/ramongardella" target="_blank" aria-label="Instagram">
-        <svg viewBox="0 0 256 256" class="ig-logo" aria-hidden="true">
-          <defs>
-            <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FEDA75"/>
-              <stop offset="25%" stop-color="#FA7E1E"/>
-              <stop offset="50%" stop-color="#D62976"/>
-              <stop offset="75%" stop-color="#962FBF"/>
-              <stop offset="100%" stop-color="#4F5BD5"/>
-            </linearGradient>
-          </defs>
-          <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#igGradient)"/>
-          <rect x="64" y="64" width="128" height="128" rx="40"
-                fill="none" stroke="#FFFFFF" stroke-width="16"/>
-          <circle cx="128" cy="128" r="32"
-                  fill="none" stroke="#FFFFFF" stroke-width="16"/>
-          <circle cx="176" cy="80" r="12" fill="#FFFFFF"/>
+      <a href="https://www.youtube.com/@mrmusicaclas" target="_blank">
+        <!-- YouTube -->
+        <svg viewBox="0 0 24 24">
+          <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.7 2.5 12 2.5 12 2.5h0s-4.7 0-8.2.3c-.5.1-1.5.1-2.4 1-.7.7-.9 2.4-.9 2.4S0 8.2 0 10.1v1.8c0 1.9.2 3.9.2 3.9s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 8.3.3 8.3.3s4.7 0 8.2-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.2-2 .2-3.9v-1.8c0-1.9-.2-3.9-.2-3.9zM9.6 14.8V8.9l6.2 3z"/>
         </svg>
+        YouTube
       </a>
+    </div>
 
-    </nav>
-
-  </main>
+  </div>
 
 </body>
 </html>
