@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <base href="/ramongardella.github.io/">
@@ -20,11 +20,11 @@
       height: 100vh;
       background:
         linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-        url("home-bg.jpg") 70% 10% / cover no-repeat;
+        url("home-bg.jpg") 82% 10% / cover no-repeat;
       color: #f2f2f2;
     }
 
-    /* Idiomas */
+    /* Languages */
     .lang-overlay {
       position: fixed;
       top: 28px;
@@ -49,16 +49,16 @@
     .home {
       height: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       padding-left: 10%;
-      padding-top: 60px;
+      padding-top: 20px;
     }
 
     .content {
       max-width: 560px;
     }
 
-    /* Nombre */
+    /* Name */
     .name {
       font-size: 48px;
       font-weight: 500;
@@ -72,10 +72,31 @@
       letter-spacing: 0.35em;
       text-transform: uppercase;
       opacity: 0.45;
-      margin-bottom: 72px;
+      margin-bottom: 18px;
     }
 
-    /* Caminos */
+    /* Subtitle */
+    .subtitle {
+      font-size: 12.5px;
+      line-height: 1.6;
+      font-weight: 500;
+      max-width: 420px;
+
+      margin-top: 6px;
+      margin-bottom: 36px;
+
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    .subtitle span {
+      display: block;
+      margin-top: 10px;
+      opacity: 0.7;
+    }
+
+    /* Paths */
     .paths {
       display: flex;
       flex-direction: column;
@@ -109,7 +130,6 @@
       max-width: 480px;
     }
 
-    /* Mental Notes destacado */
     .path.primary .path-title {
       font-size: 34px;
     }
@@ -117,32 +137,43 @@
     @media (max-width: 768px) {
       .home {
         padding: 0 8%;
-        padding-top: 70px;
+        padding-top: 35px;
       }
 
       .name {
         font-size: 40px;
       }
+
+      .subtitle {
+        font-size: 11px;
+        letter-spacing: 0.24em;
+        margin-bottom: 40px;
+      }
+
+      .subtitle br {
+        display: none;
+      }
     }
+
     .photo-credit {
-  position: fixed;
-  bottom: 18px;
-  right: 28px;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: rgba(242,242,242,0.45);
-  z-index: 5;
-}
+      position: fixed;
+      bottom: 18px;
+      right: 28px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: rgba(242,242,242,0.45);
+      z-index: 5;
+    }
   </style>
 </head>
 
 <body>
 
   <div class="lang-overlay">
-  <a href="index.html">ES</a>
-  <a href="en/index.html" class="active">EN</a>
-  <a href="de/index.html">DE</a>
-</div>
+    <a href="index.html">ES</a>
+    <a href="en/index.html" class="active">EN</a>
+    <a href="de/index.html">DE</a>
+  </div>
 
   <div class="home">
     <div class="content">
@@ -150,38 +181,42 @@
       <div class="name">Ramón Gardella</div>
       <div class="role">Musician · Educator · Creator</div>
 
+      <div class="subtitle">
+        I WORK AS A PROFESSIONAL MUSICIAN AND OFFER<br>
+        SPACES FOR REFLECTION, LESSONS AND RESOURCES<br>
+        TO MANAGE A MUSICAL CAREER.<br>
+        <span>I INVITE YOU TO EXPLORE</span>
+      </div>
+
       <div class="paths">
 
- <a href="./docs/en/index.html" class="path primary">
-  <div class="path-title">Mental Notes</div>
-  <div class="path-desc">
-    A space for musicians.<br>
-    Reflection, inner processes and accompaniment
-    to understand what happens when making music.
-  </div>
-</a>
+        <a href="./docs/en/index.html" class="path primary">
+          <div class="path-title">Mental Notes</div>
+          <div class="path-desc">
+            A space for musicians.<br>
+            Reflection, inner processes and listening
+            to understand what happens when making music.
+          </div>
+        </a>
 
+        <a href="inner-take/index.html" class="path">
+          <div class="path-title">The Inner Take</div>
+          <div class="path-desc">
+            Podcast. Conversations with musicians about experience, process and path.
+          </div>
+        </a>
 
-       <a href="inner-take/index.html" class="path">
-  <div class="path-title">The Inner Take</div>
-  <div class="path-desc">
-    Podcast. Conversations with musicians about experience, process and path.
-  </div>
-</a>
-        
         <a href="education/en/" class="path">
-  <div class="path-title">Education</div>
-  <div class="path-desc">
-    Lessons, mentoring and guidance for musical and personal processes.
-  </div>
-</a>
+          <div class="path-title">Education</div>
+          <div class="path-desc">
+            Lessons, mentoring and guidance for musical development.
+          </div>
+        </a>
 
-  <a href="music/en/" class="path">
- <div class="path-title">Music</div>
-  <div class="path-desc">
-    Concerts, recordings and professional projects.
-  </div>
-</a>
+        <a href="music/en/" class="path">
+          <div class="path-title">Music</div>
+          <div class="path-desc">
+            Concerts, recordings and professional projects.
           </div>
         </a>
 
