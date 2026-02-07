@@ -45,20 +45,19 @@
       color: #f2f2f2;
     }
 
-    /* Layout */
+    /* Layout — IGUAL QUE ES */
     .home {
       height: 100%;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       padding-left: 10%;
-      padding-top: 20px;
+      padding-top: 60px;
     }
 
     .content {
       max-width: 560px;
     }
 
-    /* Name */
     .name {
       font-size: 48px;
       font-weight: 500;
@@ -72,28 +71,22 @@
       letter-spacing: 0.35em;
       text-transform: uppercase;
       opacity: 0.45;
-      margin-bottom: 18px;
+      margin-bottom: 25px;
     }
 
-    /* Subtitle */
+    /* Subtitle — SIMPLE, ESTABLE */
     .subtitle {
-      font-size: 11.0px;
+      font-size: 12px;
       line-height: 1.6;
       font-weight: 500;
-      max-width: 420px;
+      max-width: 520px;
 
       margin-top: 6px;
-      margin-bottom: 36px;
+      margin-bottom: 56px;
 
-      letter-spacing: 0.32em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       opacity: 0.5;
-    }
-
-    .subtitle span {
-      display: block;
-      margin-top: 10px;
-      opacity: 0.7;
     }
 
     /* Paths */
@@ -137,40 +130,25 @@
     @media (max-width: 768px) {
       .home {
         padding: 0 8%;
-        padding-top: 35px;
+        padding-top: 70px;
       }
 
       .name {
         font-size: 40px;
       }
 
-.subtitle {
-  font-size: 11px;
-  line-height: 1.6;
-  font-weight: 500;
-  max-width: 520px;
-
-  margin-top: 6px;
-  margin-bottom: 36px;
-
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  opacity: 0.5;
-}
-    .subtitle span {
-  display: block;
-  white-space: nowrap;
-}
-
-.subtitle .cta {
-  margin-top: 12px;
-  opacity: 0.7;
-
+      .subtitle {
+        font-size: 11px;
+        letter-spacing: 0.24em;
+        margin-bottom: 48px;
+      }
     }
+
+    /* Photo credit — abajo a la derecha */
     .photo-credit {
       position: fixed;
-      bottom: 14px;
-      right: 20px;
+      bottom: 18px;
+      right: 28px;
       font-size: 11px;
       letter-spacing: 0.08em;
       color: rgba(242,242,242,0.45);
@@ -194,15 +172,13 @@
       <div class="role">Musician · Educator</div>
 
       <div class="subtitle">
-  <br>I WORK AS A PROFESSIONAL MUSICIAN AND OFFER</br>
-  <br>SPACES FOR REFLECTION, LESSONS AND RESOURCES</br>
-  <br>TO MANAGE A MUSICAL CAREER.</br>
-  <span class="cta">I INVITE YOU TO EXPLORE</span>
-</div>
-
+        I WORK AS A PROFESSIONAL MUSICIAN AND OFFER<br>
+        SPACES FOR REFLECTION, LESSONS AND RESOURCES<br>
+        TO MANAGE A MUSICAL CAREER.<br>
+        I INVITE YOU TO EXPLORE
+      </div>
 
       <div class="paths">
-
         <a href="./docs/en/index.html" class="path primary">
           <div class="path-title">Mental Notes</div>
           <div class="path-desc">
@@ -232,8 +208,8 @@
             Concerts, recordings and professional projects.
           </div>
         </a>
-
       </div>
+
     </div>
   </div>
 
